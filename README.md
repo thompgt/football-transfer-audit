@@ -1,4 +1,4 @@
-#  Technical Audit of an Algorithmic Decision-Support Syste
+#  Technical Audit of an Algorithmic Decision-Support System
 
 ## Football Transfer Fee Analysis
 
