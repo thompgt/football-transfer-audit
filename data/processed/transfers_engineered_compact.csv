@@ -1,0 +1,732 @@
+Name,Nationality,nationality_match_source,Nationality_bucket,Transfer_fee_in_mln,log_transfer_fee,fee_minus_value,Market_value_in_mln,potential,market_value_per_potential,position_bucket,league_country_to,nationality_matches_league_to,League_to,age_bucket,is_top_club_to,is_top_league,high_overall
+Kevin De Bruyne,Belgium,fallback_team_from,Top 1-15,76.0,4.343805421853684,31.0,45.0,86.0,0.5232558139534884,Midfielder,England,False,Premier League,20-23,True,True,True
+Raheem Sterling,England,fallback_team_from,Top 1-15,63.7,4.169761201506855,23.700000000000003,40.0,86.0,0.46511627906976744,Winger,England,True,Premier League,<20,True,True,True
+Ángel Di María,Argentina,fallback_lastname_season,Top 1-15,63.0,4.1588830833596715,13.0,50.0,88.0,0.5681818181818182,Winger,France,False,Ligue 1,24-26,True,True,True
+Anthony Martial,France,fallback_lastname_season,Top 1-15,60.0,4.110873864173311,52.0,8.0,81.0,0.09876543209876543,Winger,England,False,Premier League,<20,True,True,False
+Alex Teixeira,Brazil,fallback_lastname_season,Top 1-15,50.0,3.9318256327243257,20.0,30.0,82.0,0.36585365853658536,Midfielder,China,False,Super League,24-26,False,True,True
+Christian Benteke,Belgium,fallback_team_from,Top 1-15,46.5,3.8607297110405954,26.5,20.0,85.0,0.23529411764705882,Forward,England,False,Premier League,20-23,True,True,True
+Nicolás Otamendi,Argentina,fallback_team_from,Top 1-15,44.6,3.8199077165203406,19.6,25.0,84.0,0.2976190476190476,Defender,England,False,Premier League,24-26,True,True,True
+Julian Draxler,Germany,fallback_team_from,Top 1-15,43.0,3.784189633918261,21.0,22.0,85.0,0.25882352941176473,Midfielder,Germany,True,1.Bundesliga,20-23,True,True,True
+Roberto Firmino,Brazil,fallback_lastname_season,Top 1-15,41.0,3.7376696182833684,16.0,25.0,85.0,0.29411764705882354,Forward,England,False,Premier League,20-23,True,True,True
+Paulo Dybala,Argentina,fallback_lastname_season,Top 1-15,40.0,3.713572066704308,12.0,28.0,83.0,0.3373493975903614,Forward,Italy,False,Serie A,20-23,True,True,False
+Arturo Vidal,Chile,fallback_team_from,Top 16-30,37.5,3.6506582412937387,-4.5,42.0,87.0,0.4827586206896552,Midfielder,Germany,False,1.Bundesliga,27-29,False,True,True
+,Colombia,fallback_team_from,Top 1-15,37.1,3.6402142821326553,2.1000000000000014,35.0,86.0,0.4069767441860465,Forward,Spain,False,LaLiga,27-29,True,True,True
+,Colombia,fallback_team_from,Top 1-15,37.1,3.6402142821326553,2.1000000000000014,35.0,85.0,0.4117647058823529,Forward,Spain,False,LaLiga,27-29,True,True,True
+,Colombia,fallback_team_from,Top 1-15,37.1,3.6402142821326553,2.1000000000000014,35.0,66.0,0.5303030303030303,Forward,Spain,False,LaLiga,27-29,True,True,False
+,Colombia,fallback_team_from,Top 1-15,37.1,3.6402142821326553,2.1000000000000014,35.0,54.0,0.6481481481481481,Forward,Spain,False,LaLiga,27-29,True,True,False
+Geoffrey Kondogbia,France,fallback_lastname_season,Top 1-15,36.0,3.6109179126442243,20.0,16.0,80.0,0.2,Midfielder,Italy,False,Serie A,20-23,True,True,False
+Morgan Schneiderlin,France,fallback_team_from,Top 1-15,35.0,3.58351893845611,7.0,28.0,84.0,0.3333333333333333,Midfielder,England,False,Premier League,24-26,True,True,True
+,Turkey,fallback_team_from,Top 16-30,34.0,3.5553480614894135,-1.0,35.0,88.0,0.3977272727272727,Winger,Spain,False,LaLiga,27-29,False,True,True
+Memphis Depay,Netherlands,fallback_lastname_season,Top 1-15,34.0,3.5553480614894135,6.0,28.0,88.0,0.3181818181818182,Winger,England,False,Premier League,20-23,True,True,True
+Danilo,Brazil,fallback_team_from,Top 1-15,31.5,3.481240089335692,6.5,25.0,84.0,0.2976190476190476,Defender,Spain,False,LaLiga,20-23,False,True,True
+Mateo Kovacic,Croatia,fallback_team_from,Top 16-30,31.0,3.4657359027997265,9.0,22.0,86.0,0.2558139534883721,Midfielder,Spain,False,LaLiga,20-23,False,True,False
+Carlos Bacca,Colombia,fallback_team_from,Top 1-15,30.0,3.4339872044851463,5.0,25.0,81.0,0.30864197530864196,Forward,Italy,False,Serie A,27-29,True,True,True
+Douglas Costa,Spain,fallback_lastname_season,Top 1-15,30.0,3.4339872044851463,7.0,23.0,84.0,0.27380952380952384,Winger,Germany,False,1.Bundesliga,20-23,False,True,True
+Heung-min Son,Korea Republic,fallback_lastname_season,Outside Top 45,30.0,3.4339872044851463,14.0,16.0,81.0,0.19753086419753085,Winger,England,False,Premier League,20-23,False,True,True
+Ramires,Brazil,fallback_team_from,Top 1-15,28.0,3.367295829986474,3.0,25.0,82.0,0.3048780487804878,Midfielder,China,False,Super League,27-29,False,True,True
+Pedro,Spain,fallback_team_from,Top 1-15,27.0,3.332204510175204,7.0,20.0,86.0,0.23255813953488372,Winger,England,False,Premier League,27-29,True,True,True
+Alex Sandro,Brazil,fallback_team_from,Top 1-15,26.0,3.295836866004329,6.0,20.0,84.0,0.23809523809523808,Defender,Italy,False,Serie A,20-23,True,True,True
+Alex Sandro,Brazil,fallback_team_from,Top 1-15,26.0,3.295836866004329,6.0,20.0,64.0,0.3125,Defender,Italy,False,Serie A,20-23,True,True,False
+,Montenegro,fallback_team_from,Top 31-45,25.0,3.258096538021482,10.0,15.0,82.0,0.18292682926829268,Defender,Spain,False,LaLiga,20-23,True,True,True
+Layvin Kurzawa,France,fallback_lastname_season,Top 1-15,25.0,3.258096538021482,15.0,10.0,85.0,0.11764705882352941,Defender,France,True,Ligue 1,20-23,True,True,True
+,Belgium,fallback_lastname_season,Top 1-15,24.76,3.248822901236153,15.760000000000002,9.0,78.0,0.11538461538461539,Winger,Spain,False,LaLiga,20-23,True,True,False
+Aymen Abdennour,Tunisia,fallback_lastname_season,Outside Top 45,22.0,3.1354942159291497,12.0,10.0,83.0,0.12048192771084337,Defender,Spain,False,LaLiga,24-26,True,True,True
+,Mexico,fallback_team_from,Top 1-15,22.0,3.1354942159291497,17.0,5.0,77.0,0.06493506493506493,Forward,Portugal,False,Liga NOS,20-23,False,True,False
+,Croatia,fallback_team_from,Top 16-30,21.0,3.091042453358316,1.0,20.0,83.0,0.24096385542168675,Winger,Italy,False,Serie A,27-29,True,True,True
+,Argentina,fallback_team_from,Top 1-15,20.0,3.044522437723423,0.0,20.0,85.0,0.23529411764705882,Forward,Spain,False,LaLiga,20-23,True,True,False
+Georginio Wijnaldum,Netherlands,fallback_lastname_season,Top 1-15,20.0,3.044522437723423,5.0,15.0,83.0,0.18072289156626506,Midfielder,England,False,Premier League,20-23,True,True,True
+Giannelli Imbula,France,fallback_lastname_season,Top 1-15,20.0,3.044522437723423,8.0,12.0,80.0,0.15,Midfielder,Portugal,False,Liga NOS,20-23,False,True,False
+Abdul Rahman Baba,Ghana,fallback_team_from,Top 16-30,20.0,3.044522437723423,10.0,10.0,75.0,0.13333333333333333,Defender,England,False,Premier League,20-23,True,True,False
+Ivan Perisic,Croatia,fallback_team_from,Top 16-30,19.0,2.995732273553991,6.0,13.0,82.0,0.15853658536585366,Winger,Italy,False,Serie A,24-26,True,True,True
+Aleksandar Mitrovic,Serbia,fallback_team_from,Top 1-15,18.5,2.970414465569701,7.5,11.0,85.0,0.12941176470588237,Forward,England,False,Premier League,<20,True,True,False
+Florian Thauvin,France,fallback_lastname_season,Top 1-15,18.35,2.962692419475791,6.350000000000001,12.0,84.0,0.14285714285714285,Winger,England,False,Premier League,20-23,True,True,True
+Gervinho,Ivory Coast,fallback_lastname_season,Top 16-30,18.0,2.9444389791664403,3.0,15.0,83.0,0.18072289156626506,Winger,China,False,Super League,27-29,False,True,True
+Matteo Darmian,Italy,fallback_team_from,Top 1-15,18.0,2.9444389791664403,6.0,12.0,79.0,0.1518987341772152,Defender,England,False,Premier League,24-26,True,True,False
+Simone Zaza,Italy,fallback_team_from,Top 1-15,18.0,2.9444389791664403,7.0,11.0,83.0,0.13253012048192772,Forward,Italy,True,Serie A,20-23,True,True,False
+Sergej Milinkovic-Savic,Serbia,fallback_team_from,Top 1-15,18.0,2.9444389791664403,14.0,4.0,65.0,0.06153846153846154,Midfielder,Italy,False,Serie A,<20,False,True,False
+Oumar Niasse,Senegal,fallback_lastname_season,Top 16-30,17.9,2.9391619220655967,7.899999999999999,10.0,79.0,0.12658227848101267,Forward,England,False,Premier League,24-26,True,True,False
+Nathaniel Clyne,England,fallback_team_from,Top 1-15,17.7,2.928523523860541,0.6999999999999993,17.0,81.0,0.20987654320987653,Defender,England,True,Premier League,20-23,True,True,False
+José Salomón Rondón,Venezuela,fallback_lastname_season,Top 31-45,17.0,2.8903717578961645,2.0,15.0,83.0,0.18072289156626506,Forward,England,False,Premier League,24-26,False,True,True
+,Brazil,fallback_team_from,Top 1-15,16.0,2.833213344056216,1.0,15.0,82.0,0.18292682926829268,Defender,Spain,False,LaLiga,27-29,True,True,True
+Moussa Sow,Senegal,fallback_lastname_season,Top 16-30,16.0,2.833213344056216,3.0,13.0,78.0,0.16666666666666666,Forward,United Arab Emirates,False,UAE Gulf League,27-29,False,False,True
+Jonjo Shelvey,England,fallback_lastname_season,Top 1-15,16.0,2.833213344056216,4.0,12.0,80.0,0.15,Midfielder,England,True,Premier League,20-23,True,True,False
+Roberto Soldado,Spain,fallback_lastname_season,Top 1-15,16.0,2.833213344056216,6.0,10.0,81.0,0.12345679012345678,Forward,Spain,True,LaLiga,27-29,True,True,True
+Andros Townsend,England,fallback_lastname_season,Top 1-15,15.7,2.8154087194227095,7.699999999999999,8.0,82.0,0.0975609756097561,Winger,England,True,Premier League,20-23,True,True,False
+Virgil van Dijk,Netherlands,fallback_team_from,Top 1-15,15.7,2.8154087194227095,10.7,5.0,79.0,0.06329113924050633,Defender,England,False,Premier League,20-23,False,True,False
+Asier Illarramendi,Spain,fallback_team_from,Top 1-15,15.0,2.772588722239781,0.0,15.0,84.0,0.17857142857142858,Midfielder,Spain,True,LaLiga,24-26,False,True,True
+Dimitri Payet,France,fallback_lastname_season,Top 1-15,15.0,2.772588722239781,2.0,13.0,81.0,0.16049382716049382,Midfielder,England,False,Premier League,27-29,True,True,True
+,Spain,fallback_team_from,Top 1-15,15.0,2.772588722239781,5.0,10.0,83.0,0.12048192771084337,Midfielder,Italy,False,Serie A,27-29,False,True,True
+Jordy Clasie,Netherlands,fallback_team_from,Top 1-15,15.0,2.772588722239781,5.0,10.0,81.0,0.12345679012345678,Midfielder,England,False,Premier League,20-23,False,True,True
+Clinton N'Jie,Cameroon,fallback_lastname_season,Top 31-45,14.1,2.714694743820879,9.1,5.0,64.0,0.078125,Forward,England,False,Premier League,20-23,False,True,False
+Petr Cech,Czech Republic,fallback_team_from,Top 31-45,14.0,2.70805020110221,2.0,12.0,85.0,0.1411764705882353,Goalkeeper,England,False,Premier League,30+,False,True,True
+Paulinho,Brazil,fallback_lastname_season,Top 1-15,14.0,2.70805020110221,5.0,9.0,85.0,0.10588235294117647,Midfielder,China,False,Super League,24-26,False,True,True
+Yohan Cabaye,France,fallback_lastname_season,Top 1-15,13.9,2.7013612129514133,-2.0999999999999996,16.0,81.0,0.19753086419753085,Midfielder,England,False,Premier League,27-29,False,True,True
+,Spain,fallback_team_from,Top 1-15,13.1,2.6461747973841225,5.6,7.5,75.0,0.1,Midfielder,France,False,Ligue 1,20-23,False,True,False
+Hernanes,Brazil,fallback_team_from,Top 1-15,13.0,2.6390573296152584,-1.0,14.0,82.0,0.17073170731707318,Midfielder,Italy,False,Serie A,27-29,True,True,True
+Fredy Guarín,Colombia,fallback_team_from,Top 1-15,13.0,2.6390573296152584,2.5,10.5,79.0,0.13291139240506328,Midfielder,China,False,Super League,27-29,False,True,True
+Ramiro Funes Mori,Argentina,fallback_team_from,Top 1-15,12.9,2.631888840136646,6.9,6.0,74.0,0.08108108108108109,Defender,England,False,Premier League,20-23,True,True,False
+Mohamed Elneny,Egypt,fallback_lastname_season,Top 31-45,12.5,2.6026896854443837,8.5,4.0,72.0,0.05555555555555555,Midfielder,England,False,Premier League,20-23,False,True,False
+Andre Gray,England,fallback_team_from,Top 1-15,12.4,2.5952547069568657,11.4,1.0,60.0,0.016666666666666666,Forward,England,True,Championship,20-23,False,True,False
+Luis Muriel,Colombia,fallback_lastname_season,Top 1-15,12.0,2.5649493574615367,2.0,10.0,81.0,0.12345679012345678,Forward,Italy,False,Serie A,20-23,False,True,False
+Chancel Mbemba,DR Congo,fallback_team_from,Top 16-30,12.0,2.5649493574615367,4.0,8.0,83.0,0.0963855421686747,Defender,England,False,Premier League,<20,True,True,False
+Jordan Ayew,Ghana,fallback_team_from,Top 16-30,12.0,2.5649493574615367,6.0,6.0,78.0,0.07692307692307693,Forward,England,False,Premier League,20-23,False,True,False
+Jordan Rhodes,Scotland,fallback_lastname_season,Top 1-15,11.9,2.5572273113676265,1.9000000000000004,10.0,77.0,0.12987012987012986,Forward,England,False,Championship,24-26,False,True,False
+Allan,Brazil,fallback_lastname_season,Top 1-15,11.5,2.5257286443082556,0.0,11.5,77.0,0.14935064935064934,Midfielder,Italy,False,Serie A,20-23,False,True,False
+Fabian Delph,England,fallback_team_from,Top 1-15,11.5,2.5257286443082556,1.5,10.0,81.0,0.12345679012345678,Midfielder,England,True,Premier League,24-26,True,True,False
+Tyrone Mings,England,fallback_lastname_season,Top 1-15,11.3,2.509599262378372,5.300000000000001,6.0,66.0,0.09090909090909091,Defender,England,True,Premier League,20-23,False,True,False
+James Chester,Wales,fallback_team_from,Top 16-30,11.3,2.509599262378372,9.3,2.0,73.0,0.0273972602739726,Defender,England,False,Premier League,24-26,False,True,False
+Gonzalo Castro,Germany,fallback_lastname_season,Top 1-15,11.0,2.4849066497880004,-3.0,14.0,82.0,0.17073170731707318,Midfielder,Germany,True,1.Bundesliga,27-29,False,True,True
+Asmir Begovic,Bosnia Herzegovina,fallback_team_from,Top 31-45,11.0,2.4849066497880004,-1.0,12.0,84.0,0.14285714285714285,Goalkeeper,England,False,Premier League,27-29,True,True,True
+Ciro Immobile,Italy,fallback_lastname_season,Top 1-15,11.0,2.4849066497880004,1.0,10.0,85.0,0.11764705882352941,Forward,Spain,False,LaLiga,24-26,True,True,True
+Angelo Ogbonna,Italy,fallback_team_from,Top 1-15,11.0,2.4849066497880004,2.0,9.0,81.0,0.1111111111111111,Defender,England,False,Premier League,24-26,True,True,True
+Shinji Okazaki,Japan,fallback_lastname_season,Top 31-45,11.0,2.4849066497880004,3.0,8.0,77.0,0.1038961038961039,Forward,England,False,Premier League,27-29,True,True,True
+Jonathan Calleri,Argentina,fallback_team_from,Top 1-15,11.0,2.4849066497880004,3.5,7.5,74.0,0.10135135135135136,Forward,,,Segunda División - Segunda Fase,20-23,False,False,False
+Steven Naismith,Scotland,fallback_team_from,Top 1-15,11.0,2.4849066497880004,6.0,5.0,76.0,0.06578947368421052,Winger,England,False,Premier League,27-29,False,True,True
+Thiago Neves,Brazil,fallback_lastname_season,Top 1-15,11.0,2.4849066497880004,7.0,4.0,78.0,0.05128205128205128,Midfielder,United Arab Emirates,False,UAE Gulf League,27-29,False,False,True
+Jordan Amavi,France,fallback_team_from,Top 1-15,11.0,2.4849066497880004,7.0,4.0,73.0,0.0547945205479452,Defender,England,False,Premier League,20-23,False,True,False
+Timm Klose,Switzerland,fallback_team_from,Top 1-15,11.0,2.4849066497880004,8.0,3.0,77.0,0.03896103896103896,Defender,England,False,Premier League,24-26,False,True,False
+Fabio Borini,Italy,fallback_team_from,Top 1-15,10.7,2.4595888418037104,3.6999999999999993,7.0,79.0,0.08860759493670886,Winger,England,False,Premier League,20-23,False,True,False
+Abdoulaye Doucouré,France,fallback_lastname_season,Top 1-15,10.6,2.451005098112319,4.6,6.0,78.0,0.07692307692307693,Midfielder,England,False,Premier League,20-23,True,True,False
+Johannes Geis,Germany,fallback_lastname_season,Top 1-15,10.5,2.4423470353692043,-0.5,11.0,82.0,0.13414634146341464,Midfielder,Germany,True,1.Bundesliga,20-23,False,True,True
+Jesús Corona,Mexico,fallback_team_from,Top 1-15,10.5,2.4423470353692043,4.0,6.5,74.0,0.08783783783783784,Winger,Portugal,False,Liga NOS,20-23,False,True,False
+Josip Drmic,Switzerland,fallback_lastname_season,Top 1-15,10.0,2.3978952727983707,2.0,8.0,82.0,0.0975609756097561,Forward,Germany,False,1.Bundesliga,20-23,False,True,True
+Jordan Veretout,France,fallback_team_from,Top 1-15,10.0,2.3978952727983707,2.0,8.0,82.0,0.0975609756097561,Midfielder,England,False,Premier League,20-23,False,True,False
+,Ivory Coast,fallback_lastname_season,Top 16-30,10.0,2.3978952727983707,3.5,6.5,77.0,0.08441558441558442,Winger,England,False,Premier League,24-26,False,True,False
+Connor Wickham,England,fallback_team_from,Top 1-15,10.0,2.3978952727983707,5.0,5.0,83.0,0.060240963855421686,Forward,England,True,Premier League,20-23,False,True,False
+Adama Traoré,Ivory Coast,fallback_lastname_season,Top 16-30,10.0,2.3978952727983707,5.0,5.0,75.0,0.06666666666666667,Winger,England,False,Premier League,<20,False,True,False
+Santi Mina,Spain,fallback_lastname_season,Top 1-15,10.0,2.3978952727983707,6.0,4.0,79.0,0.05063291139240506,Forward,Spain,True,LaLiga,<20,True,True,False
+Robbie Brady,Republic of Ireland,fallback_team_from,Top 16-30,9.9,2.388762789235098,7.9,2.0,77.0,0.025974025974025976,Midfielder,England,False,Premier League,20-23,False,True,False
+Matija Nastasic,Serbia,fallback_lastname_season,Top 1-15,9.5,2.3513752571634776,-4.5,14.0,82.0,0.17073170731707318,Defender,Germany,False,1.Bundesliga,20-23,False,True,True
+Kevin Trapp,Germany,fallback_lastname_season,Top 1-15,9.5,2.3513752571634776,1.5,8.0,84.0,0.09523809523809523,Goalkeeper,France,False,Ligue 1,24-26,True,True,True
+Aderllan Santos,Mexico,fallback_lastname_season,Top 1-15,9.5,2.3513752571634776,2.0,7.5,79.0,0.0949367088607595,Defender,Spain,False,LaLiga,24-26,True,True,False
+Aderllan Santos,Mexico,fallback_lastname_season,Top 1-15,9.5,2.3513752571634776,2.0,7.5,73.0,0.10273972602739725,Defender,Spain,False,LaLiga,24-26,True,True,False
+Alberto Paloschi,Italy,fallback_team_from,Top 1-15,9.5,2.3513752571634776,3.5,6.0,81.0,0.07407407407407407,Forward,England,False,Premier League,24-26,False,True,False
+Michail Antonio,England,fallback_lastname_season,Top 1-15,9.5,2.3513752571634776,7.0,2.5,75.0,0.03333333333333333,Winger,England,True,Premier League,24-26,True,True,False
+Mapou Yanga-Mbiwa,,unresolved,Outside Top 45,9.4,2.341805806147327,2.9000000000000004,6.5,81.0,0.08024691358024691,Defender,France,,Ligue 1,24-26,False,True,True
+Derlis González,Spain,fallback_lastname_season,Top 1-15,9.4,2.341805806147327,5.65,3.75,81.0,0.046296296296296294,Winger,Ukraine,False,Premier Liga,20-23,False,True,False
+Lewis Grabban,England,fallback_lastname_season,Top 1-15,9.35,2.336986519711378,6.35,3.0,72.0,0.041666666666666664,Forward,England,True,Premier League,27-29,False,True,False
+Idrissa Gueye,Senegal,fallback_team_from,Top 16-30,9.0,2.302585092994046,1.5,7.5,83.0,0.09036144578313253,Midfielder,England,False,Premier League,24-26,False,True,True
+N'Golo Kanté,France,fallback_lastname_season,Top 1-15,9.0,2.302585092994046,4.5,4.5,76.0,0.05921052631578947,Midfielder,England,False,Premier League,20-23,True,True,False
+Guido Carrillo,Peru,fallback_lastname_season,Top 16-30,9.0,2.302585092994046,5.8,3.2,75.0,0.04266666666666667,Forward,France,False,Ligue 1,20-23,True,True,False
+Étienne Capoue,France,fallback_lastname_season,Top 1-15,8.9,2.2925347571405443,1.4000000000000004,7.5,83.0,0.09036144578313253,Midfielder,England,False,Premier League,24-26,True,True,True
+Jürgen Damm,Mexico,fallback_lastname_season,Top 1-15,8.85,2.2874714551839976,7.6499999999999995,1.2,77.0,0.015584415584415584,Winger,Mexico,True,Liga MX Clausura,20-23,False,False,False
+José Manuel Jurado,Spain,fallback_team_from,Top 1-15,8.6,2.2617630984737906,1.5999999999999996,7.0,75.0,0.09333333333333334,Midfielder,England,False,Premier League,27-29,True,True,False
+Benjamin Stambouli,France,fallback_lastname_season,Top 1-15,8.6,2.2617630984737906,3.5999999999999996,5.0,80.0,0.0625,Defender,France,True,Ligue 1,20-23,True,True,True
+Andrea Bertolacci,Italy,fallback_team_from,Top 1-15,8.5,2.2512917986064953,-6.5,15.0,78.0,0.19230769230769232,Midfielder,Italy,True,Serie A,20-23,True,True,False
+Mattia Destro,Italy,fallback_lastname_season,Top 1-15,8.5,2.2512917986064953,-4.5,13.0,83.0,0.1566265060240964,Forward,Italy,True,Serie A,20-23,False,True,True
+Rudy Gestede,Benin,fallback_lastname_season,Top 31-45,8.5,2.2512917986064953,5.0,3.5,71.0,0.04929577464788732,Forward,England,False,Premier League,24-26,False,True,False
+,Morocco,fallback_team_from,Top 31-45,8.4,2.2407096892759584,2.4000000000000004,6.0,79.0,0.0759493670886076,Winger,England,False,Premier League,27-29,True,True,True
+Andrea Belotti,Italy,fallback_lastname_season,Top 1-15,8.4,2.2407096892759584,3.4000000000000004,5.0,80.0,0.0625,Forward,Italy,True,Serie A,20-23,False,True,False
+Danny Ings,England,fallback_team_from,Top 1-15,8.3,2.2300144001592104,-3.6999999999999993,12.0,79.0,0.1518987341772152,Forward,England,True,Premier League,20-23,True,True,False
+Jonny Evans,Northern Ireland,fallback_lastname_season,Outside Top 45,8.3,2.2300144001592104,2.3000000000000007,6.0,82.0,0.07317073170731707,Defender,England,False,Premier League,24-26,False,True,True
+Obbi Oulare,Belgium,fallback_lastname_season,Top 1-15,8.23,2.222459048514761,3.2300000000000004,5.0,68.0,0.07352941176470588,Forward,England,False,Premier League,<20,True,True,False
+Bradley Johnson,England,fallback_lastname_season,Top 1-15,8.1,2.2082744135228043,4.1,4.0,74.0,0.05405405405405406,Midfielder,England,True,Championship,27-29,False,True,False
+,Spain,fallback_team_from,Top 1-15,8.0,2.1972245773362196,-7.0,15.0,79.0,0.189873417721519,Midfielder,Spain,True,LaLiga,27-29,False,True,True
+,Spain,fallback_team_from,Top 1-15,8.0,2.1972245773362196,-7.0,15.0,61.0,0.2459016393442623,Midfielder,Spain,True,LaLiga,27-29,False,True,False
+Thorgan Hazard,Belgium,fallback_team_from,Top 1-15,8.0,2.1972245773362196,-2.0,10.0,90.0,0.1111111111111111,Winger,Germany,False,1.Bundesliga,20-23,False,True,True
+Fernando,Brazil,fallback_lastname_season,Top 1-15,8.0,2.1972245773362196,-1.0,9.0,84.0,0.10714285714285714,Midfielder,Italy,False,Serie A,20-23,False,True,True
+Luiz Adriano,Brazil,fallback_lastname_season,Top 1-15,8.0,2.1972245773362196,-0.5,8.5,77.0,0.11038961038961038,Forward,Italy,False,Serie A,27-29,True,True,True
+Jeison Murillo,Colombia,fallback_team_from,Top 1-15,8.0,2.1972245773362196,0.0,8.0,78.0,0.10256410256410256,Defender,Italy,False,Serie A,20-23,True,True,False
+,Spain,fallback_team_from,Top 1-15,8.0,2.1972245773362196,0.5,7.5,74.0,0.10135135135135136,Winger,Spain,True,LaLiga,<20,True,True,False
+Steven Nzonzi,,unresolved,Outside Top 45,8.0,2.1972245773362196,0.5,7.5,79.0,0.0949367088607595,Midfielder,Spain,,LaLiga,24-26,True,True,False
+,Argentina,fallback_team_from,Top 1-15,8.0,2.1972245773362196,1.0,7.0,79.0,0.08860759493670886,Midfielder,Spain,False,LaLiga,20-23,True,True,False
+Joselu,Spain,fallback_team_from,Top 1-15,8.0,2.1972245773362196,2.0,6.0,78.0,0.07692307692307693,Forward,England,False,Premier League,24-26,False,True,False
+Admir Mehmedi,Switzerland,fallback_team_from,Top 1-15,8.0,2.1972245773362196,2.0,6.0,80.0,0.075,Forward,Germany,False,1.Bundesliga,20-23,False,True,True
+Davie Selke,Germany,fallback_lastname_season,Top 1-15,8.0,2.1972245773362196,3.0,5.0,77.0,0.06493506493506493,Forward,Germany,True,2.Bundesliga,<20,False,False,False
+Alberto Grassi,Italy,fallback_team_from,Top 1-15,8.0,2.1972245773362196,6.0,2.0,71.0,0.028169014084507043,Midfielder,Italy,True,Serie A,<20,False,True,False
+Rolando Mandragora,Italy,fallback_team_from,Top 1-15,8.0,2.1972245773362196,6.0,2.0,75.0,0.02666666666666667,Midfielder,Italy,True,Serie A,<20,True,True,False
+Stewart Downing,England,fallback_lastname_season,Top 1-15,7.9,2.186051276738094,1.9000000000000004,6.0,77.0,0.07792207792207792,Midfielder,England,True,Championship,30+,False,True,True
+Simon Kjær,Denmark,fallback_team_from,Top 16-30,7.65,2.157559320943788,-0.34999999999999964,8.0,81.0,0.09876543209876543,Defender,,,Süper Lig,24-26,False,False,True
+Lucas Ocampos,Argentina,fallback_lastname_season,Top 1-15,7.5,2.1400661634962708,1.0,6.5,80.0,0.08125,Winger,France,False,Ligue 1,<20,False,True,False
+,Mexico,fallback_lastname_season,Top 1-15,7.3,2.1162555148025524,4.3,3.0,75.0,0.04,Midfielder,Mexico,True,Liga MX Clausura,24-26,False,False,False
+Jonathas,Brazil,fallback_team_from,Top 1-15,7.2,2.1041341542702074,1.2000000000000002,6.0,76.0,0.07894736842105263,Forward,Spain,False,LaLiga,24-26,False,True,False
+Patrick Roberts,England,fallback_team_from,Top 1-15,7.2,2.1041341542702074,4.7,2.5,83.0,0.030120481927710843,Winger,England,True,Premier League,<20,True,True,False
+Lima,Brazil,fallback_lastname_season,Top 1-15,7.0,2.0794415416798357,-1.0,8.0,78.0,0.10256410256410256,Forward,United Arab Emirates,False,UAE Gulf League,30+,False,False,True
+Iago Falque,Spain,fallback_team_from,Top 1-15,7.0,2.0794415416798357,-1.0,8.0,77.0,0.1038961038961039,Winger,Italy,False,Serie A,24-26,True,True,False
+Gökhan Inler,Switzerland,fallback_lastname_season,Top 1-15,7.0,2.0794415416798357,-0.5,7.5,79.0,0.0949367088607595,Midfielder,England,False,Premier League,30+,True,True,True
+Jefferson Farfán,Peru,fallback_team_from,Top 16-30,7.0,2.0794415416798357,0.0,7.0,83.0,0.08433734939759036,Winger,United Arab Emirates,False,UAE Gulf League,27-29,False,False,True
+,Spain,fallback_team_from,Top 1-15,7.0,2.0794415416798357,0.0,7.0,75.0,0.09333333333333334,Winger,England,False,Premier League,20-23,False,True,False
+Mathew Ryan,Australia,fallback_lastname_season,Outside Top 45,7.0,2.0794415416798357,0.0,7.0,79.0,0.08860759493670886,Goalkeeper,Spain,False,LaLiga,20-23,True,True,False
+Vlad Chiriches,Romania,fallback_lastname_season,Outside Top 45,7.0,2.0794415416798357,1.0,6.0,80.0,0.075,Defender,Italy,False,Serie A,24-26,False,True,True
+Grégoire Defrel,France,fallback_lastname_season,Top 1-15,7.0,2.0794415416798357,1.0,6.0,71.0,0.08450704225352113,Forward,Italy,False,Serie A,20-23,False,True,False
+Yohan Benalouane,Tunisia,fallback_team_from,Outside Top 45,7.0,2.0794415416798357,5.7,1.3,76.0,0.017105263157894738,Defender,England,False,Premier League,27-29,True,True,False
+Naif Hazazi,Saudi Arabia,fallback_lastname_season,Outside Top 45,6.8,2.0541237336955462,5.8,1.0,74.0,0.013513513513513514,Forward,Saudi Arabia,True,Professional League,24-26,False,False,False
+Tom Ince,England,fallback_team_from,Top 1-15,6.7,2.0412203288596382,0.20000000000000018,6.5,79.0,0.08227848101265822,Winger,England,True,Championship,20-23,False,True,False
+Éder,Portugal,fallback_lastname_season,Top 1-15,6.7,2.0412203288596382,0.7000000000000002,6.0,80.0,0.075,Forward,England,False,Premier League,24-26,False,True,True
+Carlos Tévez,Argentina,fallback_team_from,Top 1-15,6.5,2.0149030205422647,-16.5,23.0,85.0,0.27058823529411763,Forward,,,Primera División,30+,False,False,True
+Robin van Persie,Netherlands,fallback_lastname_season,Top 1-15,6.5,2.0149030205422647,-8.5,15.0,88.0,0.17045454545454544,Forward,,,Süper Lig,30+,False,False,True
+Zé Luís,Brazil,fallback_lastname_season,Top 1-15,6.5,2.0149030205422647,3.0,3.5,77.0,0.045454545454545456,Forward,Ukraine,False,Premier Liga,20-23,False,True,False
+Steven Berghuis,Netherlands,fallback_team_from,Top 1-15,6.5,2.0149030205422647,3.0,3.5,76.0,0.046052631578947366,Winger,England,False,Premier League,20-23,True,True,False
+Lamine Koné,Ivory Coast,fallback_team_from,Top 16-30,6.5,2.0149030205422647,4.0,2.5,75.0,0.03333333333333333,Defender,England,False,Premier League,24-26,False,True,False
+Giovani dos Santos,Mexico,fallback_team_from,Top 1-15,6.35,1.9947003132247452,-2.6500000000000004,9.0,84.0,0.10714285714285714,Forward,United States,False,MLS,24-26,False,False,True
+Giovani dos Santos,Mexico,fallback_team_from,Top 1-15,6.35,1.9947003132247452,-2.6500000000000004,9.0,82.0,0.10975609756097561,Forward,United States,False,MLS,24-26,False,False,True
+Mathieu Valbuena,France,fallback_team_from,Top 1-15,6.0,1.9459101490553132,-5.5,11.5,81.0,0.1419753086419753,Winger,France,True,Ligue 1,27-29,False,True,True
+Ivelin Popov,Bulgaria,fallback_team_from,Outside Top 45,6.0,1.9459101490553132,-3.5,9.5,80.0,0.11875,Midfielder,Ukraine,False,Premier Liga,24-26,False,True,True
+Franco Di Santo,Argentina,fallback_lastname_season,Top 1-15,6.0,1.9459101490553132,-2.5,8.5,79.0,0.10759493670886076,Forward,Germany,False,1.Bundesliga,24-26,False,True,False
+Aaron Lennon,England,fallback_lastname_season,Top 1-15,6.0,1.9459101490553132,-2.5,8.5,79.0,0.10759493670886076,Winger,England,True,Premier League,27-29,True,True,True
+Pedro Obiang,Spain,fallback_team_from,Top 1-15,6.0,1.9459101490553132,-2.0,8.0,83.0,0.0963855421686747,Midfielder,England,False,Premier League,20-23,True,True,False
+Kiko Casilla,Spain,fallback_lastname_season,Top 1-15,6.0,1.9459101490553132,-1.5,7.5,83.0,0.09036144578313253,Goalkeeper,Spain,True,LaLiga,27-29,False,True,True
+,Austria,fallback_team_from,Top 31-45,6.0,1.9459101490553132,-1.5,7.5,76.0,0.09868421052631579,Defender,England,False,Premier League,20-23,False,True,False
+Nemanja Gudelj,Serbia,fallback_team_from,Top 1-15,6.0,1.9459101490553132,0.0,6.0,77.0,0.07792207792207792,Midfielder,Netherlands,False,Eredivisie,20-23,False,True,False
+Claudio Beauvue,France,fallback_lastname_season,Top 1-15,6.0,1.9459101490553132,1.0,5.0,72.0,0.06944444444444445,Forward,France,True,Ligue 1,24-26,False,True,False
+,Ghana,fallback_lastname_season,Top 16-30,6.0,1.9459101490553132,2.0,4.0,81.0,0.04938271604938271,Midfielder,Spain,False,LaLiga,<20,True,True,False
+Daniele Baselli,Italy,fallback_team_from,Top 1-15,6.0,1.9459101490553132,2.2,3.8,83.0,0.04578313253012048,Midfielder,Italy,True,Serie A,20-23,False,True,False
+David Nugent,England,fallback_lastname_season,Top 1-15,5.6,1.8870696490323797,3.5999999999999996,2.0,71.0,0.028169014084507043,Forward,England,True,Championship,27-29,False,True,False
+Ezequiel Lavezzi,Argentina,fallback_lastname_season,Top 1-15,5.5,1.8718021769015913,-3.5,9.0,82.0,0.10975609756097561,Forward,China,False,Super League,27-29,False,True,True
+Paul Pogba,France,fallback_team_from,Top 1-15,105.0,4.663439094112067,35.0,70.0,92.0,0.7608695652173914,Midfielder,England,False,Premier League,20-23,True,True,True
+Gonzalo Higuaín,Argentina,fallback_lastname_season,Top 1-15,90.0,4.51085950651685,25.0,65.0,86.0,0.7558139534883721,Forward,Italy,False,Serie A,27-29,True,True,True
+Oscar,Brazil,fallback_team_from,Top 1-15,60.0,4.110873864173311,25.0,35.0,88.0,0.3977272727272727,Midfielder,China,False,Super League,24-26,False,True,True
+Hulk,Brazil,fallback_lastname_season,Top 1-15,55.8,4.039536325727106,23.799999999999997,32.0,84.0,0.38095238095238093,Winger,China,False,Super League,27-29,False,True,True
+John Stones,England,fallback_team_from,Top 1-15,55.6,4.036008985209137,27.6,28.0,87.0,0.3218390804597701,Defender,England,True,Premier League,20-23,True,True,True
+Leroy Sané,Germany,fallback_team_from,Top 1-15,50.5,3.9415818076696905,20.5,30.0,80.0,0.375,Winger,England,False,Premier League,<20,True,True,True
+Leroy Sané,Germany,fallback_team_from,Top 1-15,50.5,3.9415818076696905,20.5,30.0,83.0,0.3614457831325301,Winger,England,False,Premier League,<20,True,True,False
+Henrikh Mkhitaryan,Armenia,fallback_lastname_season,Outside Top 45,42.0,3.7612001156935624,12.0,30.0,83.0,0.3614457831325301,Midfielder,England,False,Premier League,24-26,True,True,True
+Sadio Mané,Senegal,fallback_team_from,Top 16-30,41.2,3.742420221041966,21.200000000000003,20.0,84.0,0.23809523809523808,Winger,England,False,Premier League,20-23,True,True,True
+Shkodran Mustafi,Germany,fallback_team_from,Top 1-15,41.0,3.7376696182833684,21.0,20.0,87.0,0.22988505747126436,Defender,England,False,Premier League,20-23,False,True,True
+João Mário,Portugal,fallback_team_from,Top 1-15,40.0,3.713572066704308,10.0,30.0,85.0,0.35294117647058826,Midfielder,Italy,False,Serie A,20-23,True,True,True
+Michy Batshuayi,Belgium,fallback_lastname_season,Top 1-15,39.0,3.6888794541139363,24.0,15.0,83.0,0.18072289156626506,Forward,England,False,Premier League,20-23,True,True,True
+Eric Bailly,Ivory Coast,fallback_team_from,Top 16-30,38.0,3.6635616461296463,30.0,8.0,83.0,0.0963855421686747,Defender,England,False,Premier League,20-23,True,True,False
+André Gomes,Portugal,fallback_team_from,Top 1-15,37.0,3.6375861597263857,7.0,30.0,87.0,0.3448275862068966,Midfielder,Spain,False,LaLiga,20-23,False,True,True
+N'Golo Kanté,France,fallback_lastname_season,Top 1-15,35.8,3.6054978451748854,15.799999999999997,20.0,82.0,0.24390243902439024,Midfielder,England,False,Premier League,24-26,True,True,True
+Mats Hummels,Germany,fallback_lastname_season,Top 1-15,35.0,3.58351893845611,3.0,32.0,88.0,0.36363636363636365,Defender,Germany,True,1.Bundesliga,24-26,False,True,True
+David Luiz,Brazil,fallback_lastname_season,Top 1-15,35.0,3.58351893845611,7.0,28.0,84.0,0.3333333333333333,Defender,England,False,Premier League,27-29,True,True,True
+Moussa Sissoko,France,fallback_lastname_season,Top 1-15,35.0,3.58351893845611,22.0,13.0,82.0,0.15853658536585366,Midfielder,England,False,Premier League,24-26,False,True,True
+Miralem Pjanic,Bosnia Herzegovina,fallback_lastname_season,Top 31-45,32.0,3.4965075614664802,-3.0,35.0,86.0,0.4069767441860465,Midfielder,Italy,False,Serie A,24-26,True,True,True
+Arkadiusz Milik,Poland,fallback_lastname_season,Top 16-30,32.0,3.4965075614664802,20.0,12.0,84.0,0.14285714285714285,Forward,Italy,False,Serie A,20-23,False,True,True
+Christian Benteke,Belgium,fallback_team_from,Top 1-15,31.2,3.4719664525503626,4.199999999999999,27.0,86.0,0.313953488372093,Forward,England,False,Premier League,24-26,False,True,True
+Islam Slimani,Algeria,fallback_team_from,Top 16-30,30.5,3.449987545831587,8.5,22.0,80.0,0.275,Forward,England,False,Premier League,27-29,True,True,True
+Álvaro Morata,Spain,fallback_team_from,Top 1-15,30.0,3.4339872044851463,0.0,30.0,88.0,0.3409090909090909,Forward,Spain,True,LaLiga,20-23,False,True,True
+Paco Alcácer,Spain,fallback_team_from,Top 1-15,30.0,3.4339872044851463,5.0,25.0,88.0,0.2840909090909091,Forward,Spain,True,LaLiga,20-23,False,True,True
+,France,fallback_team_from,Top 1-15,30.0,3.4339872044851463,10.0,20.0,79.0,0.25316455696202533,Forward,Spain,False,LaLiga,27-29,True,True,True
+André Schürrle,Germany,fallback_team_from,Top 1-15,30.0,3.4339872044851463,12.0,18.0,83.0,0.21686746987951808,Winger,Germany,True,1.Bundesliga,24-26,False,True,True
+Gonçalo Guedes,Portugal,fallback_lastname_season,Top 1-15,30.0,3.4339872044851463,21.0,9.0,88.0,0.10227272727272728,Winger,France,False,Ligue 1,<20,True,True,False
+Dimitri Payet,France,fallback_lastname_season,Top 1-15,29.3,3.4111477125153233,-0.6999999999999993,30.0,81.0,0.37037037037037035,Midfielder,France,True,Ligue 1,27-29,False,True,True
+Yannick Bolasie,DR Congo,fallback_team_from,Top 16-30,28.9,3.3978584803966405,14.899999999999999,14.0,78.0,0.1794871794871795,Winger,England,False,Premier League,24-26,True,True,True
+Grzegorz Krychowiak,Poland,fallback_team_from,Top 16-30,27.5,3.349904087274605,-2.5,30.0,86.0,0.3488372093023256,Midfielder,France,False,Ligue 1,24-26,True,True,True
+Georginio Wijnaldum,Netherlands,fallback_lastname_season,Top 1-15,27.5,3.349904087274605,7.5,20.0,84.0,0.23809523809523808,Midfielder,England,False,Premier League,24-26,True,True,True
+Ilkay Gündogan,Germany,fallback_lastname_season,Top 1-15,27.0,3.332204510175204,-3.0,30.0,86.0,0.3488372093023256,Midfielder,England,False,Premier League,24-26,True,True,True
+,Argentina,fallback_lastname_season,Top 1-15,25.0,3.258096538021482,-5.0,30.0,84.0,0.35714285714285715,Winger,Spain,False,LaLiga,27-29,True,True,True
+Samuel Umtiti,France,fallback_lastname_season,Top 1-15,25.0,3.258096538021482,10.0,15.0,85.0,0.17647058823529413,Defender,Spain,False,LaLiga,20-23,False,True,True
+Jesé,Spain,fallback_team_from,Top 1-15,25.0,3.258096538021482,11.0,14.0,85.0,0.16470588235294117,Winger,France,False,Ligue 1,20-23,True,True,True
+André Ayew,Ghana,fallback_lastname_season,Top 16-30,24.1,3.2228678461377385,6.100000000000001,18.0,82.0,0.21951219512195122,Winger,England,False,Premier League,24-26,True,True,True
+Ezequiel Garay,Argentina,fallback_lastname_season,Top 1-15,24.0,3.2188758248682006,4.0,20.0,84.0,0.23809523809523808,Defender,Spain,False,LaLiga,27-29,True,True,True
+Odion Ighalo,Nigeria,fallback_team_from,Top 16-30,23.3,3.190476350346503,11.3,12.0,75.0,0.16,Forward,China,False,Super League,24-26,False,True,False
+Marcos Alonso,Spain,fallback_team_from,Top 1-15,23.0,3.1780538303479458,14.0,9.0,78.0,0.11538461538461539,Defender,England,False,Premier League,24-26,True,True,False
+Morgan Schneiderlin,France,fallback_lastname_season,Top 1-15,22.9,3.173878458937465,-5.100000000000001,28.0,85.0,0.32941176470588235,Midfielder,England,False,Premier League,24-26,True,True,True
+Breel Embolo,Switzerland,fallback_lastname_season,Top 1-15,22.5,3.1570004211501135,2.5,20.0,88.0,0.22727272727272727,Forward,Germany,False,1.Bundesliga,<20,False,True,True
+Vincent Janssen,Netherlands,fallback_team_from,Top 1-15,22.1,3.139832617527748,16.1,6.0,75.0,0.08,Forward,England,False,Premier League,20-23,False,True,False
+Antonio Candreva,Italy,fallback_team_from,Top 1-15,22.0,3.1354942159291497,-1.0,23.0,83.0,0.27710843373493976,Winger,Italy,True,Serie A,27-29,True,True,True
+Axel Witsel,Belgium,fallback_lastname_season,Top 1-15,20.0,3.044522437723423,0.0,20.0,84.0,0.23809523809523808,Midfielder,China,False,Super League,24-26,False,True,True
+Kevin Volland,Germany,fallback_lastname_season,Top 1-15,20.0,3.044522437723423,3.0,17.0,85.0,0.2,Forward,Germany,True,1.Bundesliga,20-23,False,True,True
+Didier Ndong,Gabon,fallback_team_from,Top 31-45,20.0,3.044522437723423,15.0,5.0,74.0,0.06756756756756757,Midfielder,England,False,Premier League,20-23,False,True,False
+Ahmed Musa,Nigeria,fallback_lastname_season,Top 16-30,19.5,3.0204248861443626,1.5,18.0,82.0,0.21951219512195122,Forward,England,False,Premier League,20-23,True,True,True
+Sofiane Boufal,Morocco,fallback_team_from,Top 31-45,18.7,2.9806186357439426,5.699999999999999,13.0,85.0,0.15294117647058825,Midfielder,England,False,Premier League,20-23,False,True,True
+Joaquín Correa,Argentina,fallback_team_from,Top 1-15,18.2,2.954910279033736,11.7,6.5,79.0,0.08227848101265822,Winger,Spain,False,LaLiga,20-23,True,True,False
+Claudio Bravo,Chile,fallback_team_from,Top 16-30,18.0,2.9444389791664403,3.0,15.0,83.0,0.18072289156626506,Goalkeeper,England,False,Premier League,30+,True,True,True
+Nolito,Spain,fallback_lastname_season,Top 1-15,18.0,2.9444389791664403,3.0,15.0,82.0,0.18292682926829268,Winger,England,False,Premier League,27-29,True,True,True
+Leonardo Pavoletti,Italy,fallback_team_from,Top 1-15,18.0,2.9444389791664403,5.0,13.0,74.0,0.17567567567567569,Forward,Italy,True,Serie A,27-29,False,True,False
+Jordon Ibe,England,fallback_team_from,Top 1-15,18.0,2.9444389791664403,11.0,7.0,81.0,0.08641975308641975,Winger,England,True,Premier League,<20,False,True,False
+Wilfred Ndidi,Nigeria,fallback_team_from,Top 16-30,17.6,2.9231615807191558,9.600000000000001,8.0,76.0,0.10526315789473684,Midfielder,England,False,Premier League,<20,True,True,False
+Manolo Gabbiadini,Italy,fallback_lastname_season,Top 1-15,17.0,2.8903717578961645,2.0,15.0,84.0,0.17857142857142858,Forward,England,False,Premier League,24-26,False,True,True
+Franco Vázquez,Italy,fallback_lastname_season,Top 1-15,16.8,2.8791984572980396,1.8000000000000007,15.0,82.0,0.18292682926829268,Midfielder,Spain,False,LaLiga,24-26,True,True,True
+Memphis Depay,Netherlands,fallback_lastname_season,Top 1-15,16.0,2.833213344056216,-9.0,25.0,89.0,0.2808988764044944,Winger,France,False,Ligue 1,20-23,False,True,True
+,Croatia,fallback_team_from,Top 16-30,16.0,2.833213344056216,3.0,13.0,81.0,0.16049382716049382,Defender,Spain,False,LaLiga,20-23,True,True,False
+Joe Allen,Wales,fallback_team_from,Top 16-30,15.5,2.803360380906535,7.5,8.0,80.0,0.1,Midfielder,England,False,Premier League,24-26,False,True,True
+Nampalys Mendy,France,fallback_team_from,Top 1-15,15.5,2.803360380906535,8.0,7.5,81.0,0.09259259259259259,Midfielder,England,False,Premier League,20-23,True,True,False
+Nampalys Mendy,France,fallback_team_from,Top 1-15,15.5,2.803360380906535,8.0,7.5,71.0,0.1056338028169014,Midfielder,England,False,Premier League,20-23,True,True,False
+Ryan Mason,England,fallback_lastname_season,Top 1-15,15.4,2.797281334830153,7.9,7.5,80.0,0.09375,Midfielder,England,True,Premier League,24-26,False,True,False
+Graziano Pellè,Italy,fallback_team_from,Top 1-15,15.25,2.7880929087757464,4.25,11.0,77.0,0.14285714285714285,Forward,China,False,Super League,30+,False,True,True
+Nacer Chadli,Belgium,fallback_lastname_season,Top 1-15,15.2,2.785011242238338,2.1999999999999993,13.0,82.0,0.15853658536585366,Winger,England,False,Premier League,24-26,False,True,True
+Oliver Burke,Scotland,fallback_lastname_season,Top 1-15,15.2,2.785011242238338,14.95,0.25,71.0,0.0035211267605633804,Winger,Germany,False,1.Bundesliga,<20,False,True,False
+Oliver Burke,Scotland,fallback_lastname_season,Top 1-15,15.2,2.785011242238338,14.95,0.25,78.0,0.003205128205128205,Winger,Germany,False,1.Bundesliga,<20,False,True,False
+Robbie Brady,Republic of Ireland,fallback_lastname_season,Top 16-30,15.1,2.7788192719904172,7.1,8.0,76.0,0.10526315789473684,Midfielder,England,False,Premier League,24-26,False,True,False
+Luka Milivojevic,Serbia,fallback_lastname_season,Top 1-15,15.1,2.7788192719904172,7.1,8.0,77.0,0.1038961038961039,Midfielder,England,False,Premier League,24-26,False,True,False
+Christoph Kramer,Germany,fallback_lastname_season,Top 1-15,15.0,2.772588722239781,3.0,12.0,84.0,0.14285714285714285,Midfielder,Germany,True,1.Bundesliga,24-26,False,True,True
+Djibril Sidibé,France,fallback_team_from,Top 1-15,15.0,2.772588722239781,11.0,4.0,80.0,0.05,Defender,France,True,Ligue 1,20-23,True,True,False
+Isaac Success,Nigeria,fallback_team_from,Top 16-30,15.0,2.772588722239781,12.0,3.0,82.0,0.036585365853658534,Winger,England,False,Premier League,<20,True,True,False
+Rodolfo Pizarro,Chile,fallback_lastname_season,Top 16-30,14.75,2.7568403652716422,9.75,5.0,75.0,0.06666666666666667,Midfielder,Mexico,False,Liga MX Clausura,20-23,False,False,False
+Amadou Diawara,Guinea,fallback_team_from,Top 31-45,14.5,2.740840023925201,3.5,11.0,72.0,0.1527777777777778,Midfielder,Italy,False,Serie A,<20,False,True,False
+Victor Wanyama,Kenya,fallback_team_from,Outside Top 45,14.4,2.7343675094195836,-0.5999999999999996,15.0,81.0,0.18518518518518517,Midfielder,England,False,Premier League,24-26,False,True,True
+Ross McCormack,Scotland,fallback_team_from,Top 1-15,14.3,2.72785282839839,6.300000000000001,8.0,74.0,0.10810810810810811,Forward,England,False,Championship,27-29,False,True,False
+Filip Kostic,Serbia,fallback_team_from,Top 1-15,14.0,2.70805020110221,4.0,10.0,83.0,0.12048192771084337,Winger,Germany,False,1.Bundesliga,20-23,False,True,True
+Ashley Williams,Wales,fallback_lastname_season,Top 16-30,14.0,2.70805020110221,6.0,8.0,81.0,0.09876543209876543,Defender,England,False,Premier League,30+,True,True,True
+Timo Werner,Germany,fallback_team_from,Top 1-15,14.0,2.70805020110221,6.0,8.0,84.0,0.09523809523809523,Forward,Germany,True,1.Bundesliga,<20,False,True,False
+Saido Berahino,England,fallback_lastname_season,Top 1-15,13.9,2.7013612129514133,-1.0999999999999996,15.0,85.0,0.17647058823529413,Forward,England,True,Premier League,20-23,False,True,True
+Jeffrey Schlupp,Ghana,fallback_lastname_season,Top 16-30,13.8,2.6946271807700692,5.800000000000001,8.0,79.0,0.10126582278481013,Defender,England,False,Premier League,20-23,False,True,False
+Roberto Soriano,Italy,fallback_team_from,Top 1-15,13.75,2.691243082785829,-0.25,14.0,81.0,0.1728395061728395,Winger,Spain,False,LaLiga,24-26,True,True,False
+Leon Bailey,Jamaica,fallback_team_from,Outside Top 45,13.5,2.6741486494265287,1.0,12.5,81.0,0.15432098765432098,Winger,Germany,False,1.Bundesliga,<20,False,True,False
+Nathan Redmond,England,fallback_lastname_season,Top 1-15,13.5,2.6741486494265287,6.0,7.5,82.0,0.09146341463414634,Winger,England,True,Premier League,20-23,False,True,False
+Roberto Pereyra,Argentina,fallback_team_from,Top 1-15,13.0,2.6390573296152584,-3.0,16.0,86.0,0.18604651162790697,Midfielder,England,False,Premier League,24-26,True,True,True
+Nicola Sansone,Italy,fallback_team_from,Top 1-15,13.0,2.6390573296152584,1.0,12.0,81.0,0.14814814814814814,Winger,Spain,False,LaLiga,20-23,True,True,False
+Jasper Cillessen,Netherlands,fallback_lastname_season,Top 1-15,13.0,2.6390573296152584,1.0,12.0,85.0,0.1411764705882353,Goalkeeper,Spain,False,LaLiga,24-26,False,True,True
+Benjamin Mendy,France,fallback_lastname_season,Top 1-15,13.0,2.6390573296152584,6.5,6.5,80.0,0.08125,Defender,France,True,Ligue 1,20-23,True,True,True
+,Germany,fallback_team_from,Top 1-15,13.0,2.6390573296152584,8.5,4.5,81.0,0.05555555555555555,Defender,Germany,True,1.Bundesliga,20-23,True,True,False
+Jonathan Kodjia,France,fallback_team_from,Top 1-15,12.9,2.631888840136646,10.4,2.5,75.0,0.03333333333333333,Forward,England,False,Championship,24-26,False,True,False
+Fernando,Brazil,fallback_team_from,Top 1-15,12.5,2.6026896854443837,1.5,11.0,82.0,0.13414634146341464,Midfielder,Ukraine,False,Premier Liga,20-23,False,True,True
+Yunus Malli,Germany,fallback_lastname_season,Top 1-15,12.5,2.6026896854443837,2.5,10.0,80.0,0.125,Midfielder,Germany,True,1.Bundesliga,20-23,True,True,False
+Jannik Vestergaard,Denmark,fallback_lastname_season,Top 16-30,12.5,2.6026896854443837,5.5,7.0,81.0,0.08641975308641975,Defender,Germany,False,1.Bundesliga,20-23,False,True,True
+Riechedly Bazoer,Netherlands,fallback_lastname_season,Top 1-15,12.0,2.5649493574615367,-3.0,15.0,88.0,0.17045454545454544,Midfielder,Germany,False,1.Bundesliga,<20,True,True,False
+Raphaël Guerreiro,Portugal,fallback_team_from,Top 1-15,12.0,2.5649493574615367,3.0,9.0,84.0,0.10714285714285714,Defender,Germany,False,1.Bundesliga,20-23,False,True,True
+,Brazil,fallback_team_from,Top 1-15,12.0,2.5649493574615367,4.0,8.0,83.0,0.0963855421686747,Defender,,,Série A,24-26,False,False,True
+Matt Ritchie,Scotland,fallback_team_from,Top 1-15,12.0,2.5649493574615367,6.0,6.0,78.0,0.07692307692307693,Midfielder,England,False,Championship,24-26,True,True,False
+Robert Snodgrass,Scotland,fallback_team_from,Top 1-15,12.0,2.5649493574615367,7.0,5.0,75.0,0.06666666666666667,Winger,England,False,Premier League,27-29,True,True,False
+Dwight Gayle,England,fallback_team_from,Top 1-15,12.0,2.5649493574615367,9.0,3.0,75.0,0.04,Forward,England,True,Championship,24-26,True,True,False
+Bas Dost,Netherlands,fallback_team_from,Top 1-15,11.85,2.553343811341229,4.35,7.5,80.0,0.09375,Forward,Portugal,False,Liga NOS,24-26,False,True,True
+Jeff Hendrick,Republic of Ireland,fallback_lastname_season,Top 16-30,11.8,2.5494451709255714,10.3,1.5,76.0,0.019736842105263157,Midfielder,England,False,Premier League,20-23,False,True,False
+James Tomkins,England,fallback_lastname_season,Top 1-15,11.7,2.5416019934645457,5.699999999999999,6.0,74.0,0.08108108108108109,Defender,England,True,Premier League,24-26,False,True,False
+Jeffrey Bruma,Netherlands,fallback_lastname_season,Top 1-15,11.5,2.5257286443082556,3.75,7.75,81.0,0.09567901234567901,Defender,Germany,False,1.Bundesliga,20-23,True,True,True
+Anthony Ujah,Nigeria,fallback_lastname_season,Top 16-30,11.5,2.5257286443082556,6.0,5.5,79.0,0.06962025316455696,Forward,China,False,Super League,24-26,False,True,True
+Jake Livermore,England,fallback_team_from,Top 1-15,11.5,2.5257286443082556,7.0,4.5,77.0,0.05844155844155844,Midfielder,England,True,Premier League,24-26,False,True,False
+Hakim Ziyech,Netherlands,fallback_team_from,Top 1-15,11.0,2.4849066497880004,0.0,11.0,83.0,0.13253012048192772,Midfielder,Netherlands,True,Eredivisie,20-23,False,True,True
+Kamil Glik,Poland,fallback_team_from,Top 16-30,11.0,2.4849066497880004,1.0,10.0,84.0,0.11904761904761904,Defender,France,False,Ligue 1,27-29,True,True,True
+Andrej Kramaric,Croatia,fallback_lastname_season,Top 16-30,11.0,2.4849066497880004,6.0,5.0,77.0,0.06493506493506493,Forward,Germany,False,1.Bundesliga,24-26,False,True,False
+Carlos Tévez,Argentina,fallback_team_from,Top 1-15,10.5,2.4423470353692043,2.0,8.5,86.0,0.09883720930232558,Forward,China,False,Super League,30+,False,True,True
+Cristian Ansaldi,Argentina,fallback_team_from,Top 1-15,10.5,2.4423470353692043,4.5,6.0,79.0,0.0759493670886076,Defender,Italy,False,Serie A,27-29,True,True,True
+Patrick van Aanholt,Netherlands,fallback_team_from,Top 1-15,10.5,2.4423470353692043,4.5,6.0,79.0,0.0759493670886076,Defender,England,False,Premier League,24-26,False,True,False
+Marten de Roon,Netherlands,fallback_team_from,Top 1-15,10.5,2.4423470353692043,5.5,5.0,73.0,0.0684931506849315,Midfielder,England,False,Premier League,24-26,False,True,False
+Scott Hogan,England,fallback_team_from,Top 1-15,10.5,2.4423470353692043,10.0,0.5,70.0,0.007142857142857143,Forward,England,True,Championship,20-23,False,True,False
+Dennis Praet,Belgium,fallback_team_from,Top 1-15,10.0,2.3978952727983707,1.0,9.0,84.0,0.10714285714285714,Midfielder,Italy,False,Serie A,20-23,False,True,True
+Giovani Lo Celso,Argentina,fallback_lastname_season,Top 1-15,10.0,2.3978952727983707,2.5,7.5,64.0,0.1171875,Midfielder,France,False,Ligue 1,<20,True,True,False
+Lorenzo Tonelli,Italy,fallback_lastname_season,Top 1-15,10.0,2.3978952727983707,4.5,5.5,79.0,0.06962025316455696,Defender,Italy,True,Serie A,24-26,False,True,True
+Rubén Rochina,Spain,fallback_team_from,Top 1-15,10.0,2.3978952727983707,7.0,3.0,79.0,0.0379746835443038,Midfielder,Ukraine,False,Premier Liga,24-26,False,True,False
+Éder,Italy,fallback_team_from,Top 1-15,9.8,2.379546134130174,-2.1999999999999993,12.0,79.0,0.1518987341772152,Forward,Italy,True,Serie A,27-29,True,True,True
+Wissam Ben Yedder,France,fallback_lastname_season,Top 1-15,9.5,2.3513752571634776,0.5,9.0,82.0,0.10975609756097561,Forward,Spain,False,LaLiga,24-26,True,True,True
+Ciro Immobile,Italy,fallback_team_from,Top 1-15,9.45,2.34660197841082,-0.5500000000000007,10.0,82.0,0.12195121951219512,Forward,Italy,True,Serie A,24-26,False,True,True
+Alex Pritchard,England,fallback_lastname_season,Top 1-15,9.4,2.341805806147327,6.4,3.0,79.0,0.0379746835443038,Midfielder,England,True,Championship,20-23,False,True,False
+James Chester,Wales,fallback_lastname_season,Top 16-30,9.3,2.33214389523559,3.3000000000000007,6.0,74.0,0.08108108108108109,Defender,England,False,Championship,24-26,False,True,False
+José Fonte,Portugal,fallback_team_from,Top 1-15,9.2,2.322387720290225,3.1999999999999993,6.0,81.0,0.07407407407407407,Defender,England,False,Premier League,30+,True,True,True
+Morgan Sanson,France,fallback_lastname_season,Top 1-15,9.0,2.302585092994046,-1.0,10.0,80.0,0.125,Midfielder,France,True,Ligue 1,20-23,False,True,True
+Diego Perotti,Argentina,fallback_team_from,Top 1-15,9.0,2.302585092994046,-0.5,9.5,82.0,0.11585365853658537,Winger,Italy,False,Serie A,24-26,True,True,True
+Sven Kums,Belgium,fallback_team_from,Top 1-15,9.0,2.302585092994046,1.5,7.5,76.0,0.09868421052631579,Midfielder,England,False,Premier League,27-29,True,True,False
+Gianluca Lapadula,Italy,fallback_team_from,Top 1-15,9.0,2.302585092994046,2.5,6.5,70.0,0.09285714285714286,Forward,Italy,True,Serie A,24-26,True,True,False
+Kamil Grosicki,Poland,fallback_lastname_season,Top 16-30,9.0,2.302585092994046,3.0,6.0,76.0,0.07894736842105263,Winger,England,False,Premier League,27-29,False,True,False
+Daryl Janmaat,Netherlands,fallback_lastname_season,Top 1-15,8.9,2.2925347571405443,1.4000000000000004,7.5,81.0,0.09259259259259259,Defender,England,False,Premier League,24-26,True,True,True
+Steven Defour,Belgium,fallback_team_from,Top 1-15,8.6,2.2617630984737906,2.5999999999999996,6.0,78.0,0.07692307692307693,Midfielder,England,False,Premier League,27-29,False,True,True
+Nani,Portugal,fallback_lastname_season,Top 1-15,8.5,2.2512917986064953,-6.0,14.5,83.0,0.1746987951807229,Winger,Spain,False,LaLiga,27-29,True,True,True
+Idrissa Gueye,Senegal,fallback_team_from,Top 16-30,8.5,2.2512917986064953,-0.5,9.0,78.0,0.11538461538461539,Midfielder,England,False,Premier League,24-26,True,True,False
+Emanuel Mammana,Argentina,fallback_team_from,Top 1-15,8.5,2.2512917986064953,1.5,7.0,79.0,0.08860759493670886,Defender,France,False,Ligue 1,<20,False,True,False
+,Germany,fallback_lastname_season,Top 1-15,8.5,2.2512917986064953,6.75,1.75,79.0,0.022151898734177215,Defender,Italy,False,Serie A,20-23,True,True,False
+Óscar Romero,Paraguay,fallback_team_from,Top 31-45,8.4,2.2407096892759584,1.4000000000000004,7.0,78.0,0.08974358974358974,Midfielder,China,False,Super League,20-23,False,True,False
+Adama Traoré,Guinea,fallback_lastname_season,Top 31-45,8.25,2.224623551524334,0.25,8.0,83.0,0.0963855421686747,Winger,England,False,Premier League,<20,False,True,False
+Gianluca Caprari,Italy,fallback_team_from,Top 1-15,8.25,2.224623551524334,4.75,3.5,77.0,0.045454545454545456,Forward,Italy,True,Serie A,20-23,True,True,False
+Marc Bartra,Spain,fallback_team_from,Top 1-15,8.0,2.1972245773362196,-4.0,12.0,85.0,0.1411764705882353,Defender,Germany,False,1.Bundesliga,24-26,False,True,True
+Tomás Rincón,Venezuela,fallback_team_from,Top 31-45,8.0,2.1972245773362196,-1.0,9.0,77.0,0.11688311688311688,Midfielder,Italy,False,Serie A,27-29,True,True,False
+Ivan Cavaleiro,Portugal,fallback_lastname_season,Top 1-15,8.0,2.1972245773362196,0.5,7.5,83.0,0.09036144578313253,Winger,England,False,Championship,20-23,False,True,True
+Benjamin Stambouli,France,fallback_lastname_season,Top 1-15,8.0,2.1972245773362196,1.0,7.0,81.0,0.08641975308641975,Defender,Germany,False,1.Bundesliga,24-26,False,True,True
+Andy Delort,France,fallback_lastname_season,Top 1-15,8.0,2.1972245773362196,2.5,5.5,80.0,0.06875,Forward,Mexico,False,Liga MX Clausura,20-23,False,False,False
+Alfred N'Diaye,Senegal,fallback_team_from,Top 16-30,8.0,2.1972245773362196,4.5,3.5,81.0,0.043209876543209874,Midfielder,Spain,False,LaLiga,24-26,True,True,False
+Max Kruse,Germany,fallback_team_from,Top 1-15,7.5,2.1400661634962708,-0.5,8.0,83.0,0.0963855421686747,Forward,Germany,True,1.Bundesliga,27-29,False,True,True
+Timothée Kolodziejczak,France,fallback_team_from,Top 1-15,7.5,2.1400661634962708,0.5,7.0,80.0,0.0875,Defender,Germany,False,1.Bundesliga,24-26,False,True,False
+,Chile,fallback_lastname_season,Top 16-30,7.2,2.1041341542702074,2.2,5.0,71.0,0.07042253521126761,Winger,Spain,False,LaLiga,20-23,True,True,False
+,Portugal,fallback_lastname_season,Top 1-15,7.2,2.1041341542702074,4.2,3.0,83.0,0.03614457831325301,Winger,Spain,False,LaLiga,<20,True,True,False
+Rudy Gestede,Benin,fallback_team_from,Top 31-45,7.1,2.0918640616783932,0.09999999999999964,7.0,75.0,0.09333333333333334,Forward,England,False,Premier League,27-29,False,True,False
+Arthur Masuaku,France,fallback_lastname_season,Top 1-15,7.1,2.0918640616783932,0.09999999999999964,7.0,85.0,0.08235294117647059,Defender,England,False,Premier League,20-23,True,True,False
+Denis Cheryshev,Russia,fallback_team_from,Outside Top 45,7.0,2.0794415416798357,-3.0,10.0,84.0,0.11904761904761904,Winger,Spain,False,LaLiga,24-26,True,True,True
+Odil Akhmedov,Uzbekistan,fallback_lastname_season,Outside Top 45,7.0,2.0794415416798357,0.0,7.0,78.0,0.08974358974358974,Midfielder,China,False,Super League,27-29,False,True,True
+Anwar El Ghazi,Netherlands,fallback_lastname_season,Top 1-15,7.0,2.0794415416798357,0.5,6.5,85.0,0.07647058823529412,Winger,France,False,Ligue 1,20-23,False,True,True
+Jonathas,Brazil,fallback_team_from,Top 1-15,7.0,2.0794415416798357,1.0,6.0,83.0,0.07228915662650602,Forward,Ukraine,False,Premier Liga,24-26,False,True,True
+Lewis Cook,England,fallback_team_to,Top 1-15,7.0,2.0794415416798357,3.0,4.0,81.0,0.04938271604938271,Midfielder,England,True,Premier League,<20,False,True,False
+Harold Preciado,Colombia,fallback_team_from,Top 1-15,7.0,2.0794415416798357,5.85,1.15,81.0,0.01419753086419753,Forward,England,False,League One,20-23,False,False,False
+Christian Kabasele,Belgium,fallback_team_from,Top 1-15,6.95,2.0731719286662407,0.9500000000000002,6.0,76.0,0.07894736842105263,Defender,England,False,Premier League,24-26,True,True,False
+Matz Sels,Belgium,fallback_team_from,Top 1-15,6.6,2.028148247292285,0.09999999999999964,6.5,78.0,0.08333333333333333,Goalkeeper,England,False,Championship,20-23,True,True,False
+,Argentina,fallback_lastname_season,Top 1-15,6.6,2.028148247292285,3.5999999999999996,3.0,75.0,0.04,Forward,Mexico,False,Liga MX Clausura,24-26,False,False,False
+Grant Hanley,Scotland,fallback_lastname_season,Top 1-15,6.6,2.028148247292285,4.1,2.5,76.0,0.03289473684210526,Defender,England,False,Championship,20-23,True,True,False
+Hiroshi Kiyotake,Japan,fallback_team_from,Top 31-45,6.5,2.0149030205422647,2.0,4.5,78.0,0.057692307692307696,Midfielder,Spain,False,LaLiga,24-26,True,True,True
+Willy Boly,France,fallback_lastname_season,Top 1-15,6.5,2.0149030205422647,3.75,2.75,76.0,0.03618421052631579,Defender,Portugal,False,Liga NOS,24-26,False,True,False
+Lys Mousset,France,fallback_lastname_season,Top 1-15,6.5,2.0149030205422647,6.1,0.4,69.0,0.005797101449275362,Forward,England,False,Premier League,<20,False,True,False
+Edimilson Fernandes,Switzerland,fallback_team_from,Top 1-15,6.4,2.0014800002101243,1.9000000000000004,4.5,82.0,0.054878048780487805,Midfielder,England,False,Premier League,<20,True,True,False
+Loris Karius,Germany,fallback_lastname_season,Top 1-15,6.2,1.9740810260220096,-0.7999999999999998,7.0,84.0,0.08333333333333333,Goalkeeper,England,False,Premier League,20-23,True,True,True
+Neymar,Brazil,fallback_team_from,Top 1-15,222.0,5.407171771460119,122.0,100.0,95.0,1.0526315789473684,Winger,France,False,Ligue 1,24-26,True,True,True
+Philippe Coutinho,Brazil,fallback_team_from,Top 1-15,125.0,4.836281906951478,35.0,90.0,89.0,1.0112359550561798,Midfielder,Spain,False,LaLiga,24-26,False,True,True
+Ousmane Dembélé,Belgium,fallback_lastname_season,Top 1-15,115.0,4.7535901911063645,82.0,33.0,90.0,0.36666666666666664,Winger,Spain,False,LaLiga,<20,False,True,True
+Romelu Lukaku,Belgium,fallback_team_from,Top 1-15,84.7,4.450852825603734,34.7,50.0,90.0,0.5555555555555556,Forward,England,False,Premier League,20-23,True,True,True
+Virgil van Dijk,Netherlands,fallback_team_from,Top 1-15,78.8,4.379523504455763,48.8,30.0,84.0,0.35714285714285715,Defender,England,False,Premier League,24-26,True,True,True
+,Spain,fallback_team_from,Top 1-15,66.0,4.204692619390966,16.0,50.0,86.0,0.5813953488372093,Forward,Spain,True,LaLiga,27-29,True,True,True
+Álvaro Morata,Spain,fallback_team_from,Top 1-15,66.0,4.204692619390966,26.0,40.0,86.0,0.46511627906976744,Forward,England,False,Premier League,20-23,True,True,True
+Pierre-Emerick Aubameyang,Gabon,fallback_lastname_season,Top 31-45,63.75,4.1705337005796475,-1.25,65.0,87.0,0.7471264367816092,Forward,England,False,Premier League,27-29,False,True,True
+Benjamin Mendy,France,fallback_lastname_season,Top 1-15,57.5,4.069026754237811,44.5,13.0,79.0,0.16455696202531644,Defender,England,False,Premier League,20-23,True,True,False
+Alexandre Lacazette,France,fallback_lastname_season,Top 1-15,53.0,3.9889840465642745,13.0,40.0,89.0,0.449438202247191,Forward,England,False,Premier League,24-26,False,True,True
+Kyle Walker,England,fallback_lastname_season,Top 1-15,52.7,3.983413001514819,22.700000000000003,30.0,84.0,0.35714285714285715,Defender,England,True,Premier League,24-26,True,True,True
+Bernardo Silva,Brazil,fallback_lastname_season,Top 1-15,50.0,3.9318256327243257,10.0,40.0,88.0,0.45454545454545453,Winger,England,False,Premier League,20-23,True,True,True
+Nemanja Matic,Serbia,fallback_team_from,Top 1-15,44.7,3.822098297900159,9.700000000000003,35.0,84.0,0.4166666666666667,Midfielder,England,False,Premier League,27-29,True,True,True
+Leonardo Bonucci,Italy,fallback_team_from,Top 1-15,42.0,3.7612001156935624,-3.0,45.0,87.0,0.5172413793103449,Defender,Italy,True,Serie A,27-29,True,True,True
+Mohamed Salah,Egypt,fallback_lastname_season,Top 31-45,42.0,3.7612001156935624,7.0,35.0,86.0,0.4069767441860465,Winger,England,False,Premier League,24-26,True,True,True
+Corentin Tolisso,France,fallback_lastname_season,Top 1-15,41.5,3.7495040759303713,19.5,22.0,86.0,0.2558139534883721,Midfielder,Germany,False,1.Bundesliga,20-23,False,True,True
+Federico Bernardeschi,Italy,fallback_team_from,Top 1-15,40.0,3.713572066704308,10.0,30.0,84.0,0.35714285714285715,Winger,Italy,True,Serie A,20-23,True,True,True
+Cédric Bakambu,DR Congo,fallback_team_from,Top 16-30,40.0,3.713572066704308,15.0,25.0,85.0,0.29411764705882354,Forward,China,False,Super League,24-26,False,True,True
+Ederson,Brazil,fallback_lastname_season,Top 1-15,40.0,3.713572066704308,18.0,22.0,86.0,0.2558139534883721,Goalkeeper,England,False,Premier League,20-23,True,True,True
+Tiemoué Bakayoko,France,fallback_lastname_season,Top 1-15,40.0,3.713572066704308,24.0,16.0,81.0,0.19753086419753085,Midfielder,England,False,Premier League,20-23,True,True,False
+Davinson Sánchez,Chile,fallback_lastname_season,Top 16-30,40.0,3.713572066704308,28.0,12.0,83.0,0.14457831325301204,Defender,England,False,Premier League,20-23,False,True,False
+André Silva,Portugal,fallback_team_from,Top 1-15,38.0,3.6635616461296463,16.0,22.0,86.0,0.2558139534883721,Forward,Italy,False,Serie A,20-23,True,True,False
+André Silva,Portugal,fallback_team_from,Top 1-15,38.0,3.6635616461296463,16.0,22.0,69.0,0.3188405797101449,Forward,Italy,False,Serie A,20-23,True,True,False
+Alex Oxlade-Chamberlain,England,fallback_team_from,Top 1-15,38.0,3.6635616461296463,16.0,22.0,86.0,0.2558139534883721,Midfielder,England,True,Premier League,20-23,True,True,True
+Danny Drinkwater,England,fallback_lastname_season,Top 1-15,37.9,3.6609942506244004,28.9,9.0,83.0,0.10843373493975904,Midfielder,England,True,Premier League,24-26,True,True,True
+,Spain,fallback_team_from,Top 1-15,36.0,3.6109179126442243,11.0,25.0,83.0,0.30120481927710846,Winger,Spain,True,LaLiga,24-26,True,True,True
+Antonio Rüdiger,Germany,fallback_lastname_season,Top 1-15,35.0,3.58351893845611,10.0,25.0,82.0,0.3048780487804878,Defender,England,False,Premier League,20-23,True,True,True
+Victor Lindelöf,Sweden,fallback_lastname_season,Outside Top 45,35.0,3.58351893845611,13.0,22.0,86.0,0.2558139534883721,Defender,England,False,Premier League,20-23,True,True,True
+Iñigo Martínez,Spain,fallback_team_from,Top 1-15,32.0,3.4965075614664802,7.0,25.0,85.0,0.29411764705882354,Defender,Spain,True,LaLiga,24-26,False,True,True
+Iñigo Martínez,Spain,fallback_team_from,Top 1-15,32.0,3.4965075614664802,7.0,25.0,72.0,0.3472222222222222,Defender,Spain,True,LaLiga,24-26,False,True,False
+Nélson Semedo,Portugal,fallback_lastname_season,Top 1-15,30.57,3.4522073025699003,10.57,20.0,85.0,0.23529411764705882,Defender,Spain,False,LaLiga,20-23,False,True,True
+,Belgium,fallback_team_from,Top 1-15,30.0,3.4339872044851463,-10.0,40.0,88.0,0.45454545454545453,Winger,China,False,Super League,20-23,False,True,True
+Danilo,Brazil,fallback_team_from,Top 1-15,30.0,3.4339872044851463,14.0,16.0,83.0,0.1927710843373494,Defender,England,False,Premier League,24-26,True,True,True
+Michael Keane,England,fallback_team_from,Top 1-15,28.5,3.3843902633457743,10.5,18.0,82.0,0.21951219512195122,Defender,England,True,Premier League,20-23,True,True,False
+Jordan Pickford,England,fallback_team_from,Top 1-15,28.5,3.3843902633457743,13.5,15.0,83.0,0.18072289156626506,Goalkeeper,England,True,Premier League,20-23,True,True,False
+Mamadou Sakho,France,fallback_team_from,Top 1-15,28.2,3.374168709274236,13.2,15.0,83.0,0.18072289156626506,Defender,England,False,Premier League,24-26,False,True,True
+Kelechi Iheanacho,Nigeria,fallback_lastname_season,Top 16-30,27.7,3.3568971227655755,12.7,15.0,88.0,0.17045454545454544,Forward,England,False,Premier League,<20,True,True,False
+Davy Klaassen,Netherlands,fallback_lastname_season,Top 1-15,27.0,3.332204510175204,9.0,18.0,84.0,0.21428571428571427,Midfielder,England,False,Premier League,20-23,True,True,True
+Milan Skriniar,Slovakia,fallback_team_from,Outside Top 45,27.0,3.332204510175204,20.0,7.0,77.0,0.09090909090909091,Defender,Italy,False,Serie A,20-23,True,True,False
+Youri Tielemans,Belgium,fallback_team_from,Top 1-15,25.0,3.258096538021482,3.0,22.0,89.0,0.24719101123595505,Midfielder,France,False,Ligue 1,<20,True,True,True
+Serge Aurier,Ivory Coast,fallback_lastname_season,Top 16-30,25.0,3.258096538021482,10.0,15.0,88.0,0.17045454545454544,Defender,England,False,Premier League,20-23,False,True,True
+Davide Zappacosta,Italy,fallback_team_from,Top 1-15,25.0,3.258096538021482,16.5,8.5,83.0,0.10240963855421686,Defender,England,False,Premier League,24-26,True,True,True
+Adrien Silva,Portugal,fallback_team_from,Top 1-15,24.5,3.2386784521643803,-0.5,25.0,83.0,0.30120481927710846,Midfielder,England,False,Premier League,27-29,True,True,True
+,France,fallback_team_from,Top 1-15,24.0,3.2188758248682006,9.0,15.0,86.0,0.1744186046511628,Defender,Spain,False,LaLiga,<20,False,True,False
+Matías Vecino,Uruguay,fallback_team_from,Top 16-30,24.0,3.2188758248682006,11.0,13.0,80.0,0.1625,Midfielder,Italy,False,Serie A,24-26,True,True,True
+Lucas Alario,Argentina,fallback_team_from,Top 1-15,24.0,3.2188758248682006,12.0,12.0,83.0,0.14457831325301204,Forward,Germany,False,1.Bundesliga,20-23,False,True,True
+Andrea Conti,Italy,fallback_team_from,Top 1-15,24.0,3.2188758248682006,14.0,10.0,79.0,0.12658227848101267,Defender,Italy,True,Serie A,20-23,True,True,False
+Leandro Paredes,Argentina,fallback_lastname_season,Top 1-15,23.0,3.1780538303479458,10.0,13.0,83.0,0.1566265060240964,Midfielder,Ukraine,False,Premier Liga,20-23,False,True,True
+André Ayew,Ghana,fallback_lastname_season,Top 16-30,22.8,3.169685580677429,4.800000000000001,18.0,80.0,0.225,Winger,England,False,Premier League,27-29,False,True,True
+Theo Walcott,England,fallback_team_from,Top 1-15,22.5,3.1570004211501135,2.5,20.0,81.0,0.24691358024691357,Winger,England,True,Premier League,27-29,True,True,True
+Marko Arnautovic,Austria,fallback_team_from,Top 31-45,22.3,3.1484533605716547,7.300000000000001,15.0,82.0,0.18292682926829268,Winger,England,False,Premier League,27-29,True,True,True
+Hakan Calhanoglu,Turkey,fallback_lastname_season,Top 16-30,22.0,3.1354942159291497,2.0,20.0,84.0,0.23809523809523808,Winger,Italy,False,Serie A,20-23,True,True,True
+Guido Carrillo,Peru,fallback_lastname_season,Top 16-30,22.0,3.1354942159291497,16.0,6.0,77.0,0.07792207792207792,Forward,England,False,Premier League,24-26,False,True,False
+Luis Muriel,Colombia,fallback_team_from,Top 1-15,21.5,3.1135153092103742,4.5,17.0,79.0,0.21518987341772153,Forward,Spain,False,LaLiga,24-26,True,True,True
+Manuel Akanji,Switzerland,fallback_lastname_season,Top 1-15,21.5,3.1135153092103742,16.5,5.0,68.0,0.07352941176470588,Defender,Germany,False,1.Bundesliga,20-23,False,True,False
+Andre Gray,England,fallback_team_from,Top 1-15,20.4,3.0633909220278057,10.399999999999999,10.0,79.0,0.12658227848101267,Forward,England,True,Premier League,24-26,True,True,False
+Blaise Matuidi,France,fallback_lastname_season,Top 1-15,20.0,3.044522437723423,-10.0,30.0,86.0,0.3488372093023256,Midfielder,Italy,False,Serie A,27-29,True,True,True
+Niklas Süle,Germany,fallback_lastname_season,Top 1-15,20.0,3.044522437723423,-5.0,25.0,87.0,0.28735632183908044,Defender,Germany,True,1.Bundesliga,20-23,False,True,True
+Roberto Gagliardini,Italy,fallback_team_from,Top 1-15,20.0,3.044522437723423,0.0,20.0,68.0,0.29411764705882354,Midfielder,Italy,True,Serie A,20-23,True,True,False
+Kevin Kampl,Slovenia,fallback_lastname_season,Top 31-45,20.0,3.044522437723423,5.0,15.0,82.0,0.18292682926829268,Midfielder,Germany,False,1.Bundesliga,24-26,False,True,True
+Maximilian Philipp,Germany,fallback_team_from,Top 1-15,20.0,3.044522437723423,5.0,15.0,79.0,0.189873417721519,Winger,Germany,True,1.Bundesliga,20-23,False,True,False
+,Spain,fallback_team_from,Top 1-15,20.0,3.044522437723423,6.0,14.0,81.0,0.1728395061728395,Midfielder,Portugal,False,Liga NOS,20-23,False,True,True
+Emerson,Brazil,fallback_lastname_season,Top 1-15,20.0,3.044522437723423,6.0,14.0,77.0,0.18181818181818182,Defender,England,False,Premier League,20-23,True,True,False
+Dalbert,Brazil,fallback_team_from,Top 1-15,20.0,3.044522437723423,15.0,5.0,84.0,0.05952380952380952,Defender,Italy,False,Serie A,20-23,True,True,True
+Kevin Wimmer,Austria,fallback_lastname_season,Top 31-45,19.4,3.0155349008501706,12.399999999999999,7.0,84.0,0.08333333333333333,Defender,England,False,Premier League,20-23,False,True,True
+Mateo Musacchio,Argentina,fallback_team_from,Top 1-15,18.0,2.9444389791664403,0.0,18.0,87.0,0.20689655172413793,Defender,Italy,False,Serie A,24-26,True,True,True
+Rúben Neves,Portugal,fallback_team_from,Top 1-15,17.9,2.9391619220655967,7.899999999999999,10.0,85.0,0.11764705882352941,Midfielder,England,False,Championship,<20,False,True,False
+Panagiotis Retsos,Greece,fallback_lastname_season,Top 31-45,17.5,2.917770732084279,12.5,5.0,80.0,0.0625,Defender,Germany,False,1.Bundesliga,<20,False,True,False
+Britt Assombalonga,DR Congo,fallback_lastname_season,Top 16-30,17.1,2.89591193827178,12.100000000000001,5.0,80.0,0.0625,Forward,England,False,Championship,20-23,False,True,False
+Lucas Biglia,Argentina,fallback_team_from,Top 1-15,17.0,2.8903717578961645,-3.0,20.0,82.0,0.24390243902439024,Midfielder,Italy,False,Serie A,30+,True,True,True
+Olivier Giroud,France,fallback_team_from,Top 1-15,17.0,2.8903717578961645,-3.0,20.0,83.0,0.24096385542168675,Forward,England,False,Premier League,30+,True,True,True
+Matthias Ginter,Germany,fallback_lastname_season,Top 1-15,17.0,2.8903717578961645,2.0,15.0,82.0,0.18292682926829268,Defender,Germany,True,1.Bundesliga,20-23,False,True,True
+John Anthony Brooks,United States,fallback_team_from,Outside Top 45,17.0,2.8903717578961645,3.0,14.0,85.0,0.16470588235294117,Defender,Germany,False,1.Bundesliga,20-23,True,True,True
+Jürgen Locadia,Netherlands,fallback_lastname_season,Top 1-15,17.0,2.8903717578961645,8.5,8.5,81.0,0.10493827160493827,Forward,England,False,Premier League,20-23,False,True,True
+Mario Lemina,Gabon,fallback_team_from,Top 31-45,17.0,2.8903717578961645,9.5,7.5,83.0,0.09036144578313253,Midfielder,England,False,Premier League,20-23,False,True,True
+,Colombia,fallback_lastname_season,Top 1-15,17.0,2.8903717578961645,10.0,7.0,82.0,0.08536585365853659,Forward,Germany,False,1.Bundesliga,20-23,False,True,True
+Ismaïla Sarr,Senegal,fallback_team_from,Top 16-30,17.0,2.8903717578961645,14.5,2.5,77.0,0.032467532467532464,Winger,France,False,Ligue 1,<20,False,True,False
+Ross Barkley,England,fallback_team_from,Top 1-15,16.9,2.884800712846709,-8.100000000000001,25.0,89.0,0.2808988764044944,Midfielder,England,True,Premier League,20-23,True,True,True
+Dani Ceballos,Spain,fallback_team_from,Top 1-15,16.5,2.8622008809294686,6.5,10.0,85.0,0.11764705882352941,Midfielder,Spain,True,LaLiga,<20,False,True,True
+Wesley Hoedt,Netherlands,fallback_team_from,Top 1-15,16.4,2.856470206220483,8.899999999999999,7.5,82.0,0.09146341463414634,Defender,England,False,Premier League,20-23,False,True,True
+Chris Wood,United States,fallback_lastname_season,Outside Top 45,16.4,2.856470206220483,10.399999999999999,6.0,75.0,0.08,Forward,England,False,Premier League,24-26,False,True,False
+Sam Clucas,England,fallback_team_from,Top 1-15,16.3,2.8507065015037334,13.8,2.5,71.0,0.035211267605633804,Midfielder,England,True,Premier League,24-26,False,True,False
+Emanuel Mammana,Argentina,fallback_lastname_season,Top 1-15,16.0,2.833213344056216,9.0,7.0,80.0,0.0875,Defender,Ukraine,False,Premier Liga,20-23,False,True,False
+Jean-Kévin Augustin,France,fallback_lastname_season,Top 1-15,16.0,2.833213344056216,13.0,3.0,81.0,0.037037037037037035,Forward,Germany,False,1.Bundesliga,<20,False,True,False
+Oliver Burke,Scotland,fallback_team_from,Top 1-15,15.2,2.785011242238338,8.2,7.0,84.0,0.08333333333333333,Winger,England,False,Premier League,<20,False,True,False
+Fernando Llorente,Spain,fallback_lastname_season,Top 1-15,15.1,2.7788192719904172,9.1,6.0,79.0,0.0759493670886076,Forward,England,False,Premier League,30+,False,True,True
+Ricardo Rodríguez,Switzerland,fallback_team_from,Top 1-15,15.0,2.772588722239781,-2.0,17.0,86.0,0.19767441860465115,Defender,Italy,False,Serie A,20-23,True,True,True
+José Izquierdo,Colombia,fallback_lastname_season,Top 1-15,15.0,2.772588722239781,1.0,14.0,80.0,0.175,Winger,England,False,Premier League,24-26,False,True,True
+Konstantinos Mitroglou,Greece,fallback_lastname_season,Top 31-45,15.0,2.772588722239781,3.0,12.0,81.0,0.14814814814814814,Forward,France,False,Ligue 1,27-29,False,True,True
+Terence Kongolo,Netherlands,fallback_team_from,Top 1-15,15.0,2.772588722239781,5.0,10.0,82.0,0.12195121951219512,Defender,France,False,Ligue 1,20-23,True,True,True
+Giovanni Simeone,Argentina,fallback_team_from,Top 1-15,15.0,2.772588722239781,5.0,10.0,80.0,0.125,Forward,Italy,False,Serie A,20-23,False,True,False
+Vicente Iborra,Spain,fallback_team_from,Top 1-15,15.0,2.772588722239781,6.0,9.0,82.0,0.10975609756097561,Midfielder,England,False,Premier League,27-29,True,True,True
+Sebastián Driussi,Argentina,fallback_team_from,Top 1-15,15.0,2.772588722239781,7.0,8.0,80.0,0.1,Forward,Ukraine,False,Premier Liga,20-23,False,True,False
+Francis Coquelin,France,fallback_team_from,Top 1-15,14.0,2.70805020110221,2.0,12.0,84.0,0.14285714285714285,Midfielder,Spain,False,LaLiga,24-26,True,True,True
+Rúben Semedo,Portugal,fallback_team_from,Top 1-15,14.0,2.70805020110221,5.0,9.0,85.0,0.10588235294117647,Defender,Spain,False,LaLiga,20-23,True,True,True
+Rick Karsdorp,Netherlands,fallback_team_from,Top 1-15,14.0,2.70805020110221,5.0,9.0,82.0,0.10975609756097561,Defender,Italy,False,Serie A,20-23,True,True,True
+Jay Rodríguez,England,fallback_team_from,Top 1-15,13.7,2.6878474937846906,3.6999999999999993,10.0,77.0,0.12987012987012986,Forward,England,True,Premier League,24-26,False,True,True
+Harry Maguire,England,fallback_team_from,Top 1-15,13.7,2.6878474937846906,5.699999999999999,8.0,80.0,0.1,Defender,England,True,Premier League,20-23,True,True,False
+Marten de Roon,Netherlands,fallback_team_from,Top 1-15,13.5,2.6741486494265287,3.5,10.0,81.0,0.12345679012345678,Midfielder,Italy,False,Serie A,24-26,False,True,True
+Bruma,Netherlands,fallback_lastname_season,Top 1-15,13.0,2.6390573296152584,2.0,11.0,86.0,0.12790697674418605,Winger,Germany,False,1.Bundesliga,20-23,False,True,True
+Davy Pröpper,Netherlands,fallback_lastname_season,Top 1-15,13.0,2.6390573296152584,3.0,10.0,83.0,0.12048192771084337,Midfielder,England,False,Premier League,24-26,False,True,True
+Sandro Wagner,Germany,fallback_lastname_season,Top 1-15,13.0,2.6390573296152584,4.0,9.0,76.0,0.11842105263157894,Forward,Germany,True,1.Bundesliga,27-29,False,True,True
+Steve Mounié,Benin,fallback_lastname_season,Top 31-45,13.0,2.6390573296152584,7.5,5.5,76.0,0.07236842105263158,Forward,England,False,Premier League,20-23,False,True,False
+Emre Mor,Turkey,fallback_lastname_season,Top 16-30,13.0,2.6390573296152584,8.0,5.0,84.0,0.05952380952380952,Winger,Spain,False,LaLiga,<20,False,True,False
+Roque Mesa,Spain,fallback_team_from,Top 1-15,12.5,2.6026896854443837,0.5,12.0,80.0,0.15,Midfielder,England,False,Premier League,27-29,False,True,True
+Simon Kjær,Denmark,fallback_lastname_season,Top 16-30,12.5,2.6026896854443837,1.5,11.0,83.0,0.13253012048192772,Defender,Spain,False,LaLiga,27-29,True,True,True
+Sven Bender,Germany,fallback_lastname_season,Top 1-15,12.5,2.6026896854443837,5.5,7.0,83.0,0.08433734939759036,Defender,Germany,True,1.Bundesliga,27-29,False,True,True
+Alex Pritchard,England,fallback_lastname_season,Top 1-15,12.35,2.5915163848462583,7.35,5.0,81.0,0.06172839506172839,Midfielder,England,True,Premier League,20-23,False,True,False
+Ezequiel Barco,Argentina,fallback_team_from,Top 1-15,12.28,2.5862591440482876,5.779999999999999,6.5,76.0,0.08552631578947369,Midfielder,United States,False,MLS,<20,False,False,False
+Ömer Toprak,Turkey,fallback_lastname_season,Top 16-30,12.0,2.5649493574615367,-4.0,16.0,85.0,0.18823529411764706,Defender,Germany,False,1.Bundesliga,24-26,False,True,True
+Gerard Deulofeu,Spain,fallback_team_from,Top 1-15,12.0,2.5649493574615367,0.0,12.0,88.0,0.13636363636363635,Winger,Spain,True,LaLiga,20-23,False,True,True
+,Spain,fallback_team_from,Top 1-15,12.0,2.5649493574615367,2.0,10.0,84.0,0.11904761904761904,Midfielder,Spain,True,LaLiga,20-23,True,True,True
+Mattia De Sciglio,Italy,fallback_lastname_season,Top 1-15,12.0,2.5649493574615367,3.5,8.5,81.0,0.10493827160493827,Defender,Italy,True,Serie A,20-23,True,True,True
+Adrián Ramos,Spain,fallback_lastname_season,Top 1-15,12.0,2.5649493574615367,7.0,5.0,78.0,0.0641025641025641,Forward,China,False,Super League,30+,False,True,True
+Denis Zakaria,Switzerland,fallback_team_from,Top 1-15,12.0,2.5649493574615367,8.0,4.0,82.0,0.04878048780487805,Midfielder,Germany,False,1.Bundesliga,<20,False,True,False
+Jordan Rhodes,Scotland,fallback_team_from,Top 1-15,11.7,2.5416019934645457,1.6999999999999993,10.0,76.0,0.13157894736842105,Forward,England,False,Championship,24-26,False,True,False
+Asmir Begovic,Bosnia Herzegovina,fallback_team_from,Top 31-45,11.5,2.5257286443082556,3.5,8.0,83.0,0.0963855421686747,Goalkeeper,England,False,Premier League,27-29,False,True,True
+Martin Braithwaite,Denmark,fallback_lastname_season,Top 16-30,11.3,2.509599262378372,3.8000000000000007,7.5,81.0,0.09259259259259259,Forward,England,False,Championship,24-26,False,True,True
+Jacob Murphy,Republic of Ireland,fallback_lastname_season,Top 16-30,11.3,2.509599262378372,10.3,1.0,77.0,0.012987012987012988,Winger,England,False,Premier League,20-23,True,True,False
+Jacob Murphy,Republic of Ireland,fallback_lastname_season,Top 16-30,11.3,2.509599262378372,10.3,1.0,75.0,0.013333333333333334,Winger,England,False,Premier League,20-23,True,True,False
+Stevan Jovetic,Montenegro,fallback_team_from,Top 31-45,11.0,2.4849066497880004,1.0,10.0,82.0,0.12195121951219512,Forward,France,False,Ligue 1,24-26,True,True,True
+Jonathan Viera,Spain,fallback_team_from,Top 1-15,11.0,2.4849066497880004,3.0,8.0,81.0,0.09876543209876543,Midfielder,China,False,Super League,27-29,False,True,True
+Marc Bartra,Spain,fallback_lastname_season,Top 1-15,10.5,2.4423470353692043,-4.5,15.0,84.0,0.17857142857142858,Defender,Spain,True,LaLiga,24-26,False,True,True
+Rodrigo Bentancur,Uruguay,fallback_team_from,Top 16-30,10.5,2.4423470353692043,4.5,6.0,82.0,0.07317073170731707,Midfielder,Italy,False,Serie A,<20,True,True,False
+Jordan Hugill,England,fallback_lastname_season,Top 1-15,10.2,2.4159137783010487,7.199999999999999,3.0,71.0,0.04225352112676056,Forward,England,True,Premier League,24-26,True,True,False
+Luiz Gustavo,Brazil,fallback_team_from,Top 1-15,10.0,2.3978952727983707,-2.0,12.0,83.0,0.14457831325301204,Midfielder,France,False,Ligue 1,27-29,False,True,True
+Lorenzo Pellegrini,Italy,fallback_team_from,Top 1-15,10.0,2.3978952727983707,-2.0,12.0,83.0,0.14457831325301204,Midfielder,Italy,True,Serie A,20-23,True,True,False
+,Spain,fallback_team_from,Top 1-15,10.0,2.3978952727983707,0.0,10.0,84.0,0.11904761904761904,Midfielder,Germany,False,1.Bundesliga,24-26,True,True,True
+Marco Benassi,Italy,fallback_team_from,Top 1-15,10.0,2.3978952727983707,0.5,9.5,84.0,0.1130952380952381,Midfielder,Italy,True,Serie A,20-23,False,True,True
+Diafra Sakho,France,fallback_lastname_season,Top 1-15,10.0,2.3978952727983707,2.0,8.0,78.0,0.10256410256410256,Forward,France,True,Ligue 1,27-29,False,True,True
+Landry Dimata,Belgium,fallback_team_from,Top 1-15,10.0,2.3978952727983707,3.5,6.5,79.0,0.08227848101265822,Forward,Germany,False,1.Bundesliga,<20,True,True,False
+Florian Lejeune,France,fallback_team_from,Top 1-15,10.0,2.3978952727983707,5.0,5.0,81.0,0.06172839506172839,Defender,England,False,Premier League,24-26,True,True,True
+Roberto Inglese,Italy,fallback_team_from,Top 1-15,10.0,2.3978952727983707,5.5,4.5,77.0,0.05844155844155844,Forward,Italy,True,Serie A,24-26,False,True,False
+,France,fallback_lastname_season,Top 1-15,10.0,2.3978952727983707,7.0,3.0,74.0,0.04054054054054054,Forward,France,True,Ligue 1,20-23,False,True,False
+Nicolas Pépé,Portugal,fallback_lastname_season,Top 1-15,10.0,2.3978952727983707,7.0,3.0,74.0,0.04054054054054054,Winger,France,False,Ligue 1,20-23,False,True,False
+Adama Diakhaby,France,fallback_lastname_season,Top 1-15,10.0,2.3978952727983707,8.5,1.5,77.0,0.01948051948051948,Forward,France,True,Ligue 1,20-23,True,True,False
+Bruno Fernandes,Portugal,fallback_team_from,Top 1-15,9.69,2.3693087250369538,2.1899999999999995,7.5,83.0,0.09036144578313253,Midfielder,Portugal,True,Liga NOS,20-23,False,True,True
+Marcos Acuña,Argentina,fallback_team_from,Top 1-15,9.59,2.359910159613315,2.59,7.0,80.0,0.0875,Midfielder,Portugal,False,Liga NOS,24-26,False,True,False
+Tom Cleverley,England,fallback_team_from,Top 1-15,9.3,2.33214389523559,1.3000000000000007,8.0,78.0,0.10256410256410256,Midfielder,England,True,Premier League,24-26,True,True,True
+Rui Fonte,Portugal,fallback_lastname_season,Top 1-15,9.13,2.315501318260592,6.130000000000001,3.0,76.0,0.039473684210526314,Forward,England,False,Championship,24-26,False,True,False
+Will Hughes,England,fallback_lastname_season,Top 1-15,9.1,2.312535423847214,1.0999999999999996,8.0,83.0,0.0963855421686747,Midfielder,England,True,Premier League,20-23,True,True,False
+Tom Ince,England,fallback_lastname_season,Top 1-15,9.1,2.312535423847214,2.0999999999999996,7.0,76.0,0.09210526315789473,Winger,England,True,Premier League,24-26,False,True,False
+Jack Cork,England,fallback_lastname_season,Top 1-15,9.1,2.312535423847214,4.1,5.0,80.0,0.0625,Midfielder,England,True,Premier League,27-29,False,True,True
+Jonathas,Brazil,fallback_team_from,Top 1-15,9.0,2.302585092994046,2.0,7.0,79.0,0.08860759493670886,Forward,Germany,False,1.Bundesliga,27-29,False,True,True
+Emiliano Rigoni,Argentina,fallback_team_from,Top 1-15,9.0,2.302585092994046,2.0,7.0,82.0,0.08536585365853659,Winger,Ukraine,False,Premier Liga,20-23,False,True,True
+Andrew Robertson,Scotland,fallback_team_from,Top 1-15,9.0,2.302585092994046,2.0,7.0,83.0,0.08433734939759036,Defender,England,False,Premier League,20-23,True,True,False
+Gastón Ramírez,Uruguay,fallback_team_from,Top 16-30,9.0,2.302585092994046,3.0,6.0,82.0,0.07317073170731707,Midfielder,Italy,False,Serie A,24-26,False,True,True
+Jairo Riedewald,Netherlands,fallback_lastname_season,Top 1-15,9.0,2.302585092994046,4.0,5.0,86.0,0.05813953488372093,Defender,England,False,Premier League,<20,False,True,True
+,France,fallback_lastname_season,Top 1-15,9.0,2.302585092994046,6.0,3.0,75.0,0.04,Defender,France,True,Ligue 1,24-26,False,True,False
+Guido Pizarro,Peru,fallback_lastname_season,Top 16-30,8.7,2.272125885509337,4.699999999999999,4.0,79.0,0.05063291139240506,Midfielder,Spain,False,LaLiga,24-26,True,True,True
+Serge Gnabry,Germany,fallback_lastname_season,Top 1-15,8.0,2.1972245773362196,-7.0,15.0,85.0,0.17647058823529413,Winger,Germany,True,1.Bundesliga,20-23,False,True,False
+Valère Germain,France,fallback_lastname_season,Top 1-15,8.0,2.1972245773362196,-2.0,10.0,81.0,0.12345679012345678,Forward,France,True,Ligue 1,24-26,False,True,True
+Soualiho Meïté,France,fallback_lastname_season,Top 1-15,8.0,2.1972245773362196,1.0,7.0,76.0,0.09210526315789473,Midfielder,France,True,Ligue 1,20-23,True,True,False
+Sofiane Hanni,Algeria,fallback_team_from,Top 16-30,8.0,2.1972245773362196,1.0,7.0,78.0,0.08974358974358974,Midfielder,Ukraine,False,Premier Liga,24-26,False,True,False
+Henry Onyekuru,Nigeria,fallback_team_from,Top 16-30,8.0,2.1972245773362196,1.0,7.0,76.0,0.09210526315789473,Winger,England,False,Premier League,<20,True,True,False
+Hirving Lozano,Mexico,fallback_lastname_season,Top 1-15,8.0,2.1972245773362196,1.5,6.5,84.0,0.07738095238095238,Winger,Netherlands,False,Eredivisie,20-23,False,True,True
+Davie Selke,Germany,fallback_team_from,Top 1-15,8.0,2.1972245773362196,2.0,6.0,83.0,0.07228915662650602,Forward,Germany,True,1.Bundesliga,20-23,False,True,False
+Nicolas de Préville,France,fallback_team_from,Top 1-15,8.0,2.1972245773362196,2.5,5.5,79.0,0.06962025316455696,Forward,France,True,Ligue 1,24-26,False,True,True
+Havard Nordtveit,Norway,fallback_lastname_season,Outside Top 45,8.0,2.1972245773362196,3.0,5.0,79.0,0.06329113924050633,Defender,Germany,False,1.Bundesliga,24-26,False,True,True
+Mariano Díaz,Paraguay,fallback_team_from,Top 31-45,8.0,2.1972245773362196,3.0,5.0,81.0,0.06172839506172839,Forward,France,False,Ligue 1,20-23,False,True,False
+Miha Mevlja,Slovenia,fallback_lastname_season,Top 31-45,8.0,2.1972245773362196,4.0,4.0,65.0,0.06153846153846154,Defender,Ukraine,False,Premier Liga,24-26,False,True,False
+Admir Mehmedi,Switzerland,fallback_lastname_season,Top 1-15,8.0,2.1972245773362196,4.5,3.5,79.0,0.04430379746835443,Forward,Germany,False,1.Bundesliga,24-26,True,True,True
+Sone Aluko,Nigeria,fallback_team_from,Top 16-30,8.0,2.1972245773362196,5.5,2.5,73.0,0.03424657534246575,Forward,England,False,Championship,27-29,False,True,False
+Amine Harit,France,fallback_team_from,Top 1-15,8.0,2.1972245773362196,6.0,2.0,84.0,0.023809523809523808,Midfielder,Germany,False,1.Bundesliga,<20,False,True,False
+Rafik Guitane,France,fallback_lastname_season,Top 1-15,8.0,2.1972245773362196,7.85,0.15,76.0,0.001973684210526316,Midfielder,France,True,Ligue 1,<20,False,True,False
+Kieran Gibbs,England,fallback_team_from,Top 1-15,7.5,2.1400661634962708,-2.5,10.0,82.0,0.12195121951219512,Defender,England,True,Premier League,24-26,False,True,True
+Badou Ndiaye,Senegal,fallback_lastname_season,Top 16-30,7.5,2.1400661634962708,2.5,5.0,79.0,0.06329113924050633,Midfielder,,,Süper Lig,24-26,False,False,True
+Ashley Fletcher,Scotland,fallback_lastname_season,Top 1-15,7.3,2.1162555148025524,6.3,1.0,78.0,0.01282051282051282,Forward,England,False,Championship,20-23,False,True,False
+Santiago Ascacíbar,Argentina,fallback_lastname_season,Top 1-15,7.2,2.1041341542702074,-0.2999999999999998,7.5,84.0,0.08928571428571429,Midfielder,Germany,False,1.Bundesliga,<20,False,True,False
+Avilés Hurtado,Colombia,fallback_team_from,Top 1-15,7.13,2.0955609235597192,4.63,2.5,76.0,0.03289473684210526,Winger,Mexico,False,Liga MX Clausura,27-29,False,False,True
+Björn Engels,Belgium,fallback_lastname_season,Top 1-15,7.1,2.0918640616783932,-0.9000000000000004,8.0,84.0,0.09523809523809523,Defender,China,False,Super League,20-23,False,True,True
+Éver Banega,Argentina,fallback_team_from,Top 1-15,7.0,2.0794415416798357,-9.0,16.0,84.0,0.19047619047619047,Midfielder,Spain,False,LaLiga,27-29,True,True,True
+Nolito,Spain,fallback_lastname_season,Top 1-15,7.0,2.0794415416798357,-5.0,12.0,83.0,0.14457831325301204,Winger,Spain,True,LaLiga,27-29,True,True,True
+Ryad Boudebouz,Algeria,fallback_lastname_season,Top 16-30,7.0,2.0794415416798357,-3.0,10.0,81.0,0.12345679012345678,Midfielder,Spain,False,LaLiga,24-26,False,True,True
+Giuliano,Brazil,fallback_lastname_season,Top 1-15,7.0,2.0794415416798357,-2.0,9.0,82.0,0.10975609756097561,Midfielder,,,Süper Lig,24-26,False,False,True
+Sébastien Haller,France,fallback_team_from,Top 1-15,7.0,2.0794415416798357,-1.0,8.0,82.0,0.0975609756097561,Forward,Germany,False,1.Bundesliga,20-23,False,True,True
+Cristiano Ronaldo,Portugal,fallback_team_from,Top 1-15,117.0,4.770684624465665,17.0,100.0,94.0,1.0638297872340425,Forward,Italy,False,Serie A,30+,True,True,True
+,France,fallback_lastname_season,Top 1-15,70.0,4.2626798770413155,5.0,65.0,91.0,0.7142857142857143,Winger,Spain,False,LaLiga,20-23,True,True,True
+Riyad Mahrez,Algeria,fallback_lastname_season,Top 16-30,67.8,4.231203744939298,17.799999999999997,50.0,84.0,0.5952380952380952,Winger,England,False,Premier League,24-26,True,True,True
+Alisson,Brazil,fallback_lastname_season,Top 1-15,62.5,4.151039905898646,2.5,60.0,84.0,0.7142857142857143,Goalkeeper,England,False,Premier League,24-26,True,True,True
+Naby Keïta,Guinea,fallback_team_from,Top 31-45,60.0,4.110873864173311,-5.0,65.0,88.0,0.7386363636363636,Midfielder,England,False,Premier League,20-23,True,True,True
+Fred,Brazil,fallback_lastname_season,Top 1-15,59.0,4.0943445622221,27.0,32.0,85.0,0.3764705882352941,Midfielder,England,False,Premier League,24-26,True,True,True
+Jorginho,Italy,fallback_lastname_season,Top 1-15,57.0,4.060443010546419,7.0,50.0,84.0,0.5952380952380952,Midfielder,England,False,Premier League,24-26,True,True,True
+Fabinho,Brazil,fallback_lastname_season,Top 1-15,45.0,3.828641396489095,0.0,45.0,88.0,0.5113636363636364,Midfielder,England,False,Premier League,20-23,True,True,True
+Richarlison,Brazil,fallback_team_from,Top 1-15,39.2,3.6938669956249757,14.200000000000003,25.0,85.0,0.29411764705882354,Winger,England,False,Premier League,20-23,True,True,False
+Radja Nainggolan,Belgium,fallback_lastname_season,Top 1-15,38.0,3.6635616461296463,-7.0,45.0,86.0,0.5232558139534884,Midfielder,Italy,False,Serie A,27-29,True,True,True
+Felipe Anderson,Brazil,fallback_team_from,Top 1-15,38.0,3.6635616461296463,8.0,30.0,86.0,0.3488372093023256,Winger,England,False,Premier League,24-26,True,True,True
+Clément Lenglet,France,fallback_team_from,Top 1-15,35.9,3.6082115510464816,10.899999999999999,25.0,84.0,0.2976190476190476,Defender,Spain,False,LaLiga,20-23,False,True,True
+Jean Michaël Seri,Ivory Coast,fallback_team_from,Top 16-30,30.0,3.4339872044851463,0.0,30.0,83.0,0.3614457831325301,Midfielder,England,False,Premier League,24-26,False,True,True
+Lucas Torreira,Uruguay,fallback_team_from,Top 16-30,30.0,3.4339872044851463,0.0,30.0,83.0,0.3614457831325301,Midfielder,England,False,Premier League,20-23,False,True,False
+Aleksandr Golovin,Russia,fallback_lastname_season,Outside Top 45,30.0,3.4339872044851463,5.0,25.0,84.0,0.2976190476190476,Midfielder,France,False,Ligue 1,20-23,True,True,True
+Álvaro Odriozola,Spain,fallback_team_from,Top 1-15,30.0,3.4339872044851463,5.0,25.0,84.0,0.2976190476190476,Defender,Spain,True,LaLiga,20-23,False,True,False
+Abdou Diallo,Senegal,fallback_lastname_season,Top 16-30,28.0,3.367295829986474,16.0,12.0,78.0,0.15384615384615385,Defender,Germany,False,1.Bundesliga,20-23,False,True,False
+Simone Verdi,Italy,fallback_team_from,Top 1-15,25.0,3.258096538021482,0.0,25.0,80.0,0.3125,Winger,Italy,True,Serie A,24-26,False,True,True
+Issa Diop,France,fallback_lastname_season,Top 1-15,25.0,3.258096538021482,3.0,22.0,87.0,0.25287356321839083,Defender,England,False,Premier League,20-23,True,True,True
+Bernd Leno,Germany,fallback_lastname_season,Top 1-15,25.0,3.258096538021482,5.0,20.0,88.0,0.22727272727272727,Goalkeeper,England,False,Premier League,24-26,False,True,True
+James Maddison,England,fallback_lastname_season,Top 1-15,25.0,3.258096538021482,15.0,10.0,80.0,0.125,Midfielder,England,True,Premier League,20-23,True,True,False
+Javier Pastore,Argentina,fallback_lastname_season,Top 1-15,24.7,3.246490991901174,9.7,15.0,83.0,0.18072289156626506,Midfielder,Italy,False,Serie A,27-29,True,True,True
+Alassane Pléa,France,fallback_team_from,Top 1-15,23.0,3.1780538303479458,5.0,18.0,86.0,0.20930232558139536,Forward,Germany,False,1.Bundesliga,24-26,False,True,True
+Ricardo Pereira,Portugal,fallback_team_from,Top 1-15,22.0,3.1354942159291497,2.0,20.0,86.0,0.23255813953488372,Defender,England,False,Premier League,20-23,True,True,True
+Ricardo Pereira,Portugal,fallback_team_from,Top 1-15,22.0,3.1354942159291497,2.0,20.0,86.0,0.23255813953488372,Defender,England,False,Premier League,20-23,True,True,True
+Ricardo Pereira,Portugal,fallback_team_from,Top 1-15,22.0,3.1354942159291497,2.0,20.0,78.0,0.2564102564102564,Defender,England,False,Premier League,20-23,True,True,True
+Diogo Dalot,Portugal,fallback_team_from,Top 1-15,22.0,3.1354942159291497,7.0,15.0,83.0,0.18072289156626506,Defender,England,False,Premier League,<20,True,True,False
+Lucas Digne,France,fallback_team_from,Top 1-15,20.2,3.054001181677967,5.199999999999999,15.0,84.0,0.17857142857142858,Defender,England,False,Premier League,24-26,True,True,True
+Aleksandar Mitrovic,Serbia,fallback_lastname_season,Top 1-15,20.2,3.054001181677967,5.199999999999999,15.0,80.0,0.1875,Forward,England,False,Premier League,20-23,False,True,False
+William Carvalho,Portugal,fallback_team_from,Top 1-15,20.0,3.044522437723423,-5.0,25.0,86.0,0.29069767441860467,Midfielder,Spain,False,LaLiga,24-26,False,True,True
+Andriy Yarmolenko,Ukraine,fallback_lastname_season,Outside Top 45,20.0,3.044522437723423,-3.0,23.0,81.0,0.2839506172839506,Winger,England,False,Premier League,27-29,True,True,True
+Gerard Moreno,Mexico,fallback_lastname_season,Top 1-15,20.0,3.044522437723423,0.0,20.0,83.0,0.24096385542168675,Forward,Spain,False,LaLiga,24-26,True,True,True
+Thomas Delaney,Denmark,fallback_lastname_season,Top 16-30,20.0,3.044522437723423,8.0,12.0,81.0,0.14814814814814814,Midfielder,Germany,False,1.Bundesliga,24-26,False,True,True
+Terence Kongolo,Netherlands,fallback_lastname_season,Top 1-15,20.0,3.044522437723423,10.0,10.0,82.0,0.12195121951219512,Defender,England,False,Premier League,20-23,False,True,True
+Alireza Jahanbakhsh,Iran,fallback_team_from,Outside Top 45,19.0,2.995732273553991,1.0,18.0,79.0,0.22784810126582278,Winger,England,False,Premier League,20-23,False,True,False
+Mohamed Elyounoussi,Norway,fallback_lastname_season,Outside Top 45,18.0,2.9444389791664403,9.5,8.5,84.0,0.10119047619047619,Winger,England,False,Premier League,20-23,False,True,True
+Justin Kluivert,Netherlands,fallback_lastname_season,Top 1-15,17.25,2.9041650800285006,2.25,15.0,86.0,0.1744186046511628,Winger,Italy,False,Serie A,<20,True,True,False
+Yves Bissouma,Mali,fallback_team_from,Outside Top 45,16.9,2.884800712846709,8.899999999999999,8.0,80.0,0.1,Midfielder,England,False,Premier League,20-23,False,True,False
+Lautaro Martínez,Argentina,fallback_team_from,Top 1-15,16.0,2.833213344056216,-9.0,25.0,88.0,0.2840909090909091,Forward,Italy,False,Serie A,<20,True,True,False
+Sokratis,Greece,fallback_lastname_season,Top 31-45,16.0,2.833213344056216,-4.0,20.0,86.0,0.23255813953488372,Defender,England,False,Premier League,27-29,False,True,True
+Daley Blind,Netherlands,fallback_lastname_season,Top 1-15,16.0,2.833213344056216,-2.0,18.0,81.0,0.2222222222222222,Defender,Netherlands,True,Eredivisie,27-29,False,True,True
+Nordi Mukiele,France,fallback_lastname_season,Top 1-15,16.0,2.833213344056216,2.0,14.0,83.0,0.1686746987951807,Defender,Germany,False,1.Bundesliga,<20,False,True,False
+Joris Gnagnon,Ivory Coast,fallback_lastname_season,Top 16-30,15.0,2.772588722239781,0.0,15.0,84.0,0.17857142857142858,Defender,Spain,False,LaLiga,20-23,True,True,True
+Joaquín Correa,Argentina,fallback_team_from,Top 1-15,15.0,2.772588722239781,5.0,10.0,82.0,0.12195121951219512,Winger,Italy,False,Serie A,20-23,False,True,False
+Mouctar Diakhaby,France,fallback_lastname_season,Top 1-15,15.0,2.772588722239781,5.0,10.0,82.0,0.12195121951219512,Defender,Spain,False,LaLiga,20-23,True,True,False
+Ibrahim Amadou,Cameroon,fallback_team_from,Top 31-45,15.0,2.772588722239781,11.5,3.5,81.0,0.043209876543209874,Midfielder,Spain,False,LaLiga,24-26,True,True,False
+João Carvalho,Portugal,fallback_lastname_season,Top 1-15,15.0,2.772588722239781,12.5,2.5,83.0,0.030120481927710843,Midfielder,England,False,Championship,20-23,False,True,False
+Xherdan Shaqiri,Switzerland,fallback_team_from,Top 1-15,14.7,2.7536607123542622,-3.3000000000000007,18.0,85.0,0.21176470588235294,Winger,England,False,Premier League,24-26,True,True,True
+Daniel Ginczek,Germany,fallback_team_from,Top 1-15,14.0,2.70805020110221,10.5,3.5,77.0,0.045454545454545456,Forward,Germany,True,1.Bundesliga,24-26,True,True,False
+Danny Ward,Wales,fallback_team_from,Top 16-30,14.0,2.70805020110221,11.5,2.5,78.0,0.03205128205128205,Goalkeeper,England,False,Premier League,24-26,True,True,False
+Davy Klaassen,Netherlands,fallback_team_from,Top 1-15,13.5,2.6741486494265287,-1.5,15.0,85.0,0.17647058823529413,Midfielder,Germany,False,1.Bundesliga,24-26,False,True,True
+Gerard Deulofeu,Spain,fallback_team_from,Top 1-15,13.0,2.6390573296152584,-1.0,14.0,89.0,0.15730337078651685,Winger,England,False,Premier League,20-23,True,True,True
+Mattia Perin,Italy,fallback_team_from,Top 1-15,12.0,2.5649493574615367,-4.0,16.0,88.0,0.18181818181818182,Goalkeeper,Italy,True,Serie A,24-26,True,True,True
+Mitchell Weiser,Germany,fallback_team_from,Top 1-15,12.0,2.5649493574615367,0.0,12.0,85.0,0.1411764705882353,Defender,Germany,True,1.Bundesliga,20-23,False,True,True
+Mikel Merino,Spain,fallback_lastname_season,Top 1-15,12.0,2.5649493574615367,2.0,10.0,84.0,0.11904761904761904,Midfielder,Spain,True,LaLiga,20-23,False,True,False
+Marcelo Saracchi,Uruguay,fallback_team_from,Top 16-30,12.0,2.5649493574615367,7.5,4.5,85.0,0.052941176470588235,Defender,Germany,False,1.Bundesliga,<20,False,True,False
+,Spain,fallback_team_from,Top 1-15,12.0,2.5649493574615367,9.5,2.5,81.0,0.030864197530864196,Defender,England,False,Premier League,24-26,False,True,True
+Dusan Tadic,Serbia,fallback_team_from,Top 1-15,11.4,2.517696472610991,-3.5999999999999996,15.0,80.0,0.1875,Midfielder,Netherlands,False,Eredivisie,27-29,False,True,True
+Benik Afobe,DR Congo,fallback_team_from,Top 16-30,11.4,2.517696472610991,1.4000000000000004,10.0,79.0,0.12658227848101267,Forward,England,False,Premier League,24-26,False,True,False
+Josh Murphy,Republic of Ireland,fallback_lastname_season,Top 16-30,11.4,2.517696472610991,9.9,1.5,79.0,0.0189873417721519,Winger,England,False,Premier League,20-23,False,True,False
+Bobby Reid,England,fallback_team_from,Top 1-15,11.35,2.513656063073986,8.35,3.0,74.0,0.04054054054054054,Midfielder,England,True,Premier League,24-26,False,True,False
+David Brooks,United States,fallback_lastname_season,Outside Top 45,11.3,2.509599262378372,6.300000000000001,5.0,81.0,0.06172839506172839,Midfielder,England,False,Premier League,<20,False,True,False
+Tom Ince,England,fallback_lastname_season,Top 1-15,11.2,2.501435951739211,3.1999999999999993,8.0,77.0,0.1038961038961039,Winger,England,True,Championship,24-26,False,True,False
+,Colombia,fallback_lastname_season,Top 1-15,11.0,2.4849066497880004,-7.0,18.0,80.0,0.225,Defender,Spain,False,LaLiga,24-26,True,True,True
+Suat Serdar,Germany,fallback_lastname_season,Top 1-15,11.0,2.4849066497880004,3.5,7.5,80.0,0.09375,Midfielder,Germany,True,1.Bundesliga,20-23,False,True,False
+Wout Weghorst,Netherlands,fallback_team_from,Top 1-15,10.5,2.4423470353692043,3.5,7.0,76.0,0.09210526315789473,Forward,Germany,False,1.Bundesliga,24-26,True,True,False
+Djaniny,Cape Verde,fallback_team_from,Outside Top 45,10.24,2.419478844465545,5.24,5.0,72.0,0.06944444444444445,Forward,Saudi Arabia,False,Professional League,24-26,False,False,False
+Francesco Acerbi,Italy,fallback_team_from,Top 1-15,10.0,2.3978952727983707,0.0,10.0,82.0,0.12195121951219512,Defender,Italy,True,Serie A,27-29,False,True,True
+Vitinho,Brazil,fallback_lastname_season,Top 1-15,10.0,2.3978952727983707,2.0,8.0,84.0,0.09523809523809523,Forward,,,Série A,20-23,False,False,True
+Soualiho Meïté,France,fallback_lastname_season,Top 1-15,10.0,2.3978952727983707,2.0,8.0,81.0,0.09876543209876543,Midfielder,Italy,False,Serie A,20-23,False,True,True
+Danilo,Brazil,fallback_lastname_season,Top 1-15,10.0,2.3978952727983707,3.0,7.0,81.0,0.08641975308641975,Midfielder,France,False,Ligue 1,20-23,False,True,False
+,Argentina,fallback_team_from,Top 1-15,10.0,2.3978952727983707,4.0,6.0,67.0,0.08955223880597014,Midfielder,Spain,False,LaLiga,20-23,True,True,False
+Bernardo,Brazil,fallback_team_from,Top 1-15,10.0,2.3978952727983707,4.0,6.0,81.0,0.07407407407407407,Defender,England,False,Premier League,20-23,False,True,False
+Adama Diakhaby,France,fallback_lastname_season,Top 1-15,10.0,2.3978952727983707,5.0,5.0,82.0,0.06097560975609756,Forward,England,False,Premier League,20-23,False,True,False
+Pelé,Guinea Bissau,fallback_team_from,Outside Top 45,10.0,2.3978952727983707,6.0,4.0,74.0,0.05405405405405406,Midfielder,France,False,Ligue 1,24-26,True,True,False
+Diego Falcinelli,Italy,fallback_team_from,Top 1-15,10.0,2.3978952727983707,6.2,3.8,75.0,0.050666666666666665,Forward,Italy,True,Serie A,24-26,False,True,False
+Antonio Barreca,Italy,fallback_team_from,Top 1-15,10.0,2.3978952727983707,6.5,3.5,86.0,0.040697674418604654,Defender,France,False,Ligue 1,20-23,True,True,False
+Federico Di Francesco,Italy,fallback_team_from,Top 1-15,10.0,2.3978952727983707,6.5,3.5,81.0,0.043209876543209874,Winger,Italy,True,Serie A,20-23,False,True,False
+Davide Santon,Italy,fallback_team_from,Top 1-15,9.5,2.3513752571634776,6.5,3.0,78.0,0.038461538461538464,Defender,Italy,True,Serie A,24-26,True,True,True
+Ramiro Funes Mori,Argentina,fallback_team_from,Top 1-15,9.0,2.302585092994046,-1.0,10.0,81.0,0.12345679012345678,Defender,Spain,False,LaLiga,24-26,True,True,True
+Khouma Babacar,Senegal,fallback_team_from,Top 16-30,9.0,2.302585092994046,1.0,8.0,81.0,0.09876543209876543,Forward,Italy,False,Serie A,24-26,False,True,True
+Lukasz Skorupski,Poland,fallback_lastname_season,Top 16-30,9.0,2.302585092994046,2.0,7.0,79.0,0.08860759493670886,Goalkeeper,Italy,False,Serie A,24-26,False,True,True
+Jordan Siebatcheu,France,fallback_lastname_season,Top 1-15,9.0,2.302585092994046,6.5,2.5,74.0,0.033783783783783786,Forward,France,True,Ligue 1,20-23,False,True,False
+Antonino La Gumina,Italy,fallback_lastname_season,Top 1-15,9.0,2.302585092994046,7.0,2.0,71.0,0.028169014084507043,Forward,Italy,True,Serie A,20-23,False,True,False
+Guido Pizarro,Argentina,fallback_team_from,Top 1-15,8.7,2.272125885509337,1.1999999999999993,7.5,80.0,0.09375,Midfielder,Mexico,False,Liga MX Apertura,27-29,False,False,True
+Alban Lafont,France,fallback_lastname_season,Top 1-15,8.5,2.2512917986064953,-9.5,18.0,89.0,0.20224719101123595,Goalkeeper,Italy,False,Serie A,<20,False,True,True
+Nicólas González,Spain,fallback_lastname_season,Top 1-15,8.5,2.2512917986064953,3.5,5.0,75.0,0.06666666666666667,Forward,Germany,False,1.Bundesliga,<20,False,True,False
+Hassane Bandé,Burkina Faso,fallback_team_from,Outside Top 45,8.25,2.224623551524334,0.75,7.5,74.0,0.10135135135135136,Winger,Netherlands,False,Eredivisie,<20,False,True,False
+Cristiano Piccini,Italy,fallback_team_from,Top 1-15,8.0,2.1972245773362196,0.5,7.5,82.0,0.09146341463414634,Defender,Spain,False,LaLiga,24-26,True,True,True
+,Argentina,fallback_lastname_season,Top 1-15,8.0,2.1972245773362196,1.0,7.0,78.0,0.08974358974358974,Winger,Italy,False,Serie A,20-23,False,True,False
+Chancel Mbemba,DR Congo,fallback_lastname_season,Top 16-30,8.0,2.1972245773362196,2.0,6.0,82.0,0.07317073170731707,Defender,Portugal,False,Liga NOS,20-23,False,True,True
+Samuel Gigot,France,fallback_team_from,Top 1-15,8.0,2.1972245773362196,2.0,6.0,79.0,0.0759493670886076,Defender,Ukraine,False,Premier Liga,20-23,False,True,False
+Lukasz Fabianski,Poland,fallback_lastname_season,Top 16-30,8.0,2.1972245773362196,3.0,5.0,80.0,0.0625,Goalkeeper,England,False,Premier League,30+,True,True,True
+Aden Flint,England,fallback_team_from,Top 1-15,8.0,2.1972245773362196,3.0,5.0,74.0,0.06756756756756757,Defender,England,True,Championship,27-29,False,True,False
+Mattéo Guendouzi,France,fallback_team_from,Top 1-15,8.0,2.1972245773362196,5.5,2.5,74.0,0.033783783783783786,Midfielder,England,False,Premier League,<20,False,True,False
+Fran Beltrán,Spain,fallback_team_from,Top 1-15,8.0,2.1972245773362196,6.0,2.0,79.0,0.02531645569620253,Midfielder,Spain,True,LaLiga,<20,False,True,False
+Stuart Armstrong,Scotland,fallback_team_from,Top 1-15,7.95,2.191653532286764,5.95,2.0,77.0,0.025974025974025976,Midfielder,England,False,Premier League,24-26,False,True,False
+Patrick Bamford,England,fallback_team_from,Top 1-15,7.9,2.186051276738094,3.9000000000000004,4.0,77.0,0.05194805194805195,Forward,England,True,Championship,20-23,False,True,False
+Omar Colley,Gambia,fallback_team_from,Outside Top 45,7.75,2.169053700369523,2.75,5.0,80.0,0.0625,Defender,Italy,False,Serie A,24-26,False,True,False
+Andrea Favilli,Italy,fallback_team_from,Top 1-15,7.5,2.1400661634962708,3.5,4.0,77.0,0.05194805194805195,Forward,Italy,True,Serie A,20-23,True,True,False
+Oghenekaro Etebo,Nigeria,fallback_lastname_season,Top 16-30,7.2,2.1041341542702074,5.7,1.5,82.0,0.018292682926829267,Midfielder,England,False,Championship,20-23,False,True,False
+Salif Sané,Senegal,fallback_team_from,Top 16-30,7.0,2.0794415416798357,-11.0,18.0,81.0,0.2222222222222222,Defender,Germany,False,1.Bundesliga,24-26,False,True,True
+,Germany,fallback_lastname_season,Top 1-15,7.0,2.0794415416798357,-5.0,12.0,79.0,0.1518987341772152,Defender,Spain,False,LaLiga,20-23,True,True,False
+Tomas Vaclik,Czech Republic,fallback_lastname_season,Top 31-45,7.0,2.0794415416798357,3.0,4.0,78.0,0.05128205128205128,Goalkeeper,Spain,False,LaLiga,27-29,True,True,True
+Néstor Araujo,Mexico,fallback_team_from,Top 1-15,7.0,2.0794415416798357,4.2,2.8,77.0,0.03636363636363636,Defender,Spain,False,LaLiga,24-26,False,True,False
+Federico Dimarco,Italy,fallback_team_from,Top 1-15,7.0,2.0794415416798357,5.0,2.0,77.0,0.025974025974025976,Defender,Italy,True,Serie A,<20,True,True,False
+Lucas Castro,Argentina,fallback_team_from,Top 1-15,6.5,2.0149030205422647,-0.5,7.0,78.0,0.08974358974358974,Midfielder,Italy,False,Serie A,27-29,False,True,True
+Ramadan Sobhi,Egypt,fallback_team_from,Top 31-45,6.5,2.0149030205422647,-0.5,7.0,85.0,0.08235294117647059,Winger,England,False,Premier League,20-23,False,True,False
+,Brazil,fallback_lastname_season,Top 1-15,6.5,2.0149030205422647,0.0,6.5,84.0,0.07738095238095238,Winger,Portugal,False,Liga NOS,20-23,False,True,True
+Riza Durmisi,Denmark,fallback_team_from,Top 16-30,6.5,2.0149030205422647,1.5,5.0,80.0,0.0625,Defender,Italy,False,Serie A,20-23,False,True,False
+Ronaldo Vieira,Portugal,fallback_lastname_season,Top 1-15,6.5,2.0149030205422647,4.5,2.0,83.0,0.024096385542168676,Midfielder,Italy,False,Serie A,<20,False,True,False
+Raúl Ruidíaz,Peru,fallback_lastname_season,Top 16-30,6.36,1.9960599327407849,1.3600000000000003,5.0,77.0,0.06493506493506493,Forward,United States,False,MLS,24-26,False,False,True
+Daniel Wass,Denmark,fallback_lastname_season,Top 16-30,6.0,1.9459101490553132,-9.0,15.0,80.0,0.1875,Midfielder,Spain,False,LaLiga,27-29,True,True,True
+Okay Yokuslu,Turkey,fallback_team_from,Top 16-30,6.0,1.9459101490553132,-1.5,7.5,80.0,0.09375,Midfielder,Spain,False,LaLiga,20-23,False,True,False
+Roque Mesa,Spain,fallback_lastname_season,Top 1-15,6.0,1.9459101490553132,-1.0,7.0,82.0,0.08536585365853659,Midfielder,Spain,True,LaLiga,27-29,True,True,True
+,Germany,fallback_team_from,Top 1-15,6.0,1.9459101490553132,0.0,6.0,82.0,0.07317073170731707,Winger,Germany,True,1.Bundesliga,20-23,False,True,True
+Zakaria Labyad,Morocco,fallback_team_from,Top 31-45,6.0,1.9459101490553132,0.0,6.0,78.0,0.07692307692307693,Midfielder,Netherlands,False,Eredivisie,24-26,False,True,False
+Moussa Niakhaté,France,fallback_team_from,Top 1-15,6.0,1.9459101490553132,1.0,5.0,75.0,0.06666666666666667,Defender,Germany,False,1.Bundesliga,20-23,False,True,False
+Uros Spajic,Serbia,fallback_team_from,Top 1-15,6.0,1.9459101490553132,1.0,5.0,78.0,0.0641025641025641,Defender,Ukraine,False,Premier Liga,24-26,False,True,False
+Walace,Brazil,fallback_team_from,Top 1-15,6.0,1.9459101490553132,1.5,4.5,82.0,0.054878048780487805,Midfielder,Germany,False,1.Bundesliga,20-23,False,True,False
+,France,fallback_lastname_season,Top 1-15,6.0,1.9459101490553132,2.0,4.0,81.0,0.04938271604938271,Defender,France,True,Ligue 1,<20,True,True,False
+Majeed Waris,Ghana,fallback_team_from,Top 16-30,6.0,1.9459101490553132,3.5,2.5,78.0,0.03205128205128205,Forward,Portugal,False,Liga NOS,24-26,False,True,False
+Igor Coronado,Brazil,fallback_lastname_season,Top 1-15,6.0,1.9459101490553132,3.6,2.4,75.0,0.032,Midfielder,United Arab Emirates,False,UAE Gulf League,24-26,False,False,False
+Milton Caraglio,Argentina,fallback_lastname_season,Top 1-15,5.98,1.9430489167742813,3.4800000000000004,2.5,74.0,0.033783783783783786,Forward,Mexico,False,Liga MX Apertura,27-29,False,False,False
+,Mexico,fallback_lastname_season,Top 1-15,5.94,1.937301774518713,2.4400000000000004,3.5,77.0,0.045454545454545456,Winger,Mexico,True,Liga MX Apertura,27-29,False,False,True
+,Mexico,fallback_lastname_season,Top 1-15,5.94,1.937301774518713,2.4400000000000004,3.5,72.0,0.04861111111111111,Winger,Mexico,True,Liga MX Apertura,27-29,False,False,False
+Éder,Italy,fallback_team_from,Top 1-15,5.7,1.9021075263969205,-1.2999999999999998,7.0,80.0,0.0875,Forward,China,False,Super League,30+,False,True,True
+Paddy McNair,Northern Ireland,fallback_team_from,Outside Top 45,5.7,1.9021075263969205,2.7,3.0,81.0,0.037037037037037035,Defender,England,False,Championship,20-23,False,True,False
+João Moutinho,Portugal,fallback_lastname_season,Top 1-15,5.6,1.8870696490323797,-4.4,10.0,82.0,0.12195121951219512,Midfielder,England,False,Premier League,30+,False,True,True
+James McClean,Republic of Ireland,fallback_lastname_season,Top 16-30,5.6,1.8870696490323797,2.5999999999999996,3.0,74.0,0.04054054054054054,Winger,England,False,Championship,27-29,False,True,False
+Denzel Dumfries,Netherlands,fallback_lastname_season,Top 1-15,5.5,1.8718021769015913,1.5,4.0,78.0,0.05128205128205128,Defender,Netherlands,True,Eredivisie,20-23,False,True,False
+Carlos Izquierdoz,Argentina,fallback_team_from,Top 1-15,5.15,1.8164520818184267,2.1500000000000004,3.0,77.0,0.03896103896103896,Defender,,,Primera División,27-29,False,False,True
+,Colombia,fallback_team_from,Top 1-15,5.1,1.8082887711792655,2.5999999999999996,2.5,78.0,0.03205128205128205,Winger,,,Série A,24-26,False,False,True
+Marius Wolf,Germany,fallback_lastname_season,Top 1-15,5.0,1.791759469228055,-5.0,10.0,77.0,0.12987012987012986,Midfielder,Germany,True,1.Bundesliga,20-23,False,True,False
+Gonzalo Castro,Germany,fallback_lastname_season,Top 1-15,5.0,1.791759469228055,-3.0,8.0,82.0,0.0975609756097561,Midfielder,Germany,True,1.Bundesliga,30+,False,True,True
+Sergi Gómez,Argentina,fallback_lastname_season,Top 1-15,5.0,1.791759469228055,-3.0,8.0,84.0,0.09523809523809523,Defender,Spain,False,LaLiga,24-26,True,True,True
+Sergi Gómez,Argentina,fallback_lastname_season,Top 1-15,5.0,1.791759469228055,-3.0,8.0,81.0,0.09876543209876543,Defender,Spain,False,LaLiga,24-26,True,True,False
+Adam Masina,Italy,fallback_team_from,Top 1-15,5.0,1.791759469228055,-2.0,7.0,79.0,0.08860759493670886,Defender,England,False,Premier League,20-23,True,True,False
+Christophe Hérelle,France,fallback_lastname_season,Top 1-15,5.0,1.791759469228055,-1.0,6.0,75.0,0.08,Defender,France,True,Ligue 1,24-26,False,True,False
+Firmin Mubele,DR Congo,fallback_lastname_season,Top 16-30,5.0,1.791759469228055,-1.0,6.0,78.0,0.07692307692307693,Forward,France,False,Ligue 1,20-23,False,True,False
+Nemanja Maksimovic,Serbia,fallback_team_from,Top 1-15,5.0,1.791759469228055,0.0,5.0,82.0,0.06097560975609756,Midfielder,Spain,False,LaLiga,20-23,False,True,False
+Fabrício,Spain,fallback_lastname_season,Top 1-15,5.0,1.791759469228055,1.0,4.0,69.0,0.057971014492753624,Forward,Japan,False,J1 League,27-29,False,False,False
+Christian Kouamé,Ivory Coast,fallback_team_from,Top 16-30,5.0,1.791759469228055,2.2,2.8,73.0,0.03835616438356164,Forward,Italy,False,Serie A,<20,False,True,False
+Luca Waldschmidt,Germany,fallback_team_from,Top 1-15,5.0,1.791759469228055,2.5,2.5,76.0,0.03289473684210526,Forward,Germany,True,1.Bundesliga,20-23,False,True,False
+Jasmin Kurtic,Slovenia,fallback_team_from,Top 31-45,4.8,1.7578579175523736,-0.20000000000000018,5.0,76.0,0.06578947368421052,Midfielder,Italy,False,Serie A,27-29,False,True,True
+Silvan Widmer,Switzerland,fallback_lastname_season,Top 1-15,4.5,1.7047480922384253,-4.0,8.5,82.0,0.10365853658536585,Defender,China,False,Super League,24-26,False,True,True
+,Japan,fallback_team_from,Top 31-45,4.5,1.7047480922384253,0.0,4.5,78.0,0.057692307692307696,Forward,Germany,False,1.Bundesliga,27-29,False,True,True
+Kyle Bartley,England,fallback_lastname_season,Top 1-15,4.5,1.7047480922384253,1.0,3.5,75.0,0.04666666666666667,Defender,England,True,Championship,24-26,False,True,False
+Rodrigo,Spain,fallback_team_to,Top 1-15,30.0,3.4339872044851463,12.0,18.0,86.0,0.20930232558139536,Forward,Spain,True,LaLiga,20-23,True,True,True
+Álvaro Negredo,Spain,fallback_team_to,Top 1-15,28.0,3.367295829986474,10.0,18.0,83.0,0.21686746987951808,Forward,Spain,True,LaLiga,27-29,True,True,True
+André Gomes,Portugal,fallback_team_to,Top 1-15,20.0,3.044522437723423,0.0,20.0,83.0,0.24096385542168675,Midfielder,Spain,False,LaLiga,20-23,True,True,False
+Roberto Pereyra,Argentina,fallback_team_to,Top 1-15,15.0,2.772588722239781,-2.0,17.0,83.0,0.20481927710843373,Midfielder,Italy,False,Serie A,20-23,True,True,True
+João Cancelo,Portugal,fallback_team_to,Top 1-15,15.0,2.772588722239781,10.0,5.0,82.0,0.06097560975609756,Defender,Spain,False,LaLiga,20-23,True,True,False
+Adama Traoré,Ivory Coast,fallback_lastname_season,Top 16-30,14.0,2.70805020110221,12.75,1.25,84.0,0.01488095238095238,Midfielder,France,False,Ligue 1,<20,True,True,True
+Ricardo Álvarez,Argentina,fallback_team_to,Top 1-15,10.5,2.4423470353692043,0.5,10.0,77.0,0.12987012987012986,Midfielder,England,False,Premier League,24-26,False,True,False
+Dusan Basta,Serbia,fallback_team_to,Top 1-15,10.5,2.4423470353692043,5.0,5.5,75.0,0.07333333333333333,Defender,Italy,False,Serie A,27-29,False,True,False
+Domenico Berardi,Italy,fallback_team_to,Top 1-15,10.0,2.3978952727983707,-7.5,17.5,87.0,0.20114942528735633,Winger,Italy,True,Serie A,<20,False,True,True
+Serge Aurier,Ivory Coast,fallback_lastname_season,Top 16-30,10.0,2.3978952727983707,0.0,10.0,84.0,0.11904761904761904,Defender,France,False,Ligue 1,20-23,True,True,True
+Matej Vydra,Czech Republic,fallback_team_to,Top 31-45,8.4,2.2407096892759584,2.9000000000000004,5.5,78.0,0.07051282051282051,Forward,England,False,Premier League,20-23,True,True,False
+Kyriakos Papadopoulos,Greece,fallback_lastname_season,Top 31-45,6.5,2.0149030205422647,-1.0,7.5,84.0,0.08928571428571429,Defender,Germany,False,1.Bundesliga,20-23,False,True,True
+Lewis Holtby,Germany,fallback_team_to,Top 1-15,6.5,2.0149030205422647,2.5,4.0,81.0,0.04938271604938271,Midfielder,Germany,True,1.Bundesliga,20-23,False,True,True
+Fabinho,Brazil,fallback_lastname_season,Top 1-15,6.0,1.9459101490553132,-2.0,8.0,80.0,0.1,Midfielder,France,False,Ligue 1,20-23,True,True,False
+Iago Aspas,Spain,fallback_team_to,Top 1-15,6.0,1.9459101490553132,2.0,4.0,80.0,0.05,Winger,Spain,True,LaLiga,24-26,True,True,True
+Leandro Paredes,Chile,fallback_lastname_season,Top 16-30,6.0,1.9459101490553132,2.5,3.5,80.0,0.04375,Midfielder,Italy,False,Serie A,20-23,True,True,False
+Mohamed Salah,Egypt,fallback_lastname_season,Top 31-45,15.0,2.772588722239781,-5.0,20.0,87.0,0.22988505747126436,Winger,Italy,False,Serie A,20-23,True,True,True
+Stevan Jovetic,Montenegro,fallback_team_to,Top 31-45,13.5,2.6741486494265287,3.5,10.0,83.0,0.12048192771084337,Forward,Italy,False,Serie A,24-26,True,True,True
+Manuel Lanzini,Argentina,fallback_lastname_season,Top 1-15,12.0,2.5649493574615367,3.0,9.0,83.0,0.10843373493975904,Midfielder,England,False,Premier League,20-23,True,True,True
+Edin Dzeko,Bosnia Herzegovina,fallback_lastname_season,Top 31-45,11.0,2.4849066497880004,-7.0,18.0,81.0,0.2222222222222222,Forward,Italy,False,Serie A,27-29,True,True,True
+Mario Lemina,Gabon,fallback_team_to,Top 31-45,9.8,2.379546134130174,5.800000000000001,4.0,81.0,0.04938271604938271,Midfielder,Italy,False,Serie A,20-23,True,True,False
+,Brazil,fallback_team_to,Top 1-15,9.0,2.302585092994046,-7.0,16.0,84.0,0.19047619047619047,Defender,Italy,False,Serie A,30+,True,True,True
+Antonio Rüdiger,Germany,fallback_lastname_season,Top 1-15,9.0,2.302585092994046,-1.0,10.0,85.0,0.11764705882352941,Defender,Italy,False,Serie A,20-23,True,True,True
+Rémy Cabella,France,fallback_lastname_season,Top 1-15,8.0,2.1972245773362196,0.0,8.0,81.0,0.09876543209876543,Midfielder,France,True,Ligue 1,24-26,False,True,True
+Dodô,Brazil,fallback_team_to,Top 1-15,7.8,2.174751721484161,1.7999999999999998,6.0,78.0,0.07692307692307693,Defender,Italy,False,Serie A,20-23,True,True,False
+Konstantinos Mitroglou,Greece,fallback_lastname_season,Top 31-45,7.0,2.0794415416798357,-2.5,9.5,78.0,0.12179487179487179,Forward,Portugal,False,Liga NOS,27-29,False,True,True
+Gerónimo Rulli,Argentina,fallback_team_to,Top 1-15,7.0,2.0794415416798357,-1.0,8.0,86.0,0.09302325581395349,Goalkeeper,Spain,False,LaLiga,20-23,False,True,True
+Jhon Córdoba,Colombia,fallback_lastname_season,Top 1-15,6.5,2.0149030205422647,3.0,3.5,81.0,0.043209876543209874,Forward,Germany,False,1.Bundesliga,20-23,False,True,False
+Nathan Aké,Netherlands,fallback_team_to,Top 1-15,22.8,3.169685580677429,14.8,8.0,81.0,0.09876543209876543,Defender,England,False,Premier League,20-23,False,True,False
+Juan Cuadrado,Colombia,fallback_team_to,Top 1-15,20.0,3.044522437723423,-5.0,25.0,82.0,0.3048780487804878,Winger,Italy,False,Serie A,27-29,True,True,True
+Nikola Maksimovic,Serbia,fallback_lastname_season,Top 1-15,20.0,3.044522437723423,10.0,10.0,86.0,0.11627906976744186,Defender,Italy,False,Serie A,24-26,False,True,True
+Nabil Bentaleb,Algeria,fallback_team_to,Top 16-30,19.0,2.995732273553991,1.0,18.0,83.0,0.21686746987951808,Midfielder,Germany,False,1.Bundesliga,20-23,False,True,False
+Medhi Benatia,Morocco,fallback_team_to,Top 31-45,17.0,2.8903717578961645,2.0,15.0,83.0,0.18072289156626506,Defender,Italy,False,Serie A,27-29,True,True,True
+Marko Rog,Croatia,fallback_lastname_season,Top 16-30,13.0,2.6390573296152584,3.0,10.0,85.0,0.11764705882352941,Midfielder,Italy,False,Serie A,20-23,False,True,False
+Bruno Peres,Brazil,fallback_lastname_season,Top 1-15,12.5,2.6026896854443837,1.5,11.0,83.0,0.13253012048192772,Defender,Italy,False,Serie A,24-26,True,True,True
+Yevhen Konoplyanka,Ukraine,fallback_team_to,Outside Top 45,12.5,2.6026896854443837,2.5,10.0,84.0,0.11904761904761904,Winger,Germany,False,1.Bundesliga,24-26,False,True,True
+Florian Thauvin,France,fallback_lastname_season,Top 1-15,11.0,2.4849066497880004,-7.0,18.0,83.0,0.21686746987951808,Winger,France,True,Ligue 1,20-23,False,True,True
+Aaron Mooy,Australia,fallback_lastname_season,Outside Top 45,9.1,2.312535423847214,4.1,5.0,79.0,0.06329113924050633,Midfielder,England,False,Premier League,24-26,False,True,True
+,Cape Verde,fallback_team_to,Outside Top 45,9.0,2.302585092994046,5.5,3.5,72.0,0.04861111111111111,Midfielder,France,False,Ligue 1,24-26,False,True,False
+Juan Jesus,Brazil,fallback_lastname_season,Top 1-15,8.0,2.1972245773362196,0.5,7.5,78.0,0.09615384615384616,Defender,Italy,False,Serie A,24-26,True,True,False
+Wanderson,Brazil,fallback_lastname_season,Top 1-15,8.0,2.1972245773362196,5.25,2.75,77.0,0.03571428571428571,Winger,Ukraine,False,Premier Liga,20-23,False,True,True
+Bruno Martins Indi,Netherlands,fallback_team_to,Top 1-15,7.7,2.1633230256605382,-3.3,11.0,82.0,0.13414634146341464,Defender,England,False,Premier League,24-26,False,True,True
+Christian Atsu,Ghana,fallback_lastname_season,Top 16-30,7.5,2.1400661634962708,2.5,5.0,81.0,0.06172839506172839,Winger,England,False,Premier League,24-26,True,True,True
+Clinton N'Jie,Cameroon,fallback_lastname_season,Top 31-45,7.0,2.0794415416798357,0.0,7.0,79.0,0.08860759493670886,Forward,France,False,Ligue 1,20-23,False,True,False
+Kylian Mbappé,France,fallback_lastname_season,Top 1-15,135.0,4.912654885736052,15.0,120.0,94.0,1.2765957446808511,Winger,France,True,Ligue 1,<20,True,True,True
+Douglas Costa,Brazil,fallback_team_to,Top 1-15,40.0,3.713572066704308,-15.0,55.0,82.0,0.6707317073170732,Winger,Italy,False,Serie A,24-26,True,True,True
+Geoffrey Kondogbia,France,fallback_team_to,Top 1-15,25.0,3.258096538021482,-5.0,30.0,81.0,0.37037037037037035,Midfielder,Spain,False,LaLiga,24-26,True,True,True
+Nikola Kalinic,Croatia,fallback_lastname_season,Top 16-30,20.0,3.044522437723423,6.0,14.0,81.0,0.1728395061728395,Forward,Italy,False,Serie A,27-29,True,True,True
+Duván Zapata,Colombia,fallback_team_to,Top 1-15,17.0,2.8903717578961645,-3.0,20.0,81.0,0.24691358024691357,Forward,Italy,False,Serie A,24-26,False,True,True
+Grégoire Defrel,France,fallback_lastname_season,Top 1-15,15.0,2.772588722239781,5.0,10.0,79.0,0.12658227848101267,Forward,Italy,False,Serie A,24-26,True,True,True
+,Portugal,fallback_lastname_season,Top 1-15,14.0,2.70805020110221,2.0,12.0,86.0,0.13953488372093023,Winger,England,False,Premier League,20-23,False,True,True
+M'Baye Niang,France,fallback_team_to,Top 1-15,12.0,2.5649493574615367,2.0,10.0,85.0,0.11764705882352941,Forward,Italy,False,Serie A,20-23,False,True,True
+Willy Boly,France,fallback_lastname_season,Top 1-15,12.0,2.5649493574615367,7.0,5.0,78.0,0.0641025641025641,Defender,England,False,Premier League,24-26,False,True,False
+Gianluca Lapadula,Italy,fallback_team_to,Top 1-15,11.0,2.4849066497880004,4.0,7.0,77.0,0.09090909090909091,Forward,Italy,True,Serie A,27-29,False,True,True
+Odsonne Edouard,France,fallback_team_to,Top 1-15,10.3,2.424802725718295,8.8,1.5,80.0,0.01875,Forward,Scotland,False,Premiership,<20,False,False,False
+Jordan Amavi,France,fallback_lastname_season,Top 1-15,10.0,2.3978952727983707,-6.0,16.0,80.0,0.2,Defender,France,True,Ligue 1,20-23,False,True,False
+Patrik Schick,Czech Republic,fallback_lastname_season,Top 31-45,9.0,2.302585092994046,-11.0,20.0,87.0,0.22988505747126436,Forward,Italy,False,Serie A,20-23,True,True,True
+Germán Pezzella,Argentina,fallback_team_to,Top 1-15,9.0,2.302585092994046,-4.0,13.0,83.0,0.1566265060240964,Defender,Italy,False,Serie A,24-26,False,True,True
+Riccardo Saponara,Italy,fallback_team_to,Top 1-15,9.0,2.302585092994046,0.0,9.0,82.0,0.10975609756097561,Midfielder,Italy,True,Serie A,24-26,False,True,True
+Tanguy Ndombélé,France,fallback_lastname_season,Top 1-15,8.0,2.1972245773362196,-17.0,25.0,84.0,0.2976190476190476,Midfielder,France,True,Ligue 1,20-23,False,True,False
+Sergi Darder,Spain,fallback_lastname_season,Top 1-15,8.0,2.1972245773362196,-3.0,11.0,84.0,0.13095238095238096,Midfielder,Spain,True,LaLiga,20-23,False,True,True
+Mikel Merino,Spain,fallback_lastname_season,Top 1-15,7.0,2.0794415416798357,-3.0,10.0,84.0,0.11904761904761904,Midfielder,England,False,Premier League,20-23,True,True,False
+Marcel Tisserand,DR Congo,fallback_team_to,Top 16-30,7.0,2.0794415416798357,-0.5,7.5,79.0,0.0949367088607595,Defender,Germany,False,1.Bundesliga,24-26,True,True,False
+Valentino Lazaro,Austria,fallback_team_to,Top 31-45,6.5,2.0149030205422647,-2.5,9.0,80.0,0.1125,Winger,Germany,False,1.Bundesliga,20-23,False,True,False
+Tomás Rincón,Venezuela,fallback_team_to,Top 31-45,6.0,1.9459101490553132,-2.0,8.0,77.0,0.1038961038961039,Midfielder,Italy,False,Serie A,27-29,False,True,True
+Fabio Borini,Italy,fallback_lastname_season,Top 1-15,5.5,1.8718021769015913,-1.5,7.0,77.0,0.09090909090909091,Winger,Italy,True,Serie A,24-26,True,True,True
+Bryan Cristante,Italy,fallback_team_to,Top 1-15,5.0,1.791759469228055,-20.0,25.0,82.0,0.3048780487804878,Midfielder,Italy,True,Serie A,20-23,False,True,False
+Florent Hadergjonaj,Switzerland,fallback_lastname_season,Top 1-15,5.0,1.791759469228055,0.0,5.0,79.0,0.06329113924050633,Defender,England,False,Premier League,20-23,False,True,False
+Juan Iturbe,Paraguay,fallback_team_to,Top 31-45,5.0,1.791759469228055,1.0,4.0,78.0,0.05128205128205128,Winger,Mexico,False,Liga MX Apertura,24-26,False,False,True
+Pietro Iemmello,Italy,fallback_team_to,Top 1-15,5.0,1.791759469228055,3.0,2.0,74.0,0.02702702702702703,Forward,Italy,True,Serie B,24-26,False,False,False
