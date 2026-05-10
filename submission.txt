@@ -1,0 +1,15 @@
+Hello everyone!
+
+As a reminder, the final deliverables for the course project are due next Monday, May 11 at 11:59am (noon). You should submit via Gradescope one submission per group (we will deduct points for not linking your partner or having dual submissions!) encompassing 4 files:
+
+Written project report in PDF format following the report structure in the Project Description document on Brightspace. You should include a joint project contributions statement that you both agree with. There is a strict 10-page limit, so decide carefully which figures, tables, and analyses best support your technical audit of your ADS.
+Presentation slides (see next bullet) in PDF format. There is no strict page limit, but the slides should summarize the written report and all slides must appear in the video presentation.
+Project presentation in mp4 or mov format, strictly 5 minutes (please do not speed up the video!). You should walk through the main points of your analysis using the slides above. It is fine if you are not physically together and each person records their part, but make sure to merge the recordings in a coherent way.
+Notebook with your code implementation of your ADS audit that generates the main analyses, plots, and tables from your report.
+Submit each file in a separate question within the "Project Report" assignment on Gradescope, and make sure to click save answer so the file is actually uploaded.
+
+Finally, remember that we want you to analyze your ADS as a decision-support system beyond its predictive performance. Make sure to motivate and frame your audit in terms of how prediction errors translate into real-world fairness issues that affect people's lives.
+
+It has been our pleasure to have you all in the class, and we wish you the best in your future careers as Responsible Data Scientists!
+
+Mateo & Lucius
