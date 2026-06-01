@@ -197,30 +197,42 @@ def run_model(X, y, features, df_full):
     scenario_specs = [
         {
             'label': 'Young Brazilian Talent',
-            'query': "(age < 21) & (nationality == 'Brazil')",
-            'desc': 'Young prospect moving from Brazil to Europe.'
+            'query': "Name == 'Richarlison' and Season_Year == 2017",
+            'desc': 'Young prospect moving from Brazil to the Premier League (Fluminense to Watford).'
         },
         {
             'label': 'English Domestic Move',
-            'query': "(nationality == 'England') & (Home_Nation_Transfer == 1)",
-            'desc': 'English player moving within the UK (Premier League).'
+            'query': "Name == 'Alex Oxlade-Chamberlain' and Season_Year == 2017",
+            'desc': 'English player moving domestically between top clubs (Arsenal to Liverpool).'
         },
         {
             'label': 'Superstar Juggernaut',
-            'query': "(overall > 85)",
-            'desc': 'Marquee signing with elite overall ability.'
+            'query': "Name == 'Paul Pogba' and Season_Year == 2016",
+            'desc': 'Marquee signing with world-record fee context (Juve to Man Utd).'
         },
         {
-            'label': 'Veteran Retirement',
-            'query': "(age > 33)",
-            'desc': 'Experienced player moving in the twilight of their career.'
+            'label': 'Veteran Superstar',
+            'query': "Name == 'Cristiano Ronaldo' and Season_Year == 2018",
+            'desc': 'Elite veteran (33) moving for a high fee to a top league (Real to Juve).'
         },
         {
-            'label': 'Mid-tier Competitive',
-            'query': "(overall >= 74) & (overall <= 78) & (age >= 24) & (age <= 28)",
-            'desc': 'Stable prime-age player in a mid-tier league context.'
+            'label': 'Mid-tier to Arsenal',
+            'query': "Name == 'Lucas Torreira' and Season_Year == 2018",
+            'desc': 'Established competitive player moving to a top-6 league club (Sampdoria to Arsenal).'
         }
     ]
+
+    print("\n--- Feature Definitions & Expected Ranges ---")
+    print("1. Contract_Duration: [0 - 7] Years left on contract. Mean: 3.5. High (>5) = Security premium.")
+    print("2. Age_Feature: [17 - 35] Player age. Mean: 25. High (>28) typically discounts fee.")
+    print("3. Financial_Strength: [€5M - €15M] 3-yr rolling median fee of buying league. High = Premier League context.")
+    print("4. Ability_Overall: [50 - 94] Current FIFA rating. Elite (>85) exponentially increases value.")
+    print("5. Ability_Potential: [60 - 94] FIFA Potential. High (>85) adds 'future' premium.")
+    print("6. xG_Proxy (Advanced): [20 - 190] Sum of Finishing/Positioning. Elite strikers sit > 160.")
+    print("7. xA_Proxy (Advanced): [40 - 170] Sum of Vision/Crossing. Playmakers sit > 140.")
+    print("8. Passport_Premium: [0 or 1] 1 for top 10 FIFA nations (e.g., Brazil, France, England).")
+    print("9. Position_Feature: [0 - 3] 0:GK, 1:DEF, 2:MID, 3:FWD. Forwards typically carry higher fees.")
+    print("10. Home_Nation_Transfer: [0 or 1] 1 if transferring within home country league system.")
 
     for spec in scenario_specs:
         candidates = df_full.query(spec['query'])
