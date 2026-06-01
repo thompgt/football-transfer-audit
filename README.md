@@ -43,7 +43,7 @@ This scenario explores the "homegrown premium" featuring a domestic move between
 ![LIME English Domestic Move](./plots/lime_english_domestic_move.png)
 
 #### Scenario 3: Superstar Juggernaut (Paul Pogba)
-The "Marquee Signing" prototype features an elite player moving for a then world-record context (Juve to Man Utd, 2016). The model's logic is dominated by elite **Ability_Overall** and **Ability_Potential**, both sitting at the extreme high end of the range. For such marquee players, **International_Reputation** (indirectly captured via high Overall) and top-tier **Advanced Stats** like the xG/xA proxies become the definitive positive drivers.
+The "Marquee Signing" prototype features Paul Pogba's world-record context move (Juve to Man Utd, 2016). The model identifies his elite **Ability_Overall** and **Ability_Potential** as the definitive positive drivers, reflecting his status as one of the world's most valuable players at the time. With high **Financial_Strength** from the Premier League and peak technical output (xG/xA proxies), the model predicts a valuation mirroring the historical €105M fee, quantifying the "superstar premium" in elite transfers.
 
 ![LIME Superstar Juggernaut](./plots/lime_superstar_juggernaut.png)
 
@@ -53,7 +53,7 @@ This prototype covers an elite veteran (33) moving for a high fee to a top-6 lea
 ![LIME Veteran Superstar](./plots/lime_veteran_superstar.png)
 
 #### Scenario 5: Mid-tier Competitive (Daley Blind)
-The "Standard Prime" move features stable, established players moving between competitive but non-elite leagues (Man Utd to Ajax, 2018). The model shows a balanced distribution of weights, where **Ability_Overall** and **Financial_Strength** are the primary anchors. This scenario demonstrates the model's ability to provide a "fair market" baseline where established technical quality drives a valuation that closely tracks the player's immediate contribution rather than extreme upside or historical reputation.
+The "Standard Prime" move features Daley Blind moving between competitive European leagues (Man Utd to Ajax, 2018). The model shows a balanced distribution of weights, where **Ability_Overall** and **Financial_Strength** are the primary anchors. This scenario demonstrates the model's ability to provide a "fair market" baseline where established technical quality drives a valuation that closely tracks the player's immediate contribution rather than extreme upside or historical reputation.
 
 ![LIME Mid-tier Competitive](./plots/lime_mid-tier_competitive.png)
 
