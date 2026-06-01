@@ -30,32 +30,32 @@ The plot below illustrates the global feature influence for our refined 10-facto
 ![SHAP 10 Factors](./plots/shap_summary.png)
 
 ### 4. Domain Expertise: LIME Scenario Analysis
-To validate the model's decision-making, we conducted local audits across five distinct player prototypes. These case studies use Local Interpretable Model-agnostic Explanations (LIME) to show how the 10 factors contribute to a specific valuation, ensuring the model aligns with professional scouting logic.
+To validate the model's decision-making, we conducted local audits across five distinct player prototypes using historical examples from the dataset. These case studies use Local Interpretable Model-agnostic Explanations (LIME) to show how the 10 factors contribute to a specific valuation.
 
-#### Scenario 1: Young Brazilian Talent
-This prototype represents the "high-upside prospect" moving from South America to an elite European league. The model identifies the player's high **Ability_Potential** and young **Age_Feature** as the primary positive drivers, reflecting the market's willingness to pay a premium for future growth. The slightly lower current **Ability_Overall** acts as a minor discount, but the overall valuation remains high due to the prospect's technical floor (xG/xA proxies).
+#### Scenario 1: Young Brazilian Talent (Richarlison)
+This prototype represents the "high-upside prospect" moving from Brazil to the Premier League (Fluminense to Watford, 2017). The model identifies Richarlison's **Ability_Potential** and young **Age_Feature** as the primary positive drivers. Despite a lower current **Ability_Overall** compared to established stars, his technical proxies (xG/xA) and the high liquidity of the buying league drive a strong valuation for a relatively unproven talent.
 
 ![LIME Young Brazilian Talent](./plots/lime_young_brazilian_talent.png)
 
-#### Scenario 2: English Domestic Move
-This scenario explores the "homegrown premium" in the Premier League, featuring an English player moving between top-flight English clubs. The model highlights the **Home_Nation_Transfer** and **Financial_Strength** of the buying league as major positive weights, quantifying the added cost of domestic proven talent. Even if technical stats are mid-tier, the combined effect of the **Passport_Premium** and the high-liquidity environment of the English league drives the fee significantly above global averages.
+#### Scenario 2: English Domestic Move (Alex Oxlade-Chamberlain)
+This scenario explores the "homegrown premium" featuring a domestic move between top-flight English clubs (Arsenal to Liverpool, 2017). The model highlights **Home_Nation_Transfer** and **Financial_Strength** of the Premier League as major positive weights. Even with balanced technical stats, the combined effect of the **Passport_Premium** and the proven domestic record drives the fee significantly above international benchmarks.
 
 ![LIME English Domestic Move](./plots/lime_english_domestic_move.png)
 
-#### Scenario 3: Superstar Juggernaut
-The "Marquee Signing" prototype features elite players with world-class technical standing moving to global giants. The model's logic is dominated by **Ability_Overall** and **Ability_Potential**, both sitting at the top of the feature range, alongside high **Financial_Strength**. In this elite tier, advanced stats like the **xG_Proxy** become critical positive drivers, as the model expects marquee forwards to justify their fees with high-volume offensive output.
+#### Scenario 3: Superstar Juggernaut (Paul Pogba)
+The "Marquee Signing" prototype features an elite player moving for a then world-record context (Juve to Man Utd, 2016). The model's logic is dominated by elite **Ability_Overall** and **Ability_Potential**, both sitting at the extreme high end of the range. For such marquee players, **International_Reputation** (indirectly captured via high Overall) and top-tier **Advanced Stats** like the xG/xA proxies become the definitive positive drivers.
 
 ![LIME Superstar Juggernaut](./plots/lime_superstar_juggernaut.png)
 
-#### Scenario 4: Veteran Retirement
-This prototype covers experienced players in the twilight of their careers moving to emerging or "retirement" leagues. The model correctly identifies **Age_Feature** (values > 30) as a heavy negative driver, which significantly suppresses the predicted fee despite the player's high **Ability_Overall**. The valuation is further moderated by low **Ability_Potential**, reflecting the short-term nature of the investment and the declining resale value typical of this archetype.
+#### Scenario 4: Veteran Superstar (Cristiano Ronaldo)
+This prototype covers an elite veteran (33) moving for a high fee to a top-6 league (Real to Juve, 2018). While the model recognizes his world-class **Ability_Overall**, the **Age_Feature** (values > 28) and declining **Ability_Potential** act as definitive negative weights. This creates a fascinating tension where his intrinsic ability pulls the fee upward, while his career stage exerts significant downward pressure, reflecting the high-risk nature of veteran investments.
 
-![LIME Veteran Retirement](./plots/lime_veteran_retirement.png)
+![LIME Veteran Superstar](./plots/lime_veteran_superstar.png)
 
-#### Scenario 5: Mid-tier Competitive
-The "Standard Prime" move features stable, established players moving between competitive but non-elite leagues. The model shows a balanced distribution of weights, where **Ability_Overall** and **Contract_Duration** are the primary anchors. This scenario demonstrates the model's ability to provide a "fair market" baseline where no single factor exerts extreme pressure, resulting in a valuation that closely tracks the player's immediate technical contribution and league context.
+#### Scenario 5: Mid-tier to Arsenal (Lucas Torreira)
+This scenario represents a prime-age competitive player moving to a top European club (Sampdoria to Arsenal, 2018). The model shows a balanced distribution of weights, with **Ability_Overall** and **Financial_Strength** as the primary anchors. This case demonstrates the model's ability to provide a "fair market" baseline driven by established technical quality rather than extreme upside or historical reputation.
 
-![LIME Mid-tier Competitive](./plots/lime_mid-tier_competitive.png)
+![LIME Mid-tier to Arsenal](./plots/lime_mid-tier_to_arsenal.png)
 
 ### 5. Fair 90% Conformal Prediction
 To account for uncertainty in a responsible way, the audit implements **Conformal Prediction**. This moves beyond point estimates to provide a calibrated 90% confidence interval for each player's fee. The analysis confirms that these intervals maintain consistent coverage across different regions, providing a reliable measure of "valuation risk" that doesn't penalize players based on their origin.
