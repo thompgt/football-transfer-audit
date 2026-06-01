@@ -52,10 +52,10 @@ This prototype covers an elite veteran (33) moving for a high fee to a top-6 lea
 
 ![LIME Veteran Superstar](./plots/lime_veteran_superstar.png)
 
-#### Scenario 5: Mid-tier to Arsenal (Lucas Torreira)
-This scenario represents a prime-age competitive player moving to a top European club (Sampdoria to Arsenal, 2018). The model shows a balanced distribution of weights, with **Ability_Overall** and **Financial_Strength** as the primary anchors. This case demonstrates the model's ability to provide a "fair market" baseline driven by established technical quality rather than extreme upside or historical reputation.
+#### Scenario 5: Mid-tier Competitive (Daley Blind)
+The "Standard Prime" move features stable, established players moving between competitive but non-elite leagues (Man Utd to Ajax, 2018). The model shows a balanced distribution of weights, where **Ability_Overall** and **Financial_Strength** are the primary anchors. This scenario demonstrates the model's ability to provide a "fair market" baseline where established technical quality drives a valuation that closely tracks the player's immediate contribution rather than extreme upside or historical reputation.
 
-![LIME Mid-tier to Arsenal](./plots/lime_mid-tier_to_arsenal.png)
+![LIME Mid-tier Competitive](./plots/lime_mid-tier_competitive.png)
 
 ### 5. Fair 90% Conformal Prediction
 To account for uncertainty in a responsible way, the audit implements **Conformal Prediction**. This moves beyond point estimates to provide a calibrated 90% confidence interval for each player's fee. The analysis confirms that these intervals maintain consistent coverage across different regions, providing a reliable measure of "valuation risk" that doesn't penalize players based on their origin.
