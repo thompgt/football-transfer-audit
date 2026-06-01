@@ -66,14 +66,18 @@ def engineer_features(transfers, fifa):
     # Transfer in 2015-2016 (Season_Year 2015) -> use FIFA 15 or 16.
     # We'll match on Name and Season_Year
     
-    fifa['Name_Match'] = fifa['short_name'].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8').str.lower()
+    # Map FIFA years to Season years (FIFA 15 released late 2014)
+    fifa['Season_Match'] = fifa['fifa_year'] - 1
+    
+    fifa['Short_Name_Match'] = fifa['short_name'].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8').str.lower()
+    fifa['Long_Name_Match'] = fifa['long_name'].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8').str.lower()
     transfers['Name_Match'] = transfers['Name'].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8').str.lower()
+
+    # Join on both Short Name and Long Name to maximize matching accuracy
+    merged_short = transfers.merge(fifa, left_on=['Name_Match', 'Season_Year'], right_on=['Short_Name_Match', 'Season_Match'], how='inner')
+    merged_long = transfers.merge(fifa, left_on=['Name_Match', 'Season_Year'], right_on=['Long_Name_Match', 'Season_Match'], how='inner')
     
-    # Map FIFA years to Season years
-    # FIFA 15 is released in late 2014, used for 2014-2015 season.
-    fifa['Season_Match'] = fifa['fifa_year'] - 1 # FIFA 15 -> Season 2014
-    
-    merged = transfers.merge(fifa, left_on=['Name_Match', 'Season_Year'], right_on=['Name_Match', 'Season_Match'], how='inner')
+    merged = pd.concat([merged_short, merged_long]).drop_duplicates(subset=['Name', 'Season_Year']).reset_index(drop=True)
     
     # Define 10 Factors
     # 1. Contract duration (years left)
