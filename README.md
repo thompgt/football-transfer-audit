@@ -7,7 +7,7 @@
 ![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
 ![SHAP](https://img.shields.io/badge/SHAP-1E88E5?style=for-the-badge)
-![Fairlearn](https://img.shields.io/badge/Fairlearn-6A1B9A?style=for-the-badge)
+![LIME](https://img.shields.io/badge/LIME-6A1B9A?style=for-the-badge)
 
 ## What is this?
 
