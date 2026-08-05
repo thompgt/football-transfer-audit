@@ -3,9 +3,9 @@
 ## Tech Stack
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Counterfactual Fairness](https://img.shields.io/badge/Counterfactual-Fairness-1E88E5?style=for-the-badge)
-![Conformal Prediction](https://img.shields.io/badge/Conformal-Prediction-1E88E5?style=for-the-badge)
-![Responsible AI](https://img.shields.io/badge/Responsible-AI-1E88E5?style=for-the-badge)
+![Counterfactual Fairness](https://img.shields.io/badge/Counterfactual_Fairness-1E88E5?style=for-the-badge)
+![Conformal Prediction](https://img.shields.io/badge/Conformal_Prediction-1E88E5?style=for-the-badge)
+![Responsible AI](https://img.shields.io/badge/Responsible_AI-1E88E5?style=for-the-badge)
 ![SHAP](https://img.shields.io/badge/SHAP-1E88E5?style=for-the-badge)
 ![LIME](https://img.shields.io/badge/LIME-6A1B9A?style=for-the-badge)
 
