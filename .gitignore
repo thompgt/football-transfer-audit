@@ -1,1 +1,33 @@
-/.venv
+# Virtualenvs
+.venv/
+venv/
+env/
+
+# Python bytecode / packaging
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Test / lint caches
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+# Notebook outputs are stripped by the pre-commit hook, not ignored - the
+# notebooks themselves are the deliverable and stay tracked.
+
+# Generated audit artefacts. These are rebuilt by scripts/run_audit.py; the
+# committed copies under results/ are the ones CI checks for drift, so only
+# scratch output is ignored here.
+results/_scratch/
+nbconvert_out/
+
+# OS noise
+.DS_Store
+Thumbs.db
