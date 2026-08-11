@@ -1,318 +1,308 @@
-import zipfile
-import pandas as pd
-import numpy as np
-import re
-from fuzzywuzzy import process
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-import shap
-from lime.lime_tabular import LimeTabularExplainer
-import matplotlib.pyplot as plt
+"""Ten-factor transfer-fee model with SHAP and LIME explanations.
 
-# 1. Load Data
-def load_data():
-    transfers_zip = 'data/transfers.zip'
-    ratings_zip = 'data/ratings.zip'
-    
-    with zipfile.ZipFile(transfers_zip) as z:
-        with z.open('top250-00-19.csv') as f:
-            transfers = pd.read_csv(f)
-            
-    fifa_data = []
-    with zipfile.ZipFile(ratings_zip) as z:
-        # We'll use 2015-2019 to match the transfer seasons
-        for year in [15, 16, 17, 18, 19]:
-            fname = f'players_{year}.csv'
-            if fname in z.namelist():
-                with z.open(fname) as f:
-                    df = pd.read_csv(f)
-                    df['fifa_year'] = 2000 + year
-                    fifa_data.append(df)
-    
-    fifa = pd.concat(fifa_data, ignore_index=True)
-    return transfers, fifa
+Run from the repository root::
 
-# 2. Preprocessing & Feature Engineering
-def parse_fifa_stat(stat):
-    if isinstance(stat, str):
-        # Handle formats like '94+3' or '94-1'
-        res = re.split(r'[+-]', stat)
-        return float(res[0])
-    return float(stat)
+    python predict_10_factors.py
 
-def engineer_features(transfers, fifa):
-    # Clean transfers
-    transfers = transfers.dropna(subset=['Transfer_fee', 'Season', 'Name']).copy()
-    transfers['Season_Year'] = transfers['Season'].apply(lambda x: int(x.split('-')[0]))
-    
-    # Filter transfers to 2015-2018 (where we have FIFA data)
-    transfers = transfers[transfers['Season_Year'].isin([2014, 2015, 2016, 2017, 2018])].copy()
-    
-    # Financial strength of buying club: 3-year rolling mean of the buying league's median transfer fee
-    annual_league_medians = transfers.groupby(['League_to', 'Season_Year'])['Transfer_fee'].median().reset_index()
-    annual_league_medians = annual_league_medians.sort_values(['League_to', 'Season_Year'])
-    annual_league_medians['Buying_League_Strength'] = annual_league_medians.groupby('League_to')['Transfer_fee'].transform(
-        lambda x: x.rolling(window=3, min_periods=1).mean()
+All the data plumbing now comes from ``src/fta`` so it is shared with
+``scripts/run_audit.py`` and covered by ``tests/``. This script is the
+explainability story only.
+
+Five correctness problems in the previous version are fixed here:
+
+* **Inflation.** The median top-250 fee ran roughly 7 -> 10 -> 13 -> 9 M EUR
+  across the pooled seasons and season was not a feature, so market drift was
+  absorbed into player attributes. The model now trains on the season-deflated
+  target by default; ``--raw-fee`` restores the old behaviour for comparison.
+* **Random split across a time series.** Replaced with a strict temporal split:
+  train on 2015-2017, test on 2018.
+* **Target-derived aggregates over the full dataset.** Buying-league strength
+  was a rolling mean of fee medians computed across every row and then fed back
+  as a feature. It is now fitted on the training fold only.
+* **FIFA ratings from after the transfer.** A 2016 summer move was matched to
+  FIFA 17, released that September, whose ratings had already reacted to the
+  move. Each season is now pinned to the last edition released before its
+  window.
+* **LIME plots silently falling back to the wrong player.** The old code did
+  ``candidates = df_full.head(1)`` when a scenario player was missing while
+  keeping the title, and git history ("Fix player names in LIME plots") shows
+  wrong figures actually shipped. A missing scenario is now an error.
+"""
+
+from __future__ import annotations
+
+import argparse
+import sys
+from pathlib import Path
+
+import matplotlib
+
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt  # noqa: E402
+import numpy as np  # noqa: E402
+import pandas as pd  # noqa: E402
+from sklearn.ensemble import RandomForestRegressor  # noqa: E402
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score  # noqa: E402
+
+REPO_ROOT = Path(__file__).resolve().parent
+sys.path.insert(0, str(REPO_ROOT / "src"))
+
+from fta import config  # noqa: E402
+from fta.data import load_fifa, load_transfers  # noqa: E402
+from fta.features import (  # noqa: E402
+    TEN_FACTORS,
+    FoldSafeAggregates,
+    build_ten_factors,
+    temporal_split,
+)
+from fta.matching import strict_join  # noqa: E402
+from fta.regions import to_region  # noqa: E402
+
+PLOTS = REPO_ROOT / "plots"
+
+FEATURE_NOTES = [
+    ("Contract_Duration", "Years left on contract at the move. Long contracts remove the seller's urgency."),
+    ("Age_Feature", "Player age at the move."),
+    ("Financial_Strength", "3-year rolling median fee of the buying league, fitted on training seasons only."),
+    ("Ability_Overall", "FIFA overall rating from the edition released before the window."),
+    ("Ability_Potential", "FIFA potential rating, same edition."),
+    ("xG_Proxy", "Finishing + Positioning. A proxy, not a measured xG."),
+    ("xA_Proxy", "Vision + Crossing. A proxy, not a measured xA."),
+    ("Passport_Premium", "1 if the player holds a top-10 footballing nationality."),
+    ("Position_Feature", "0 GK / 1 DEF / 2 MID / 3 FWD."),
+    ("Home_Nation_Transfer", "1 if moving to a league in the player's own country."),
+]
+
+SCENARIOS = [
+    {
+        "label": "Young Brazilian Talent",
+        "player_name": "Richarlison",
+        "season": 2017,
+        "desc": "Young prospect moving from Brazil to the Premier League (Fluminense to Watford).",
+    },
+    {
+        "label": "English Domestic Move",
+        "player_name": "Alex Oxlade-Chamberlain",
+        "season": 2017,
+        "desc": "English player moving domestically between top clubs (Arsenal to Liverpool).",
+    },
+    {
+        "label": "Superstar Juggernaut",
+        "player_name": "Paul Pogba",
+        "season": 2016,
+        "desc": "Marquee signing with world-record fee context (Juventus to Man Utd).",
+    },
+    {
+        "label": "Veteran Superstar",
+        "player_name": "Cristiano Ronaldo",
+        "season": 2018,
+        "desc": "Elite veteran (33) moving for a high fee to a top league (Real to Juventus).",
+    },
+    {
+        "label": "Mid-tier Competitive",
+        "player_name": "Daley Blind",
+        "season": 2018,
+        "desc": "Prime-age established player moving between competitive leagues (Man Utd to Ajax).",
+    },
+]
+
+
+class ScenarioNotFound(LookupError):
+    """A named LIME scenario player is not in the joined dataset.
+
+    Raised rather than falling back to an arbitrary row. A plot titled "Paul
+    Pogba" that explains whoever happened to sort first is worse than no plot:
+    it is a wrong figure that looks right, and this repository shipped several.
+    """
+
+
+def build_dataset():
+    """Join, split, and engineer features without leaking the holdout season."""
+    transfers = load_transfers()
+    fifa = load_fifa()
+
+    seasons = list(config.TRAIN_SEASONS) + [config.HOLDOUT_SEASON]
+    transfers = transfers[transfers["Season_transferred"].isin(seasons)].copy()
+    transfers = transfers.dropna(subset=["Transfer_fee", "Name"])
+    transfers = transfers[transfers["Age"] > 0]
+    transfers["Transfer_fee_in_mln"] = transfers["Transfer_fee"] / 1e6
+    transfers = transfers.reset_index(drop=True)
+
+    matched = strict_join(transfers, fifa)
+    matched["Region"] = matched["Nationality"].map(to_region)
+    df = matched[matched["match_tier"] != "unmatched"].reset_index(drop=True)
+
+    split = temporal_split(df["Season_transferred"])
+    agg = FoldSafeAggregates().fit(df.loc[split.train_idx])
+    df = build_ten_factors(agg.transform(df))
+
+    X = df[TEN_FACTORS].astype(float)
+    X = X.fillna(X.loc[split.train_idx].median())
+    return df, X, split, agg
+
+
+def find_scenario_row(df: pd.DataFrame, spec: dict) -> pd.Series:
+    mask = (df["Name"] == spec["player_name"]) & (df["Season_transferred"] == spec["season"])
+    hits = df[mask]
+    if hits.empty:
+        # Try a normalized contains-match before giving up, so an accent or a
+        # middle name does not lose a legitimate scenario.
+        loose = (
+            df["Name"].str.contains(spec["player_name"].split()[-1], case=False, na=False)
+            & (df["Season_transferred"] == spec["season"])
+        )
+        hits = df[loose]
+    if hits.empty:
+        raise ScenarioNotFound(
+            f"{spec['player_name']} ({spec['season']}) is not in the joined dataset. "
+            "Either the join dropped this transfer or the scenario list is stale. "
+            "Fix one of those - do not plot a different player under this title."
+        )
+    return hits.iloc[0]
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--raw-fee",
+        action="store_true",
+        help="Train on the raw fee instead of the season-deflated fee (the old, inflation-confounded behaviour).",
     )
-    transfers = transfers.merge(annual_league_medians[['League_to', 'Season_Year', 'Buying_League_Strength']], on=['League_to', 'Season_Year'], how='left')
-    
-    # Fuzzy match players (simplified for this task)
-    # In a real scenario, we'd do a more robust join. 
-    # Here we'll do a simple name + year join to keep it fast, or small sample fuzzy.
-    
-    # Prepare FIFA data: average stats across years for the same player-year if needed, 
-    # but usually we want the rating BEFORE the transfer.
-    # Transfer in 2015-2016 (Season_Year 2015) -> use FIFA 15 or 16.
-    # We'll match on Name and Season_Year
-    
-    # Map FIFA years to Season years (FIFA 15 released late 2014)
-    fifa['Season_Match'] = fifa['fifa_year'] - 1
-    
-    fifa['Short_Name_Match'] = fifa['short_name'].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8').str.lower()
-    fifa['Long_Name_Match'] = fifa['long_name'].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8').str.lower()
-    transfers['Name_Match'] = transfers['Name'].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8').str.lower()
+    parser.add_argument(
+        "--skip-missing-scenarios",
+        action="store_true",
+        help="Warn and continue instead of failing when a named scenario player is absent.",
+    )
+    args = parser.parse_args()
 
-    # Join on both Short Name and Long Name to maximize matching accuracy
-    merged_short = transfers.merge(fifa, left_on=['Name_Match', 'Season_Year'], right_on=['Short_Name_Match', 'Season_Match'], how='inner')
-    merged_long = transfers.merge(fifa, left_on=['Name_Match', 'Season_Year'], right_on=['Long_Name_Match', 'Season_Match'], how='inner')
-    
-    merged = pd.concat([merged_short, merged_long]).drop_duplicates(subset=['Name', 'Season_Year']).reset_index(drop=True)
-    
-    # Define 10 Factors
-    # 1. Contract duration (years left)
-    def calc_duration(row):
-        try:
-            val = row['contract_valid_until']
-            if pd.isna(val): return 2.0 # default
-            return float(val) - row['Season_Year']
-        except: return 2.0
-    
-    merged['Contract_Duration'] = merged.apply(calc_duration, axis=1)
-    
-    # 2. Age
-    merged['Age_Feature'] = merged['age']
-    
-    # 3. Financial strength of buying club
-    merged['Financial_Strength'] = merged['Buying_League_Strength']
-    
-    # 4. Ability (Overall)
-    merged['Ability_Overall'] = merged['overall']
-    
-    # 5. Potential
-    merged['Ability_Potential'] = merged['potential']
-    
-    # 6. Advanced Stats: xG Proxy (Finishing + Positioning)
-    merged['xG_Proxy'] = merged['attacking_finishing'].apply(parse_fifa_stat) + merged['mentality_positioning'].apply(parse_fifa_stat)
-    
-    # 7. Advanced Stats: xA Proxy (Vision + Crossing)
-    merged['xA_Proxy'] = merged['mentality_vision'].apply(parse_fifa_stat) + merged['attacking_crossing'].apply(parse_fifa_stat)
-    
-    # 8. Passport Premium (Binary: Top Nations)
-    top_nations = ['Brazil', 'Argentina', 'France', 'Germany', 'Spain', 'England', 'Italy', 'Portugal', 'Netherlands', 'Belgium']
-    merged['Passport_Premium'] = merged['nationality'].apply(lambda x: 1 if x in top_nations else 0)
-    
-    # 9. Position (Simplified categories)
-    def group_pos(pos):
-        if pos in ['ST', 'CF', 'LW', 'RW', 'LS', 'RS', 'RF', 'LF']: return 3 # Forward
-        if pos in ['CAM', 'CM', 'CDM', 'LM', 'RM', 'LAM', 'RAM', 'LDM', 'RDM']: return 2 # Midfield
-        if pos in ['CB', 'LB', 'RB', 'LWB', 'RWB', 'LCB', 'RCB']: return 1 # Defense
-        return 0 # GK or other
-    
-    merged['Position_Feature'] = merged['player_positions'].apply(lambda x: group_pos(x.split(',')[0]))
-    
-    # 10. Home Nation Transfer (Replacing International Reputation)
-    league_to_country = {
-        'Premier League': 'England', ' England': 'England', 'League One': 'England', 'Championship': 'England',
-        'LaLiga': 'Spain', 'LaLiga2': 'Spain', 'Primera División': 'Spain',
-        'Serie A': 'Italy', 'Serie B': 'Italy', 'Serie C - B': 'Italy',
-        '1.Bundesliga': 'Germany', 'Bundesliga': 'Germany', '2.Bundesliga': 'Germany',
-        'Ligue 1': 'France', 'Ligue 2': 'France',
-        'Liga NOS': 'Portugal', ' Portugal': 'Portugal', 'Ledman Liga Pro': 'Portugal',
-        'Eredivisie': 'Netherlands',
-        'Série A': 'Brazil', ' Brazil': 'Brazil',
-        'Süper Lig': 'Turkey',
-        'Premier Liga': 'Russia', ' Russia': 'Russia',
-        'Jupiler Pro League': 'Belgium', ' Belgium': 'Belgium',
-        'Super League': 'China', ' China': 'China',
-        'MLS': 'United States',
-        'Argentina': 'Argentina', 'Torneo Final': 'Argentina',
-        'Mexico': 'Mexico', 'Liga MX Clausura': 'Mexico', 'Liga MX Apertura': 'Mexico',
-        'Scotland': 'Scotland', 'Premiership': 'Scotland'
-    }
-    
-    def is_home_transfer(row):
-        dest_country = league_to_country.get(row['League_to'], 'Unknown')
-        return 1 if row['nationality'] == dest_country else 0
+    PLOTS.mkdir(exist_ok=True)
 
-    merged['Home_Nation_Transfer'] = merged.apply(is_home_transfer, axis=1)
-    
-    features = [
-        'Contract_Duration', 'Age_Feature', 'Financial_Strength', 
-        'Ability_Overall', 'Ability_Potential', 'xG_Proxy', 'xA_Proxy', 
-        'Passport_Premium', 'Position_Feature', 'Home_Nation_Transfer'
-    ]
-    
-    X = merged[features]
-    y = merged['Transfer_fee']
-    
-    return X, y, features, merged
+    print("Loading and joining data...")
+    df, X, split, agg = build_dataset()
+    print(f"Dataset: {len(df)} matched transfers "
+          f"({len(split.train_idx)} train {config.TRAIN_SEASONS} / "
+          f"{len(split.test_idx)} test {config.HOLDOUT_SEASON})")
 
-# 3. Model & Explainability
-def run_model(X, y, features, df_full):
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-    
-    model = RandomForestRegressor(n_estimators=100, random_state=42)
+    y_raw = df["Transfer_fee_in_mln"].astype(float)
+    seasons = df["Season_transferred"]
+    X_train, X_test = X.loc[split.train_idx], X.loc[split.test_idx]
+    y_train_raw, y_test_raw = y_raw.loc[split.train_idx], y_raw.loc[split.test_idx]
+
+    deflated = not args.raw_fee
+    y_train = y_train_raw if args.raw_fee else agg.deflate(y_train_raw, seasons.loc[split.train_idx])
+
+    model = RandomForestRegressor(
+        n_estimators=300, max_features="sqrt", min_samples_leaf=2,
+        random_state=config.RANDOM_SEED, n_jobs=-1,
+    )
     model.fit(X_train, y_train)
-    
-    y_pred = model.predict(X_test)
-    
-    print("--- Evaluation Metrics ---")
-    print(f"MAE: {mean_absolute_error(y_test, y_pred):.2f}")
-    print(f"RMSE: {np.sqrt(mean_squared_error(y_test, y_pred)):.2f}")
-    print(f"R2 Score: {r2_score(y_test, y_pred):.2f}")
-    
-    # Feature Ranges Explanation
-    print("\n--- Feature Ranges & Context ---")
-    stats = X.describe()
-    for feat in features:
-        f_min = stats.loc['min', feat]
-        f_max = stats.loc['max', feat]
-        f_mean = stats.loc['mean', feat]
-        print(f"{feat:22}: Range [{f_min:6.1f} - {f_max:6.1f}] | Mean: {f_mean:6.1f}")
 
-    # SHAP
+    pred_test = model.predict(X_test)
+    if deflated:
+        pred_test = agg.reflate(pred_test, seasons.loc[split.test_idx]).to_numpy()
+
+    target_label = "season-deflated fee" if deflated else "raw fee"
+    print(f"\n--- Evaluation on the held-out {config.HOLDOUT_SEASON} season "
+          f"(target: {target_label}) ---")
+    print(f"MAE:  {mean_absolute_error(y_test_raw, pred_test):.3f} M EUR")
+    print(f"RMSE: {np.sqrt(mean_squared_error(y_test_raw, pred_test)):.3f} M EUR")
+    print(f"R2:   {r2_score(y_test_raw, pred_test):.3f}")
+
+    print("\n--- Feature ranges (training fold) ---")
+    stats = X_train.describe()
+    for feat, note in FEATURE_NOTES:
+        print(f"{feat:22}: [{stats.loc['min', feat]:7.1f} - {stats.loc['max', feat]:7.1f}] "
+              f"mean {stats.loc['mean', feat]:7.1f}  | {note}")
+
+    # ------------------------------------------------------------------ SHAP
+    import shap
+
+    print("\nComputing SHAP values on the held-out season...")
     explainer = shap.TreeExplainer(model)
     shap_values = explainer.shap_values(X_test)
     plt.figure(figsize=(10, 6))
-    shap.summary_plot(shap_values, X_test, feature_names=features, show=False)
-    plt.savefig('plots/shap_summary.png')
-    plt.close()
-    
-    # --- LIME Explanations for Archetypes ---
-    explainer_lime = LimeTabularExplainer(
-        X_train.values, 
-        feature_names=features, 
-        class_names=['Transfer_fee'], 
-        mode='regression',
-        random_state=42
+    shap.summary_plot(shap_values, X_test, feature_names=TEN_FACTORS, show=False)
+    plt.title(
+        f"SHAP: ten-factor RF on held-out {config.HOLDOUT_SEASON} ({target_label})",
+        fontsize=11, fontweight="bold",
     )
-    
-    scenario_specs = [
-        {
-            'label': 'Young Brazilian Talent',
-            'player_name': 'Richarlison',
-            'season': 2017,
-            'desc': 'Young prospect moving from Brazil to the Premier League (Fluminense to Watford).'
-        },
-        {
-            'label': 'English Domestic Move',
-            'player_name': 'Alex Oxlade-Chamberlain',
-            'season': 2017,
-            'desc': 'English player moving domestically between top clubs (Arsenal to Liverpool).'
-        },
-        {
-            'label': 'Superstar Juggernaut',
-            'player_name': 'Paul Pogba',
-            'season': 2016,
-            'desc': 'Marquee signing with world-record fee context (Juve to Man Utd).'
-        },
-        {
-            'label': 'Veteran Superstar',
-            'player_name': 'Cristiano Ronaldo',
-            'season': 2018,
-            'desc': 'Elite veteran (33) moving for a high fee to a top league (Real to Juve).'
-        },
-        {
-            'label': 'Mid-tier Competitive',
-            'player_name': 'Daley Blind',
-            'season': 2018,
-            'desc': 'Prime-age established player moving between competitive leagues (Man Utd to Ajax).'
-        }
-    ]
+    plt.tight_layout()
+    plt.savefig(PLOTS / "shap_summary.png", dpi=140)
+    plt.close()
+    print(f"Generated plot: shap_summary.png")
 
-    print("\n--- Feature Definitions & Expected Ranges ---")
-    print("1. Contract_Duration: [0 - 7] Years left on contract. Mean: 3.5. High (>5) = Security premium.")
-    print("2. Age_Feature: [17 - 35] Player age. Mean: 25. High (>28) typically discounts fee.")
-    print("3. Financial_Strength: [€5M - €15M] 3-yr rolling median fee of buying league. High = Premier League context.")
-    print("4. Ability_Overall: [50 - 94] Current FIFA rating. Elite (>85) exponentially increases value.")
-    print("5. Ability_Potential: [60 - 94] FIFA Potential. High (>85) adds 'future' premium.")
-    print("6. xG_Proxy (Advanced): [20 - 190] Sum of Finishing/Positioning. Elite strikers sit > 160.")
-    print("7. xA_Proxy (Advanced): [40 - 170] Sum of Vision/Crossing. Playmakers sit > 140.")
-    print("8. Passport_Premium: [0 or 1] 1 for top 10 FIFA nations (e.g., Brazil, France, England).")
-    print("9. Position_Feature: [0 - 3] 0:GK, 1:DEF, 2:MID, 3:FWD. Forwards typically carry higher fees.")
-    print("10. Home_Nation_Transfer: [0 or 1] 1 if transferring within home country league system.")
+    # ------------------------------------------------------------------ LIME
+    from lime.lime_tabular import LimeTabularExplainer
 
-    for spec in scenario_specs:
-        # Use boolean indexing for better reliability than query()
-        mask = (df_full['Name'] == spec['player_name']) & (df_full['Season_Year'] == spec['season'])
-        candidates = df_full[mask]
-        
-        if candidates.empty:
-            # Fallback if specific player not found (though they should be)
-            candidates = df_full.head(1)
-        
-        # Pick the first matching row and its data
-        target_row = candidates.iloc[0]
-        row_values = target_row[features].values.astype(float)
-        
-        # LIME Explanation
-        exp = explainer_lime.explain_instance(row_values, model.predict, num_features=10)
-        
-        # Nice Plot Styling
-        lime_df = pd.DataFrame(exp.as_list(), columns=['feature', 'weight'])
-        lime_df = lime_df.sort_values('weight')
-        
+    def predict_fn(arr):
+        # LIME hands raw ndarrays to the model; rewrapping them keeps sklearn's
+        # feature-name check satisfied instead of emitting a warning per call.
+        return model.predict(pd.DataFrame(arr, columns=TEN_FACTORS))
+
+    lime_explainer = LimeTabularExplainer(
+        X_train.values,
+        feature_names=TEN_FACTORS,
+        class_names=["Transfer_fee_in_mln"],
+        mode="regression",
+        random_state=42,
+    )
+
+    missing = []
+    for spec in SCENARIOS:
+        try:
+            row = find_scenario_row(df, spec)
+        except ScenarioNotFound as exc:
+            if not args.skip_missing_scenarios:
+                raise
+            print(f"WARNING: {exc}")
+            missing.append(spec["label"])
+            continue
+
+        row_values = row[TEN_FACTORS].to_numpy(dtype=float)
+        exp = lime_explainer.explain_instance(row_values, predict_fn, num_features=10)
+
+        lime_df = pd.DataFrame(exp.as_list(), columns=["feature", "weight"]).sort_values("weight")
+
+        pred = predict_fn(row_values.reshape(1, -1))[0]
+        if deflated:
+            pred = float(pred * agg.season_median_.get(row["Season_transferred"], agg.global_median_))
+        actual = float(row["Transfer_fee_in_mln"])
+
         fig, ax = plt.subplots(figsize=(10, 6))
-        colors = ['#2a9d8f' if val > 0 else '#e76f51' for val in lime_df['weight']]
-        ax.barh(lime_df['feature'], lime_df['weight'], color=colors, alpha=0.85)
-        ax.axvline(0, color='black', linewidth=0.8, linestyle='--')
-        
-        pred_val = model.predict(row_values.reshape(1, -1))[0]
-        actual_val = target_row['Transfer_fee']
-        
-        ax.set_title(f"{spec['label']} | Pred €{pred_val/1e6:.2f}M | Actual €{actual_val/1e6:.2f}M", 
-                     fontsize=12, fontweight='bold')
-        ax.set_xlabel('LIME local contribution (Weight)')
-        ax.grid(axis='x', alpha=0.3)
-        
-        # Metadata box
-        player_name = target_row['Name']
-        nation = target_row['nationality']
-        age = target_row['age']
-        metadata = f"{spec['desc']}\nPlayer: {player_name}\nNation: {nation}\nAge: {age}"
-        ax.text(0.98, 0.05, metadata, transform=ax.transAxes, ha='right', va='bottom',
-                fontsize=9, bbox=dict(boxstyle='round', facecolor='white', alpha=0.9, edgecolor='#cccccc'))
-        
+        colors = ["#2a9d8f" if w > 0 else "#e76f51" for w in lime_df["weight"]]
+        ax.barh(lime_df["feature"], lime_df["weight"], color=colors, alpha=0.85)
+        ax.axvline(0, color="black", linewidth=0.8, linestyle="--")
+        ax.set_title(
+            f"{spec['label']} | Pred EUR {pred:.2f}M | Actual EUR {actual:.2f}M",
+            fontsize=12, fontweight="bold",
+        )
+        # LIME weights describe a local linear surrogate of *this model*. They
+        # are not estimates of what the market pays, and nothing downstream may
+        # phrase them causally.
+        ax.set_xlabel("LIME local surrogate weight (explains the model, not the market)")
+        ax.grid(axis="x", alpha=0.3)
+
+        metadata = (
+            f"{spec['desc']}\nPlayer: {row['Name']}\nNation: {row['Nationality']}\n"
+            f"Age: {row['Age']}\nSeason: {row['Season_transferred']}\n"
+            f"Match tier: {row['match_tier']}"
+        )
+        ax.text(
+            0.98, 0.05, metadata, transform=ax.transAxes, ha="right", va="bottom",
+            fontsize=9,
+            bbox=dict(boxstyle="round", facecolor="white", alpha=0.9, edgecolor="#cccccc"),
+        )
+
         plt.tight_layout()
         fname = f"lime_{spec['label'].lower().replace(' ', '_')}.png"
-        plt.savefig(f"plots/{fname}")
+        plt.savefig(PLOTS / fname, dpi=140)
         plt.close()
-        print(f"Generated plot: {fname} for {player_name}")
+        print(f"Generated plot: {fname} for {row['Name']} ({row['Season_transferred']})")
 
-    return model
+    if missing:
+        print(f"\nScenarios skipped because the join dropped them: {', '.join(missing)}")
+    return 0
 
-    print("\n--- Feature Definitions ---")
-    print("1. Contract_Duration: Years remaining on contract at time of transfer.")
-    print("2. Age_Feature: Player age in years.")
-    print("3. Financial_Strength: 3-year rolling mean of the median transfer fee of the BUYING league.")
-    print("4. Ability_Overall: FIFA Overall rating (quantifies current technical/physical standing).")
-    print("5. Ability_Potential: FIFA Potential rating (quantifies future ceiling).")
-    print("6. xG_Proxy (Advanced Stat): Sum of FIFA 'Finishing' and 'Positioning' stats.")
-    print("7. xA_Proxy (Advanced Stat): Sum of FIFA 'Vision' and 'Crossing' stats.")
-    print("8. Passport_Premium: Binary (1 if player is from a top 10 FIFA nation, 0 otherwise).")
-    print("9. Position_Feature: Categorical (0:GK, 1:DEF, 2:MID, 3:FWD).")
-    print("10. Home_Nation_Transfer: Binary (1 if player is transferring to a club in their home country, 0 otherwise).")
-
-    return model
 
 if __name__ == "__main__":
-    print("Loading data...")
-    transfers, fifa = load_data()
-    print("Engineering features...")
-    X, y, features, df_full = engineer_features(transfers, fifa)
-    print(f"Dataset size: {len(X)} rows")
-    if len(X) > 0:
-        run_model(X, y, features, df_full)
-    else:
-        print("No matching data found. Check matching logic.")
+    raise SystemExit(main())

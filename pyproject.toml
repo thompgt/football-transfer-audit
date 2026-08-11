@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fta"
+version = "0.2.0"
+description = "Fairness audit of a football transfer fee model"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = ["fta"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+# B905: zip(strict=) would be correct but adds noise to short, obviously
+# equal-length pairings; E501 is handled by line-length above.
+ignore = ["E501", "B905"]

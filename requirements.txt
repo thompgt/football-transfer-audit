@@ -1,12 +1,35 @@
-numpy
-pandas
-matplotlib
-seaborn
-scikit-learn
-fuzzywuzzy
-python-Levenshtein
-jupyter
-ipykernel
-fairlearn
-category_encoders
-joblib
+# Fully pinned. Resolved and verified on Python 3.13.7 / Windows, and exercised
+# by CI on Linux.
+#
+# The previous file had no version specifiers at all; listed fairlearn,
+# category_encoders and joblib, none of which are imported anywhere in the
+# repository; and omitted shap and lime, which are imported and which notebook
+# cells therefore `pip install`-ed at runtime. Those in-notebook installs are
+# gone - a notebook that installs its own dependencies is not reproducible,
+# because what it installs depends on when you ran it.
+
+# --- core analysis -----------------------------------------------------------
+numpy==2.2.6
+pandas==2.2.3
+scipy==1.18.0
+scikit-learn==1.6.1
+
+# --- figures -----------------------------------------------------------------
+matplotlib==3.10.0
+seaborn==0.13.2
+
+# --- explainability (imported by predict_10_factors.py and the notebooks) ----
+shap==0.48.0
+lime==0.2.0.1
+
+# --- notebooks ---------------------------------------------------------------
+jupyterlab==4.6.3
+notebook==7.6.1
+ipykernel==6.29.5
+nbformat==5.11.0
+nbconvert==7.16.6
+
+# --- development -------------------------------------------------------------
+pytest==8.3.4
+ruff==0.14.4
+nbstripout==0.8.1
