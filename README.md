@@ -354,35 +354,104 @@ We conducted a counterfactual audit using a "Shadow Model" to measure the **Geog
 
 ### Prerequisites
 
-- Python 3 with `pip`.
-- The bundled data — `data/transfers.zip` (`top250-00-19.csv`) and
-  `data/ratings.zip` (`players_15.csv` … `players_19.csv`) — is already in the
-  repo; nothing needs downloading and there are no API keys or environment
-  variables to set. Scripts resolve these paths relative to the repository
-  root, so run them from there.
+- Python 3.10+ (developed and tested on 3.13) with `pip`, **or** Docker.
+- The bundled data (`data/transfers.zip`, `data/ratings.zip`) is already in the
+  repository. No API keys, no downloads. Scripts resolve paths relative to the
+  repository root, so run them from there. See `data/SOURCES.md` for provenance
+  and terms, and `python scripts/fetch_data.py` to verify the archives against
+  their recorded checksums.
 
 ### Install
 
 ```bash
+python -m venv .venv
+. .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-pip install shap lime   # explainability libs used by predict_10_factors.py, not pinned in requirements.txt
 ```
+
+`requirements.txt` is fully pinned and includes `shap` and `lime`. There is no
+second install step and no `pip install` inside a notebook cell.
 
 ### Reproducing this audit
 
 ```bash
-python predict_10_factors.py   # trains the model, prints MAE/RMSE/R2, writes SHAP/LIME plots to plots/
-python viz.py                  # writes fairness_audit.png
+python scripts/run_audit.py    # the audit itself -> results/*.json, results/*.csv
+python viz.py                  # renders fairness_audit.png from results/region_stats.json
+python predict_10_factors.py   # ten-factor model + SHAP/LIME plots -> plots/
 ```
 
-`predict_10_factors.py` writes into the existing `plots/` directory and `viz.py`
-writes `fairness_audit.png` at the repository root; both overwrite the committed
-figures in place.
+`scripts/run_audit.py` is the source of every published number. It prints the
+join tiers, the ambiguity and attrition tables, the computed scorecard and the
+per-region residuals with bootstrap intervals, and writes:
 
-The full fairness diagnostics (model comparison, Simpson's paradox checks,
-conformal prediction, counterfactual audit) are in
-`notebooks/cleaned_model_pipeline.ipynb`:
+| File | Contents |
+|---|---|
+| `results/region_stats.json` | Per-region residual, 95% bootstrap CI, support verdict. Consumed by `viz.py`. |
+| `results/scorecard.json` | The computed audit verdict for each model variant. |
+| `results/attrition.csv` | Join match rate by selling league, buying league and season. |
+| `results/ambiguity.csv` | Surname-collision rate and namesake ability spread by region. |
+| `results/proxy_leakage.csv` | Permutation test: how much of the regional gap each feature carries. |
+| `results/run_metadata.json` | Row counts, seeds, package versions for the run. |
+
+`predict_10_factors.py` trains on the season-deflated fee by default; pass
+`--raw-fee` to reproduce the older inflation-confounded target. A named LIME
+scenario player that is missing from the join is a hard error, not a silent
+fallback to an arbitrary row — pass `--skip-missing-scenarios` to downgrade it
+to a warning.
+
+### Docker
+
+The whole audit runs reproducibly in a container built on
+`jupyter/scipy-notebook`, so results do not depend on a local Python:
 
 ```bash
-jupyter notebook notebooks/cleaned_model_pipeline.ipynb
+docker compose run --rm audit        # run the audit, write results/ to the host
+docker compose run --rm tests        # pytest
+docker compose run --rm smoke        # nbconvert execution smoke-run of the notebooks
+docker compose up lab                # JupyterLab at http://localhost:8888
 ```
+
+See `docker/README.md` for details.
+
+### Tests
+
+```bash
+pytest                                # 31 known-answer tests
+python -m pytest tests/test_matching.py -v   # the join-bias tests specifically
+```
+
+CI (`.github/workflows/ci.yml`) runs lint, the test suite, `scripts/run_audit.py`,
+and a check that the committed `results/scorecard.json` still matches a live
+rerun — so a stale published figure fails the build instead of shipping.
+
+### The notebooks
+
+```bash
+jupyter lab notebooks/cleaned_model_pipeline.ipynb
+```
+
+The notebooks are the narrative walkthrough; `src/fta` and `scripts/run_audit.py`
+are the authority. Where they disagree, the package is correct — it is the part
+with tests. Notebook outputs are stripped on commit
+(`.pre-commit-config.yaml`) so diffs stay readable and the repository does not
+carry 4.8 MB of stale rendered figures.
+
+## Limitations
+
+Stated up front rather than buried, because several of them cap how strong any
+conclusion here can be:
+
+1. **The transfer data is the top 250 fees per season, not all transfers.**
+   Every result is conditional on the expensive tail of the market.
+2. **Join attrition is not random** — 48.6% match rate for the Chinese Super
+   League against 87.4% for the Bundesliga (`results/attrition.csv`). Regional
+   claims are claims about the survivors.
+3. **Sample sizes are small.** The 2018 holdout has 215 transfers. Only two
+   regions clear n >= 30. Anything below that is labelled inconclusive and must
+   stay that way.
+4. **FIFA ratings are opinions, not measurements**, and are known to lag for
+   players outside the major European leagues. That is itself a plausible
+   source of any regional pattern, and this data cannot separate it from model
+   bias.
+5. **SHAP and LIME describe the model, not the market.** No figure or caption
+   in this repository should be read as a causal claim about what clubs pay.
