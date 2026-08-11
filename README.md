@@ -175,9 +175,10 @@ constructed version of the same audit does not reproduce the disparity.
 | **Data engineering** | Reading datasets straight out of zipped archives, Unicode/accent normalization of player names, fuzzy and tiered fallback joins (`fuzzywuzzy` + short-name/long-name/lastname-season matching) to link transfer records to FIFA rating tables across five FIFA editions. |
 | **Feature engineering** | A hand-designed 10-factor feature set: contract duration, age, buying-league financial strength (3-year rolling mean of league median fee), FIFA overall/potential, xG and xA proxies built from FIFA sub-ratings, passport premium, position grouping, home-nation transfer flag. |
 | **Modeling** | `scikit-learn` `RandomForestRegressor` (standard, sample-weighted and conservative/regularized variants), a `LinearRegression` baseline, and a hierarchical global-model-plus-group-residual-model strategy. Evaluation with MAE / RMSE / R². |
-| **Fairness / responsible ML** | Signed-residual, MAE-gap and calibration-by-predicted-fee-bin metrics computed per group; inverse-frequency sample reweighting; stratified splits on Region × fee band; minimum-support rules; Simpson's paradox diagnostics; counterfactual "shadow model" region swaps; `fairlearn` in the dependency set. |
+| **Fairness / responsible ML** | Signed-residual, MAE-gap and calibration-by-predicted-fee-bin metrics computed per group; inverse-frequency sample reweighting; stratified splits on Region × fee band; a single enforced minimum-support rule with 95% percentile bootstrap confidence intervals (`src/fta/fairness.py`); Simpson's paradox diagnostics; counterfactual "shadow model" region swaps; a permutation test for proxy leakage through non-sensitive features. |
 | **Uncertainty quantification** | Conformal prediction producing calibrated 90% intervals, checked for consistent coverage across regions. |
 | **Explainability** | `shap` (TreeExplainer, beeswarm and dependence plots) and `lime` (`LimeTabularExplainer` in regression mode) for global and per-transfer explanations, plus PDP/ICE curves. |
+| **Reproducibility** | Every published figure is computed by `scripts/run_audit.py` into `results/`, with pinned dependencies, a Dockerised run, checksummed inputs, and a CI check that fails if a committed number drifts from a live rerun. |
 | **Communication** | A written metrics plan, a stage-by-stage workflow document, annotated figures, and named real-player case studies used to sanity-check model behaviour. |
 
 ## Architecture
@@ -282,59 +283,113 @@ A critical part of the audit is detecting Simpson's Paradox—where global trend
 *Share of grouping/strata combinations where a region's bias sign flips once you condition on a second factor (league tier, age, position) — a high rate (e.g. "Region", 0.67) means headline fairness numbers can mask reversed patterns underneath.*
 
 #### 3. Model Explainability (SHAP)
-Transparency is key to a responsible audit. We provide two distinct SHAP (SHapley Additive exPlanations) views to distinguish between **Market-Driven** and **Technical-Driven** valuations.
 
-##### Global Importance (Market + Technical)
-In the full model, we observe that technical skills (FIFA Overall/Potential) are primary drivers, but market-level features like the player's current market value also play a dominant role. While this provides high predictive accuracy, it potentially inherits historical biases embedded in market sentiment.
+> **What SHAP and LIME can and cannot tell you.** Both are *surrogate*
+> descriptions of a fitted model. A SHAP value says how much a feature moved
+> *this model's output*; a LIME weight says how a local linear approximation of
+> *this model* behaves near one point. Neither is a measurement of what football
+> clubs pay, and neither licenses a causal claim about the transfer market.
+> Everything below is phrased as a statement about model behaviour. An earlier
+> version of this README was not, and two of its claims were wrong as a result —
+> see the notes marked **Corrected**.
+
+##### Global attribution with market value in the feature set
 
 ![SHAP Market](./docs/assets/shap_market.png)
 
-*Beeswarm plot of each feature's SHAP contribution — `Market_value_in_mln` dominates, meaning the model partly just re-states the market's own (potentially biased) prior valuation of the player.*
+*Beeswarm of each feature's SHAP contribution. `Market_value_in_mln` dominates
+the attribution — the model's output largely tracks the market's own prior
+valuation of the player, so its predictions carry whatever is in that prior.
+This is a statement about where the model's output comes from, not about
+whether the market's prior is correct.*
 
-##### 10-Factor Global Explainability (SHAP)
-The plot below illustrates the global feature influence for our refined 10-factor model, where feature values are color-coded (red for high, blue for low) to show their directional impact on the transfer fee. Unlike traditional feature importance plots that only show magnitude, this SHAP beeswarm plot reveals how specific factors like high `Ability_Overall` or `Financial_Strength` consistently drive valuations upward, while factors like increased `Age_Feature` exert downward pressure. This directional transparency addresses the flaws of prior importance rankings by explicitly showing *how* a feature changes the outcome, rather than just *that* it does. From a fairness perspective, it allows us to audit whether sensitive proxies like `Passport_Premium` or `Home_Nation_Transfer` are exerting undue influence compared to intrinsic technical metrics like the `xG_Proxy`. By moving beyond "black-box" importance to granular directional impact, we provide a more transparent and auditable framework that ensures valuations are driven by performance and context rather than opaque systemic biases.
+##### Ten-factor attribution, market value removed
 
 ![SHAP 10 Factors](./plots/shap_summary.png)
 
-*With market-value stripped out, `Ability_Overall` and `Ability_Potential` become the dominant drivers, and the nationality-linked proxies (`Passport_Premium`, `Home_Nation_Transfer`) rank lowest — evidence the 10-factor model leans on merit-based inputs rather than pedigree.*
+*With market value stripped out, `Ability_Overall` and `Ability_Potential`
+account for most of the model's output variation, and `Age_Feature` pushes in
+the opposite direction at high values. The nationality-linked flags
+(`Passport_Premium`, `Home_Nation_Transfer`) receive low mean |SHAP|.*
 
-#### 4. Domain Expertise: LIME Scenario Analysis
-To validate the model's decision-making, we conducted local audits across five distinct player prototypes using historical examples from the dataset. These case studies use Local Interpretable Model-agnostic Explanations (LIME) to show how the 10 factors contribute to a specific valuation.
+> **Corrected.** This caption previously read that the low SHAP rank of the
+> nationality proxies was "evidence the 10-factor model leans on merit-based
+> inputs rather than pedigree". That inference does not hold. A low attribution
+> on an *explicit* nationality flag says nothing about nationality entering
+> through correlated features — league, club, or the FIFA ratings themselves,
+> which are known to lag for players outside the major European leagues.
+>
+> The test the claim actually needs is a permutation test on the audited
+> quantity. Shuffling each feature and remeasuring the max regional residual gap
+> gives the opposite result: `Passport_Premium` is the **only** feature whose
+> permutation *shrinks* the gap (by 0.039 M EUR of 0.151 M EUR, about 26%).
+> Every other feature's permutation widens it. The explicit nationality flag is
+> the largest single carrier of what regional gap there is, despite ranking low
+> on SHAP. Full table: `results/proxy_leakage.csv`, generated by
+> `scripts/run_audit.py`.
 
-##### Scenario 1: Young Brazilian Talent (Richarlison)
-This prototype represents the "high-upside prospect" moving from Brazil to the Premier League (Fluminense to Watford, 2017). The model identifies Richarlison's **Ability_Potential** and young **Age_Feature** as the primary positive drivers. Despite a lower current **Ability_Overall** compared to established stars, his technical proxies (xG/xA) and the high liquidity of the buying league drive a strong valuation for a relatively unproven talent.
+#### 4. LIME Scenario Analysis
+
+Five named transfers from the joined dataset, each explained by a local linear
+surrogate of the model. Every plot is stamped with the player, season and join
+tier actually used; a scenario player missing from the join is now a hard error
+rather than a silent substitution (`ScenarioNotFound` in
+`predict_10_factors.py`). Earlier versions fell back to `df_full.head(1)` while
+keeping the original title, and git history — commit "Fix player names in LIME
+plots" — shows mislabelled figures were published.
+
+##### Scenario 1: Young Brazilian Talent (Richarlison, 2017)
+
+Prospect moving from Brazil to the Premier League (Fluminense to Watford).
 
 ![LIME Young Brazilian Talent](./plots/lime_young_brazilian_talent.png)
 
-*Per-feature LIME weights for Richarlison's transfer — potential and age dominate the positive contribution.*
+*In the local surrogate around this transfer, `Ability_Potential` and low
+`Age_Feature` carry the largest positive weights, and `Ability_Overall` a
+negative one — the model's output for this row is driven more by projected
+ceiling than current rating.*
 
-##### Scenario 2: English Domestic Move (Alex Oxlade-Chamberlain)
-This scenario explores the "homegrown premium" featuring a domestic move between top-flight English clubs (Arsenal to Liverpool, 2017). The model highlights **Home_Nation_Transfer** and **Financial_Strength** of the Premier League as major positive weights. Even with balanced technical stats, the combined effect of the **Passport_Premium** and the proven domestic record drives the fee significantly above international benchmarks.
+##### Scenario 2: English Domestic Move (Alex Oxlade-Chamberlain, 2017)
+
+Domestic move between top-flight English clubs (Arsenal to Liverpool).
 
 ![LIME English Domestic Move](./plots/lime_english_domestic_move.png)
 
-*Per-feature LIME weights for Oxlade-Chamberlain's transfer — the nationality/home-league proxies visibly push the valuation up, illustrating the exact kind of feature the audit is designed to flag.*
+*`Home_Nation_Transfer` and `Passport_Premium` take positive local weights for
+this row.*
 
-##### Scenario 3: Superstar Juggernaut (Paul Pogba)
-The "Marquee Signing" prototype features Paul Pogba's world-record context move (Juve to Man Utd, 2016). The model identifies his elite **Ability_Overall** and **Ability_Potential** as the definitive positive drivers, reflecting his status as one of the world's most valuable players at the time. With high **Financial_Strength** from the Premier League and peak technical output (xG/xA proxies), the model predicts a valuation mirroring the historical €105M fee, quantifying the "superstar premium" in elite transfers.
+> **Corrected.** This caption previously said the passport premium and domestic
+> record "drives the fee significantly above international benchmarks". That is
+> a causal claim about the market inferred from a local surrogate weight, and
+> the surrogate cannot support it. Two things it does not establish: that the
+> *fee* (as opposed to the model's output) responds to nationality, and that the
+> effect is large relative to anything. What can be said is that the model's
+> local approximation at this point assigns positive weight to two
+> nationality-linked flags — which is the kind of behaviour the audit exists to
+> flag and then test properly, which the permutation test above does.
+
+##### Scenario 3: Superstar Juggernaut (Paul Pogba, 2016)
 
 ![LIME Superstar Juggernaut](./plots/lime_superstar_juggernaut.png)
 
-*Per-feature LIME weights for Pogba's transfer — elite ability and potential, not nationality proxies, explain the record fee.*
+*Elite `Ability_Overall` and `Ability_Potential` carry the dominant positive
+local weights for the record-fee row.*
 
-##### Scenario 4: Veteran Superstar (Cristiano Ronaldo)
-This prototype covers an elite veteran (33) moving for a high fee to a top-6 league (Real to Juve, 2018). While the model recognizes his world-class **Ability_Overall**, the **Age_Feature** (values > 28) and declining **Ability_Potential** act as definitive negative weights. This creates a fascinating tension where his intrinsic ability pulls the fee upward, while his career stage exerts significant downward pressure, reflecting the high-risk nature of veteran investments.
+##### Scenario 4: Veteran Superstar (Cristiano Ronaldo, 2018)
 
 ![LIME Veteran Superstar](./plots/lime_veteran_superstar.png)
 
-*Per-feature LIME weights for Ronaldo's transfer — age works against ability, showing the model discounts veterans regardless of reputation.*
+*Ability and age pull the local surrogate in opposite directions: high
+`Ability_Overall` positive, `Age_Feature` at 33 negative. The model discounts
+age irrespective of reputation, because reputation is not one of its inputs.*
 
-##### Scenario 5: Mid-tier Competitive (Daley Blind)
-The "Standard Prime" move features Daley Blind moving between competitive European leagues (Man Utd to Ajax, 2018). The model shows a balanced distribution of weights, where **Ability_Overall** and **Financial_Strength** are the primary anchors. This scenario demonstrates the model's ability to provide a "fair market" baseline where established technical quality drives a valuation that closely tracks the player's immediate contribution rather than extreme upside or historical reputation.
+##### Scenario 5: Mid-tier Competitive (Daley Blind, 2018)
 
 ![LIME Mid-tier Competitive](./plots/lime_mid-tier_competitive.png)
 
-*Per-feature LIME weights for Blind's transfer — a "boring", balanced case with no single factor dominating, used as a sanity-check baseline.*
+*A deliberately unremarkable case with no single dominant weight, used as a
+sanity check that the surrogate is not always attributing everything to one
+feature.*
 
 #### 5. Fair 90% Conformal Prediction
 To account for uncertainty in a responsible way, the audit implements **Conformal Prediction**. This moves beyond point estimates to provide a calibrated 90% confidence interval for each player's fee. The analysis confirms that these intervals maintain consistent coverage across different regions, providing a reliable measure of "valuation risk" that doesn't penalize players based on their origin.
