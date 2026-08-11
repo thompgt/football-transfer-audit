@@ -10,7 +10,7 @@ reporting its interval and its support verdict.
 
 from __future__ import annotations
 
-from dataclasses import dataclass, asdict
+from dataclasses import asdict, dataclass
 
 import numpy as np
 import pandas as pd
@@ -26,8 +26,8 @@ from fta.config import (
 )
 
 CONCLUSIVE = "conclusive"
-INCONCLUSIVE = "inconclusive (n < %d)" % MIN_SUPPORT
-NOT_REPORTED = "not reported (n < %d)" % MIN_REPORTABLE
+INCONCLUSIVE = f"inconclusive (n < {MIN_SUPPORT})"
+NOT_REPORTED = f"not reported (n < {MIN_REPORTABLE})"
 
 
 def bootstrap_ci(
@@ -178,9 +178,9 @@ def build_scorecard(model_name: str, y_true, y_pred, groups, **kwargs) -> Scorec
         max_ratio = float("nan")
         status = "INCONCLUSIVE"
         recommendation = (
-            "No group reaches the minimum support of n=%d on the held-out set; "
-            "the audit cannot certify or reject this model on regional fairness."
-            % MIN_SUPPORT
+            f"No group reaches the minimum support of n={MIN_SUPPORT} on the "
+            "held-out set; the audit cannot certify or reject this model on "
+            "regional fairness."
         )
         basis = "0 groups at or above minimum support"
     else:
@@ -213,7 +213,7 @@ def build_scorecard(model_name: str, y_true, y_pred, groups, **kwargs) -> Scorec
                 "No adequately-powered group breaches the residual-gap or "
                 "MAE-ratio threshold."
             )
-        basis = "%d groups at or above minimum support (n>=%d)" % (len(solid), MIN_SUPPORT)
+        basis = f"{len(solid)} groups at or above minimum support (n>={MIN_SUPPORT})"
 
     return Scorecard(
         model=model_name,
@@ -255,7 +255,10 @@ def assert_scorecard_fresh(scorecard: Scorecard, expected: dict, tol: float = 1e
     if drift:
         raise AssertionError(
             "Scorecard has drifted from the committed figures: "
-            + "; ".join(f"{k}: committed={c!r} live={l!r}" for k, (c, l) in drift.items())
+            + "; ".join(
+                f"{key}: committed={committed!r} live={live_value!r}"
+                for key, (committed, live_value) in drift.items()
+            )
         )
 
 
@@ -278,7 +281,7 @@ def permutation_proxy_leakage(model, X, y, sensitive_series, n_repeats: int = 20
     rows = []
     for col in X.columns:
         gaps = []
-        for _ in range(n_repeats):
+        for _ in range(n_repeats):  # noqa: B007
             X_perm = X.copy()
             X_perm[col] = rng.permutation(X_perm[col].values)
             tbl = group_residual_table(y, model.predict(X_perm), groups, n_samples=1)

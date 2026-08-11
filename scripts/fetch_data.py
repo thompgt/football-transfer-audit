@@ -77,7 +77,7 @@ def main() -> int:
             "token in ~/.kaggle/kaggle.json, and accepting each dataset's terms):\n",
             file=sys.stderr,
         )
-        for rel, meta in MANIFEST.items():
+        for meta in MANIFEST.values():
             print(f"  kaggle datasets download -d {meta['kaggle']} -p data/", file=sys.stderr)
         print("\nSee data/SOURCES.md for provenance and licensing.", file=sys.stderr)
         return 1
