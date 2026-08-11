@@ -1,0 +1,33 @@
+# Install once per clone:  pip install pre-commit && pre-commit install
+#
+# The notebooks previously carried 4.8 MB of committed outputs across three
+# files, with execution counts running 25, 18, None, 19 - meaning the files as
+# committed could not run top to bottom. Stripping outputs on commit keeps
+# diffs reviewable and stops stale rendered figures from being mistaken for
+# current results.
+repos:
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.8.1
+    hooks:
+      - id: nbstripout
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.14.4
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+        types_or: [python]
+        files: ^(src|tests|scripts)/
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: end-of-file-fixer
+        exclude: \.(png|zip|docx)$
+      - id: trailing-whitespace
+        exclude: \.(png|zip|docx)$
+      - id: check-json
+      - id: check-yaml
+      - id: check-added-large-files
+        args: ["--maxkb=2048"]
