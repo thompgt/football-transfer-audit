@@ -114,7 +114,15 @@ def strict_join(
     f["_last"] = f["Lastname"]
     f["_club"] = f["club"].map(normalize_text) if "club" in f.columns else np.nan
 
-    value_cols = [c for c in ("overall", "potential", "Nationality", "age", "n_namesakes", "overall_spread", "is_ambiguous") if c in f.columns]
+    # Everything the FIFA side contributes travels together, so a row can never
+    # end up with an ability rating but no sub-ratings (or vice versa).
+    carried = (
+        "overall", "potential", "Nationality", "age", "player_positions",
+        "contract_valid_until", "attacking_finishing", "attacking_crossing",
+        "mentality_positioning", "mentality_vision", "fifa_edition",
+        "n_namesakes", "overall_spread", "is_ambiguous",
+    )
+    value_cols = [c for c in carried if c in f.columns]
 
     # Tier 1: full name + season.
     t1 = f.drop_duplicates(subset=["_full", "Season"])[["_full", "Season", "_club"] + value_cols]

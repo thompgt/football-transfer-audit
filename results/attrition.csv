@@ -1,0 +1,76 @@
+axis,value,n_rows,n_matched,match_rate
+League_from,Allsvenskan,1,0,0.0
+League_from,A Grupa - Championship gr.,1,0,0.0
+League_from,Professional League,2,0,0.0
+League_from,Ligat ha'Al,1,0,0.0
+League_from,Superligaen Championship round,1,0,0.0
+League_from,Série B,1,0,0.0
+League_from,UAE Gulf League,5,1,0.2
+League_from,Super League,37,18,0.4864864864864865
+League_from,Liga MX Clausura,8,4,0.5
+League_from,Premiership,2,1,0.5
+League_from,SuperLiga,2,1,0.5
+League_from,Série A,45,27,0.6
+League_from,Süper Lig,20,12,0.6
+League_from,League One,8,5,0.625
+League_from,Liga NOS,50,36,0.72
+League_from,Premier Liga,25,19,0.76
+League_from,Liga MX Apertura,9,7,0.7777777777777778
+League_from,Bundesliga,11,9,0.8181818181818182
+League_from,LaLiga,96,79,0.8229166666666666
+League_from,Serie B,6,5,0.8333333333333334
+League_from,1.HNL,7,6,0.8571428571428571
+League_from,1.Bundesliga,87,76,0.8735632183908046
+League_from,Primera División,28,25,0.8928571428571429
+League_from,Premier League,139,125,0.8992805755395683
+League_from,Jupiler Pro League,23,21,0.9130434782608695
+League_from,Serie A,142,130,0.9154929577464789
+League_from,2.Bundesliga,12,11,0.9166666666666666
+League_from,Eredivisie,28,26,0.9285714285714286
+League_from,Ligue 1,100,94,0.94
+League_from,Championship,62,61,0.9838709677419355
+League_from, Canada,1,1,1.0
+League_from,Botola Pro,1,1,1.0
+League_from,Rel. Ligue 1,2,2,1.0
+League_from,Proximus League,1,1,1.0
+League_from,Liga Águila II,3,3,1.0
+League_from,Ligue 2,8,8,1.0
+League_from,Liga 1 - Championship group,1,1,1.0
+League_from,2ª B - Grupo III,1,1,1.0
+League_from,HET Liga,1,1,1.0
+League_from,LaLiga2,3,3,1.0
+League_from,Superligaen,4,4,1.0
+League_from,Stars League,1,1,1.0
+League_from,U18 Premier League,1,1,1.0
+League_to,UAE Gulf League,6,0,0.0
+League_to,League One,5,2,0.4
+League_to,Super League,63,29,0.4603174603174603
+League_to,J1 League,2,1,0.5
+League_to,Premiership,2,1,0.5
+League_to,Liga MX Clausura,7,4,0.5714285714285714
+League_to,Série A,5,3,0.6
+League_to,Süper Lig,9,6,0.6666666666666666
+League_to,Primera División,3,2,0.6666666666666666
+League_to,Professional League,4,3,0.75
+League_to,Ligue 1,80,63,0.7875
+League_to,Liga NOS,16,13,0.8125
+League_to,Eredivisie,12,10,0.8333333333333334
+League_to,Premier Liga,26,22,0.8461538461538461
+League_to,Liga MX Apertura,7,6,0.8571428571428571
+League_to,Championship,37,32,0.8648648648648649
+League_to,LaLiga,121,106,0.8760330578512396
+League_to,Premier League,288,256,0.8888888888888888
+League_to,1.Bundesliga,121,109,0.9008264462809917
+League_to,Serie A,160,146,0.9125
+League_to,2.Bundesliga,2,2,1.0
+League_to, Uruguay,1,1,1.0
+League_to,LaLiga2,1,1,1.0
+League_to,Jupiler Pro League,1,1,1.0
+League_to,MLS,5,5,1.0
+League_to,Ledman Liga Pro,1,1,1.0
+League_to,Serie B,1,1,1.0
+League_to,Segunda División - Segunda Fase,1,1,1.0
+Season_transferred,2015,248,191,0.7701612903225806
+Season_transferred,2016,250,209,0.836
+Season_transferred,2017,244,212,0.8688524590163934
+Season_transferred,2018,245,215,0.8775510204081632
