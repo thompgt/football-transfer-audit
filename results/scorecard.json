@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-11T00:21:34+00:00",
+  "generated_utc": "2026-09-08T12:45:42+00:00",
   "audit_config": {
     "min_support": 30,
     "min_reportable": 5,
@@ -25,8 +25,8 @@
       "rmse": 8.49959333796395,
       "mae": 5.963280450312823,
       "r2": 0.7207623414472801,
-      "max_signed_residual_gap": 0.1513112731740186,
-      "max_mae_ratio": 1.0515371777906768,
+      "max_signed_residual_gap": 0.15131127317401927,
+      "max_mae_ratio": 1.0515371777906766,
       "n_conclusive_groups": 2,
       "n_inconclusive_groups": 5,
       "status": "PASS",
@@ -38,7 +38,7 @@
       "rmse": 8.71564991791525,
       "mae": 6.093107061680642,
       "r2": 0.7063856698025986,
-      "max_signed_residual_gap": 0.21510973317302629,
+      "max_signed_residual_gap": 0.21510973317302695,
       "max_mae_ratio": 1.033050043177707,
       "n_conclusive_groups": 2,
       "n_inconclusive_groups": 5,
